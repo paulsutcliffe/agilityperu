@@ -5,7 +5,7 @@ Característica: Administracion de las visas en la web
 Escenario: Crear Visas
   Dado que he iniciado sesión como administrador
   Y que estoy en la página inicial
-  Cuando hago click en "Visas"
+  Cuando hago click en "Visa"
   Y hago click en "Crear visas"
   Y lleno el formulario con los datos de la visa
   Cuando presiono "Guardar"
@@ -15,7 +15,7 @@ Escenario: Editar Visa
   Dado que existe una visa
   Y que he iniciado sesión como administrador
   Y que estoy en la página inicial
-  Cuando hago click en "Visas"
+  Cuando hago click en "Visa"
   Y hago click en "Editar"
   Y lleno "titulo" con "Nueva Visa"
   Y uso la imagen "imagen_visa2.jpg"
@@ -26,6 +26,6 @@ Escenario: Eliminar Visa
   Dado que existe una visa
   Y que he iniciado sesión como administrador
   Y que estoy en la página inicial
-  Cuando hago click en "visas"
+  Cuando hago click en "visa"
   Y hago click en "Eliminar"
   Entonces debería ver "La visa ha sido eliminado."

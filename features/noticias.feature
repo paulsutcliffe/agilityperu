@@ -5,7 +5,7 @@ Característica: Administracion de los noticias en la web
 Escenario: Crear Noticia
   Dado que he iniciado sesión como administrador
   Y que estoy en la página inicial
-  Cuando hago click en "Noticias"
+  Cuando hago click en "Noticia"
   Y hago click en "Crear noticia"
   Y lleno el formulario con los datos de la noticia
   Cuando presiono "Guardar"
