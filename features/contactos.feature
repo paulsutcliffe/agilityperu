@@ -28,4 +28,4 @@ Escenario: Eliminar Contacto
   Y que estoy en la página inicial
   Cuando hago click en "Contacto"
   Y hago click en "Eliminar"
-  Entonces debería ver "La contacto ha sido eliminado."
+  Entonces debería ver "El contacto ha sido eliminado."
