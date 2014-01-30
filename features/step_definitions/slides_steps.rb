@@ -5,7 +5,7 @@ end
 
 Dado(/^que existe un slide$/) do
   Slide.create(titulo: "Campeonato Agility las americas",
-               imagen: File.new("features/support/imagen_slide2.jpg"))
+               imagen: File.new("features/support/imagen_slide2.jpg")).save!
 end
 
 Cuando(/^lleno "(.*?)" con "(.*?)"$/) do |campo, valor|
