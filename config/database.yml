@@ -20,3 +20,6 @@ production:
   host: localhost
   database: agilityperu_production
   <<: *defaults
+
+cucumber:
+  <<: *test

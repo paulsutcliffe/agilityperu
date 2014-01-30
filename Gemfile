@@ -43,7 +43,11 @@ gem "capistrano", group: :development
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-
+group :test do
+  gem 'cucumber-rails', :require => false
+  # database_cleaner is not required, but highly recommended
+  gem 'database_cleaner'
+end
 gem "bootstrap-sass", "~> 3.0.3.0"
 gem "compass-rails", group: :assets
 gem "rails_layout", group: :development
