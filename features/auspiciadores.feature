@@ -19,7 +19,7 @@ Escenario: Editar Auspiciador
   Y hago click en "Editar"
   Y lleno "Nombre" con "Nuevo auspiciador"
   Y lleno "Descripcion" con "Descripcion"
-  Y uso la imagen "imagen_auspiciador1.jpg"
+  Y uso la imagen "imagen_auspiciador2.jpg"
   Cuando presiono "Guardar"
   Entonces debería ver "El auspiciador ha sido editado."
 
