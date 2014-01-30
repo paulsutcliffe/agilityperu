@@ -18,7 +18,7 @@ Escenario: Editar Visa
   Cuando hago click en "Visas"
   Y hago click en "Editar"
   Y lleno "titulo" con "Nueva Visa"
-  Y uso la imagen "foto_visa2.jpg"
+  Y uso la imagen "imagen_visa2.jpg"
   Cuando presiono "Guardar"
   Entonces debería ver "La visa ha sido editado."
 
