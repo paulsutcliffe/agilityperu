@@ -20,7 +20,7 @@ Cuando(/^lleno el formulario con los datos del administrador$/) do
 end
 
 Cuando(/^presiono "(.*?)"$/) do |boton|
-  click_buttom(boton)
+  click_button(boton)
 end
 
 Entonces(/^debería ver "(.*?)"$/) do |resultado|
@@ -30,8 +30,8 @@ end
 Dado(/^que he iniciado sesión como administrador$/) do
   Admin.new(:email => email, :password => password, :password_confirmation => password).save!
   visit('/cms/ingresar')
-  fill_in "E-mail", :with => email
-  fill_in "Contraseña", :with => password
+  fill_in "Email", with: email
+  fill_in "Contraseña", with: password
   click_button('Ingresar')
 end
 

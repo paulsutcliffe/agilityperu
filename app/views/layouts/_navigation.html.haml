@@ -5,3 +5,4 @@
     .collapse.navbar-collapse
       %ul.nav.navbar-nav
         %li= link_to 'Inicio', root_path, class: 'active'
+        %li= link_to 'Cerrar Sesión', destroy_admin_session_path, method: :delete
