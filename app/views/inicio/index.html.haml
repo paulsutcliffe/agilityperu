@@ -1,7 +1,50 @@
+.region-slider
+  -#carousel-generic.carousel.slide
+    %ol.carousel-indicators
+      - @slides.each_with_index do |slide, index|
+        - if index == 0
+          %li.active{:'data-target' => '#carousel-generic', :'data-slide-to' => index, :'data-interval' => '100'}
+        - else
+          %li{:'data-target' => '#carousel-generic', :'data-slide-to' => index, :'data-interval' => '100'}
+    .carousel-inner
+      - @slides.each_with_index do |slide, index|
+        - if index == 0
+          .item.active
+            = image_tag slide.imagen_url(:full), class: 'full-width'
+        - else
+          .item
+            = image_tag slide.imagen_url(:full), class: 'full-width'}
+
 #region-Inicio.container
   .region
     .region-title
       %h1= page_title!('index')
 
+
   .region
-    %p Aquí va el contenido...
+    .region-texto
+      %h1 Aquí va el contenido...
+    .region-horas
+      %h1
+        FALTA:
+      .horas
+        horas
+  
+  .region
+    .region-inscripcion
+    .region-lista-contactos
+
+  .region
+    .region-info
+    .region-info
+    .region-info
+
+  .region
+    .region-auspiciadores
+      %h1
+        CONOCE A NUESTROS AUSPICIADORES
+    .region-slider
+
+  .region
+    .footer
+
