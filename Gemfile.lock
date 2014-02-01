@@ -48,6 +48,8 @@ GEM
       activemodel (>= 3.2.0)
       activesupport (>= 3.2.0)
       json (>= 1.7)
+    childprocess (0.4.0)
+      ffi (~> 1.0, >= 1.0.11)
     chunky_png (1.2.9)
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
@@ -89,6 +91,7 @@ GEM
       factory_girl (~> 4.3.0)
       railties (>= 3.0.0)
     fake (1.42.11.0)
+    ffi (1.9.3)
     friendly_id (5.0.2)
       activerecord (~> 4.0.0)
     fssm (0.2.10)
@@ -181,6 +184,7 @@ GEM
       rspec-expectations (= 3.0.0.beta1)
       rspec-mocks (= 3.0.0.beta1)
     rspec-support (3.0.0.beta1)
+    rubyzip (1.1.0)
     rvm-capistrano (1.5.1)
       capistrano (~> 2.15.4)
     sass (3.2.14)
@@ -196,6 +200,11 @@ GEM
     sdoc (0.4.0)
       json (~> 1.8)
       rdoc (~> 4.0, < 5.0)
+    selenium-webdriver (2.39.0)
+      childprocess (>= 0.2.5)
+      multi_json (~> 1.0)
+      rubyzip (~> 1.0)
+      websocket (~> 1.0.4)
     sprockets (2.10.1)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -213,7 +222,7 @@ GEM
     treetop (1.4.15)
       polyglot
       polyglot (>= 0.3.1)
-    turbolinks (2.2.0)
+    turbolinks (2.2.1)
       coffee-rails
     tzinfo (0.3.38)
     uglifier (2.4.0)
@@ -225,6 +234,7 @@ GEM
       raindrops (~> 0.7)
     warden (1.2.3)
       rack (>= 1.0)
+    websocket (1.0.7)
     xpath (2.0.0)
       nokogiri (~> 1.3)
 
@@ -259,6 +269,7 @@ DEPENDENCIES
   sass-rails (~> 4.0.0)
   scaffold-bootstrap3
   sdoc
+  selenium-webdriver
   turbolinks
   uglifier (>= 1.3.0)
   unicorn

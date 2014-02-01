@@ -16,3 +16,16 @@ end
 Cuando(/^uso la imagen "(.*?)"$/) do |archivo|
   attach_file("Imagen", File.expand_path("features/support/" + archivo))
 end
+
+Cuando(/^agrego la imagen "(.*?)"$/) do |archivo|
+  attach_file("Imagen", File.expand_path("features/support/" + archivo))
+end
+
+Entonces(/^debería ver la imagen "(.*?)"$/) do |archivo|
+  page.should have_xpath("//img[contains(@src, \"#{archivo}\")]")
+end
+
+Dado(/^que exite el slide "(.*?)" con título "(.*?)"$/) do |imagen, titulo|
+  Slide.create(imagen: File.new("features/support/#{imagen}"),
+               titulo: titulo).save!
+end
