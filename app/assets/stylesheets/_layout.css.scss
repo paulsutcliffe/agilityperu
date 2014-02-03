@@ -2,10 +2,30 @@
 clear:both;
 }
 
-
 .region{
 @extend .col-md-12;
 @extend .col-sm-12;
 @extend .col-xs-12;
 @extend .col-lg-12;
+}
+
+.region-slider{
+width: 100%;
+max-width: 100%;
+}
+
+.region-texto{
+@extend .col-md-6;
+@extend .col-sm-6;
+@extend .col-xs-6;
+@extend .col-lg-6;
+}
+
+.region-horas{
+
+@extend .col-md-6;
+@extend .col-sm-6;
+@extend .col-xs-6;
+@extend .col-lg-6;
+
 }

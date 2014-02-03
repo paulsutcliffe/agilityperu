@@ -5,13 +5,16 @@
       - if index == 0
         %li.active{:'data-target' => '#carousel-generic', :'data-slide-to' => index}
       - else
-        %li{:'data-target' => '#carousel-generic', :'data-slide-to' => index}
-
+    %li{:'data-target' => '#carousel-generic', :'data-slide-to' => 0}
+    %li{:'data-target' => '#carousel-generic', :'data-slide-to' => 1}
+    %li{:'data-target' => '#carousel-generic', :'data-slide-to' => 2}
   .carousel-inner
-    - @slides.each_with_index do |slide, index|
+    .container
+      = image_tag '/assets/img-slider.jpg'
+    -# @slides.each_with_index do |slide, index|
       - if index == 0
         .item.active
-          = image_tag slide.imagen_url(:full)
+          -#= image_tag slide.imagen_url(:full)
           .carousel-caption
             %p= slide.titulo
       - else
