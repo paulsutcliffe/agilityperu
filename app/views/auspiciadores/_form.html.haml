@@ -1,0 +1,26 @@
+= form_for @auspiciador, :html => { class: 'form-horizontal', role: 'form' } do |f|
+  - if @auspiciador.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@auspiciador.errors.count, "error")}"
+      %ul
+        - @auspiciador.errors.full_messages.each do |msg|
+          %li= msg
+
+  .form-group
+    = f.label :imagen, class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.file_field :imagen, class: 'form-control'
+  .form-group
+    = f.label :nombre, class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.text_field :nombre, class: 'form-control'
+  .form-group
+    = f.label :descripcion, class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.text_area :descripcion, class: 'form-control'
+  .form-group
+    = f.label :link, class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.text_field :link, class: 'form-control'
+  .actions
+    = f.submit 'Guardar', class: 'btn btn-default'

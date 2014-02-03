@@ -1,0 +1,30 @@
+#region-auspiciadores.container
+
+  .region
+    .region-title
+      %h1= page_title!('auspiciadores')
+
+    .region
+      - if current_admin
+        .admin-control
+          = link_to 'Crear Auspiciador', new_auspiciador_path, class: 'btn btn-primary'
+
+      .table-responsive
+        %table.table
+          %tr
+            %th Imagen
+            %th Nombre
+            %th Descripcion
+            %th Link
+            %th
+            %th
+
+          - @auspiciadores.each do |auspiciador|
+            %tr
+              %td= image_tag auspiciador.imagen_url(:thumb)
+              %td= auspiciador.nombre
+              %td= auspiciador.descripcion
+              %td= auspiciador.link
+              - if current_admin
+                %td= link_to 'Editar', edit_auspiciador_path(auspiciador), class: 'btn btn-success'
+                %td= link_to 'Eliminar', auspiciador, :method => :delete, :data => { :confirm => '¿Estás Seguro?' }, class: 'btn btn-danger'

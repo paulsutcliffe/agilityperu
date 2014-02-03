@@ -7,8 +7,10 @@
         %ul.nav.navbar-nav
           %li= link_to 'Inicio', root_path, class: 'active'
           %li= link_to 'Slides', slides_path
+          %li= link_to 'Auspiciadores', auspiciadores_path
           %li= link_to 'Cerrar Sesión', destroy_admin_session_path, method: :delete
       - else
         %ul.nav.navbar-nav
           %li= link_to 'INICIO', root_path
+          %li= link_to 'AUSPICIADORES', auspiciadores_path
           %li= link_to 'COMPETENCIA'

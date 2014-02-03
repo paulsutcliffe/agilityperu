@@ -1,0 +1,27 @@
+
+#carousel-auspiciadores.carousel.slide
+
+  %ol.carousel-indicators
+    - @auspiciadores.each_slice(6).each_with_index do |auspiciador, index|
+      - if index == 0
+        %li.active{:'data-target' => '#carousel-auspiciadores', :'data-slide-to' => index.to_s}
+      - else
+        %li{:'data-target' => '#carousel-auspiciadores', :'data-slide-to' => index.to_s}
+
+  .carousel-inner
+    - @auspiciadores.each_slice(6).each_with_index do |auspiciador, index|
+      - if index == 0
+        .item.active
+          - auspiciador.each do |auspiciador|
+            .slide
+              = link_to image_tag(auspiciador.imagen_url(:thumb)), auspiciador.link, target: '_blank'
+
+      - else
+        .item
+          - auspiciador.each do |auspiciador|
+            .slide
+              = link_to image_tag(auspiciador.imagen_url(:thumb)), auspiciador.link, target: '_blank'
+
+  = link_to content_tag(:span, '', class: 'glyphicon glyphicon-chevron-left'), '#carousel-auspiciadores', :'data-slide' => 'prev', class: 'left carousel-control'
+  = link_to content_tag(:span, '', class: 'glyphicon glyphicon-chevron-right'), '#carousel-auspiciadores', :'data-slide' => 'next', class: 'right carousel-control'
+
