@@ -1,0 +1,24 @@
+#region-mensajes.container
+  .region
+    .region-title
+      %h1= page_title!('mensaje')
+
+  .region
+    %p
+      %b Nombre:
+      = @mensaje.nombre
+    %p
+      %b Email:
+      = @mensaje.email
+    %p
+      %b Telefono:
+      = @mensaje.telefono
+    %p
+      %b Mensaje:
+      = @mensaje.mensaje
+
+  .region
+    - if current_admin
+      .admin-controls
+        = link_to 'Editar', edit_mensaje_path(@mensaje), class: 'btn btn-success'
+    = link_to 'Regresar', mensajes_path, class: 'btn btn-warning'

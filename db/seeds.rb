@@ -15,3 +15,11 @@ end
 12.times do
   FactoryGirl.create :auspiciador
 end
+
+12.times do
+  FactoryGirl.create :mensaje
+end
+
+8.times do
+  FactoryGirl.create :noticia
+end

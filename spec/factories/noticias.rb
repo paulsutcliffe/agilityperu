@@ -1,10 +1,10 @@
 # Read about factories at https://github.com/thoughtbot/factory_girl
-
+require 'faker'
 FactoryGirl.define do
   factory :noticia do
-    titulo "MyString"
-    foto "MyString"
+    titulo { Faker::Name.title}
+    foto { Rack::Test::UploadedFile.new(File.join(Rails.root,'features','support','foto_noticia1.jpg'))}
     fecha "2014-02-03"
-    contenido "MyText"
+    contenido { Faker::Lorem.paragraph }
   end
 end
