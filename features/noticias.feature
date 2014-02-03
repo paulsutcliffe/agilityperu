@@ -6,7 +6,7 @@ Escenario: Crear Noticia
   Dado que he iniciado sesión como administrador
   Y que estoy en la página inicial
   Cuando hago click en "Noticia"
-  Y hago click en "Crear noticia"
+  Y hago click en "Crear Noticia"
   Y lleno el formulario con los datos de la noticia
   Cuando presiono "Guardar"
   Entonces debería ver "Noticia creado con éxito."
@@ -17,7 +17,7 @@ Escenario: Editar Noticia
   Y que estoy en la página inicial
   Cuando hago click en "Noticia"
   Y hago click en "Editar"
-  Y lleno "titulo" con "Nueva noticia"
+  Y lleno "Titulo" con "Nueva noticia"
   Y lleno "Contenido" con "Contenido"
   Y uso la foto "foto_noticia2.jpg"
   Cuando presiono "Guardar"
@@ -30,3 +30,13 @@ Escenario: Eliminar Noticia
   Cuando hago click en "Noticia"
   Y hago click en "Eliminar"
   Entonces debería ver "La noticia ha sido eliminado."
+
+Esquema del escenario: las noticias pueden verse en la página de inicio
+  Dado que existe la noticia "<foto>" con título "<titulo>" con fecha "<fecha>" con contenido "<contenido>"
+  Y que estoy en la página inicial
+  Entonces debería ver la imagen "<foto>"
+
+  Ejemplos:
+    | foto              | titulo    | fecha      | contenido   |
+    | foto_noticia1.jpg | noticia 1 | 03-02-2014 | contenido 1 |
+    | foto_noticia2.jpg | noticia 2 | 03-02-2014 | contenido 2 |

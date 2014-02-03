@@ -1,4 +1,6 @@
 Agilityperu::Application.routes.draw do
+  resources :noticias
+
   resources :auspiciadores
 
   resources :slides
