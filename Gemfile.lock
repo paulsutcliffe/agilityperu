@@ -90,7 +90,8 @@ GEM
     factory_girl_rails (4.3.0)
       factory_girl (~> 4.3.0)
       railties (>= 3.0.0)
-    fake (1.42.11.0)
+    faker (1.2.0)
+      i18n (~> 0.5)
     ffi (1.9.3)
     friendly_id (5.0.2)
       activerecord (~> 4.0.0)
@@ -252,7 +253,7 @@ DEPENDENCIES
   database_cleaner
   devise
   factory_girl_rails (~> 4.3.0)
-  fake
+  faker
   friendly_id (~> 5.0.0)
   haml
   inherited_resources
