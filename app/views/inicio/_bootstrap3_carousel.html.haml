@@ -9,12 +9,10 @@
     %li{:'data-target' => '#carousel-generic', :'data-slide-to' => 1}
     %li{:'data-target' => '#carousel-generic', :'data-slide-to' => 2}
   .carousel-inner
-    .container
-      = image_tag '/assets/img-slider.jpg'
-    -# @slides.each_with_index do |slide, index|
+    - @slides.each_with_index do |slide, index|
       - if index == 0
         .item.active
-          -#= image_tag slide.imagen_url(:full)
+          = image_tag slide.imagen_url(:full)
           .carousel-caption
             %p= slide.titulo
       - else
@@ -23,6 +21,5 @@
           .carousel-caption
             %p= slide.titulo
 
-  -#
     = link_to content_tag(:span, '', class: 'icon-prev'), '#carousel-generic', :'data-slide' => 'prev'
     = link_to content_tag(:span, '', class: 'icon-next'), '#carousel-generic', :'data-slide' => 'next'
