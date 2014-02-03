@@ -15,15 +15,64 @@ main{
   marin-left:0px;
   bottom: -42px !important;
   }
-  ul li{
+  ul li{}
+}
 
+#region-Inicio{
+  margin-top: 40px;
+    h1{
+      span{
+      font-weight: bold;
+      }
+    }
+
+  .region-horas{ 
+    h2{
+    text-align:right;
+    font-weight: bold;
+    }
+    .numero{
+    font-size: 72px;
+    font-weight: bold;
+    }
+    .texto{
+    font-size: 30px;
+    }
   }
 
 }
 
-#region-Inicio{
-span{
-  font-weight: bold;
+.line{padding-bottom: 50px; border-bottom: 2px solid $gray-title;}
+
+
+/*INSCRIPCION*/
+
+.inscrip-info{
+  margin-top:80px;
 }
+
+.region-inscripcion p{
+display: inline-block;
+text-align: right;
+width: 145px;
 }
+
+
+/*INFORMACION*/
+
+.region-info{
+  margin-top: 20px;
+  .info{
+background-color:white;
+padding-left: 10px;
+padding-right: 10px;
+padding-bottom: 20px;
+  min-height: 180px;
+  }
+}
+
+
+/*AUSPICIADORES*/
+
+
 

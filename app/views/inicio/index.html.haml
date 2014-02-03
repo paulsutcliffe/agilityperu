@@ -2,7 +2,7 @@
   = render 'bootstrap3_carousel'
 
 #region-Inicio.container
-  .region
+  .region.line
     .region-texto
       %h1 
         PER&Uacute; LES DA A 
@@ -14,19 +14,63 @@
         %br
         El lugar será el complejo Deportivo de la Costa Verde en el Circuito de Playas de Magdalena del Mar, Lima. Perú.
     .region-horas
-      %h1
-        FALTA:
-      .horas
-        horas
+      %h2
+        FALTAN:
+      .region
+        .horas
+          %span.numero
+            24
+          %br
+          %span.texto
+            d&iacute;as
+        .horas
+          %span.numero
+            30
+          %br
+          %span.texto
+            horas
+        .horas
+          %span.numero
+            50
+          %br
+          %span.texto
+            minutos
   
-  .region
+  .region.line.inscripcion
     .region-inscripcion
-    .region-lista-contactos
+      .inscrip-info
+        %p
+          FORMULARIO DE INSCRIPCION
+        =image_tag '/assets/img-inscripcion.jpg'
+      .inscrip-info
+        %p
+          LISTA DE CONTACTOS
+        =image_tag '/assets/img-contacto.jpg'  
+    .region-libre
 
   .region
     .region-info
+      =image_tag '/assets/img-ubicacion.jpg'
+      .info
+        %h4.titulo
+          UBICACI&Oacute;N DEL EVENTO
+        %p
+          El Complejo Deportivo cuenta con 5 canchas de futbol adyacentes con superficie de gras artificial. Se utilizara la cancha del medio para instalar la pista de 
     .region-info
+      =image_tag '/assets/img-personas.jpg'
+      .info
+        %h4.titulo
+          &Uacute;LTIMAS NOTICIAS
+        %p
+          Se confirman la presencia de los jueces:
+          Josef van Eester, de Bélgica y Tamás Tráj, de Hungría.
     .region-info
+      =image_tag '/assets/img-ubicacion.jpg'
+      .info
+        %h4.titulo
+          SE&Ntilde;AL EN VIVO
+        %p
+          Podrá ver en vivo la inaguracion, compenetancias y premiaciones del Campeonato Mundial de Agility de la FCI 2014
 
   .region
     .region-auspiciadores

@@ -9,6 +9,12 @@ clear:both;
 @extend .col-lg-12;
 }
 
+.horas{
+@extend .col-md-4;
+@extend .col-sm-4;
+@extend .col-xs-4;
+@extend .col-lg-4;
+}
 .region-slider{
 width: 100%;
 max-width: 100%;
@@ -29,3 +35,45 @@ max-width: 100%;
 @extend .col-lg-6;
 
 }
+
+
+.region-inscripcion{
+
+@extend .col-md-4;
+@extend .col-sm-4;
+@extend .col-xs-4;
+@extend .col-lg-4;
+.inscrip-info{
+background-color: $orange-info;
+}
+p{
+color: white;
+}
+}
+
+.region-libre{
+
+@extend .col-md-6;
+@extend .col-sm-6;
+@extend .col-xs-6;
+@extend .col-lg-6;
+}
+
+.inscripcion{
+background: url('/assets/background-contacto.jpg') no-repeat center ;
+min-height: 600px;
+}
+
+
+.region-info{
+@extend .col-md-4;
+@extend .col-sm-4;
+@extend .col-xs-12;
+@extend .col-lg-4;
+img{
+width: 339px;
+height: 175px;
+}
+}
+
+
