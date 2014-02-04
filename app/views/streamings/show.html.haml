@@ -1,0 +1,15 @@
+#region-streamings.container
+  .region
+    .region-title
+      %h1= page_title!('streaming')
+
+  .region
+    %p
+      %b Codigo embed:
+      = @streaming.codigo_embed
+
+  .region
+    - if current_admin
+      .admin-controls
+        = link_to 'Editar', edit_streaming_path(@streaming), class: 'btn btn-success'
+    = link_to 'Regresar', streamings_path, class: 'btn btn-warning'

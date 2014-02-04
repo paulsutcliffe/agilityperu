@@ -41,11 +41,11 @@
       .inscrip-info
         %p
           FORMULARIO DE INSCRIPCION
-        =image_tag '/assets/img-inscripcion.jpg'
+        = image_tag '/assets/img-inscripcion.jpg'
       .inscrip-info
         %p
           LISTA DE CONTACTOS
-        =image_tag '/assets/img-contacto.jpg'  
+        = link_to (image_tag '/assets/img-contacto.jpg'), contactos_path
     .region-libre
 
   .region

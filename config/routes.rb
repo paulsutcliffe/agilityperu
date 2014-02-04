@@ -1,4 +1,8 @@
 Agilityperu::Application.routes.draw do
+  resources :contactos
+
+  resources :streamings
+
   resources :requisitos
 
   resources :transportes

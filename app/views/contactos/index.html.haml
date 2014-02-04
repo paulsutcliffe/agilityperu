@@ -1,0 +1,30 @@
+#region-contactos.container
+
+  .region
+    .region-title
+      %h1= page_title!('contactos')
+
+    .region
+      - if current_admin
+        .admin-control
+          = link_to 'Crear Contacto', new_contacto_path, class: 'btn btn-primary'
+
+      .table-responsive
+        %table.table
+          %tr
+            %th Titulo
+            %th Contenido
+            %th Email
+            %th Website
+            %th
+            %th
+
+          - @contactos.each do |contacto|
+            %tr
+              %td= contacto.titulo
+              %td= contacto.contenido
+              %td= contacto.email
+              %td= contacto.website
+              - if current_admin
+                %td= link_to 'Editar', edit_contacto_path(contacto), class: 'btn btn-success'
+                %td= link_to 'Eliminar', contacto, :method => :delete, :data => { :confirm => '¿Estás Seguro?' }, class: 'btn btn-danger'

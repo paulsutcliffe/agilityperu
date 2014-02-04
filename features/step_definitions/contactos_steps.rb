@@ -6,8 +6,8 @@ Cuando(/^lleno el formulario con los datos del contacto$/) do
 end
 
 Dado(/^que existe un contacto$/) do
-  Contacto.create(nombre: "Inscripciones y transferencias",
-                  descripcion: "contenido",
+  Contacto.create(titulo: "Inscripciones y transferencias",
+                  contenido: "contenido",
                   email: "info@kcp.com.pe",
                   website: "consultas@kcp.com.pe").save!
 end

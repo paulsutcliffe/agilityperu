@@ -39,3 +39,11 @@ end
 8.times do
   FactoryGirl.create :requisito
 end
+
+5.times do
+  FactoryGirl.create :streaming
+end
+
+5.times do
+  FactoryGirl.create :contacto
+end

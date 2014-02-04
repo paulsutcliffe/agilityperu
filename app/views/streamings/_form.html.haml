@@ -1,0 +1,14 @@
+= form_for @streaming, :html => { class: 'form-horizontal', role: 'form' } do |f|
+  - if @streaming.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@streaming.errors.count, "error")}"
+      %ul
+        - @streaming.errors.full_messages.each do |msg|
+          %li= msg
+
+  .form-group
+    = f.label :codigo_embed, class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.text_field :codigo_embed, class: 'form-control'
+  .actions
+    = f.submit 'Guardar', class: 'btn btn-default'
