@@ -11,8 +11,11 @@
  *= require_self
  *
  */
+
 @import 'bootstrap';
 
+@import url(http://fonts.googleapis.com/css?family=Merriweather+Sans:400,300italic,700italic,400italic,800italic);
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
 @import 'mixins.css.scss';
 @import 'variables.css.scss';
 @import 'fonts.css.scss';

@@ -33,7 +33,7 @@ class SlideUploader < CarrierWave::Uploader::Base
 
   # Create different versions of your uploaded files:
   version :full do
-    process :resize_to_fill => [1200, 244]
+    process :resize_to_fill => [1200, 400]
   end
 
   version :thumb do

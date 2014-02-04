@@ -28,31 +28,27 @@ max-width: 100%;
 }
 
 .region-horas{
-
 @extend .col-md-6;
 @extend .col-sm-6;
 @extend .col-xs-6;
 @extend .col-lg-6;
-
 }
 
 
 .region-inscripcion{
-
 @extend .col-md-4;
 @extend .col-sm-4;
 @extend .col-xs-4;
 @extend .col-lg-4;
-.inscrip-info{
-background-color: $orange-info;
-}
-p{
-color: white;
-}
+  .inscrip-info{
+  background-color: $orange-info;
+  }
+  p{
+  color: white;
+  }
 }
 
 .region-libre{
-
 @extend .col-md-6;
 @extend .col-sm-6;
 @extend .col-xs-6;
@@ -61,7 +57,7 @@ color: white;
 
 .inscripcion{
 background: url('/assets/background-contacto.jpg') no-repeat center ;
-min-height: 600px;
+min-height: 800px;
 }
 
 
@@ -76,4 +72,38 @@ height: 175px;
 }
 }
 
+.region-slider .slide{
+@extend .col-md-6;
+@extend .col-sm-6;
+@extend .col-xs-12;
+@extend .col-lg-2;
+}
+
+.region-facebook{
+@extend .col-md-4;
+@extend .col-sm-4;
+@extend .col-xs-4;
+@extend .col-lg-4;
+}
+.region-facebook-2{
+@extend .col-md-offset-4;
+@extend .col-sm-offset-4;
+@extend .col-xs-offset-4;
+@extend .col-lg-offset-4;
+
+}
+.region-offset{
+@extend .col-md-offset-6;
+@extend .col-sm-offset-6;
+@extend .col-xs-offset-6;
+@extend .col-lg-offset-6;
+
+}
+.region-footer-contacto{
+@extend .col-md-3;
+@extend .col-sm-3;
+@extend .col-xs-3;
+@extend .col-lg-3;
+
+}
 

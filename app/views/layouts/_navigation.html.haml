@@ -1,7 +1,6 @@
 .navigation
   .container
     .navbar-header
-      = link_to "Reemplazar por el nombre del nuevo proyecto", root_path, class: 'navbar-brand'
     .collapse.navbar-collapse
       - if current_admin
         %ul.nav.navbar-nav
@@ -14,7 +13,22 @@
       - else
         %ul.nav.navbar-nav
           %li= link_to 'INICIO', root_path
-          %li= link_to 'AUSPICIADORES', auspiciadores_path
-          %li= link_to 'NOTICIAS', noticias_path
-          %li= link_to 'CONTACTO', new_mensaje_path
           %li= link_to 'COMPETENCIA'
+          %li.dropdown
+            %a{:href => "#", :class => "dropdown-toggle", :data => {:toggle=>"dropdown"}} INSCRIPCIONES
+            %ul.dropdown-menu
+              %li
+                %a.drop-content
+                  COSTOS
+              %li
+                %a.drop-content
+                  FORMULARIOS
+          %li= link_to 'DELEGACIONES'
+          %li= link_to 'INFORMACIÓN'
+          %li= link_to 'NOTICIAS', noticias_path
+          %li= link_to 'SEÑAL EN VIVO'
+          %li= link_to 'CONTACTO', new_mensaje_path
+
+
+          -if current_admin
+            %li= link_to 'AUSPICIADORES', auspiciadores_path
