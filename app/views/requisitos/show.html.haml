@@ -1,0 +1,18 @@
+#region-requisitos.container
+  .region
+    .region-title
+      %h1= page_title!('requisito')
+
+  .region
+    %p
+      %b Pais:
+      = @requisito.pais
+    %p
+      %b Contenido:
+      = @requisito.contenido
+
+  .region
+    - if current_admin
+      .admin-controls
+        = link_to 'Editar', edit_requisito_path(@requisito), class: 'btn btn-success'
+    = link_to 'Regresar', requisitos_path, class: 'btn btn-warning'

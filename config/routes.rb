@@ -1,4 +1,6 @@
 Agilityperu::Application.routes.draw do
+  resources :requisitos
+
   resources :transportes
 
   resources :hoteles

@@ -1,0 +1,17 @@
+- page_title!('Creando requisito')
+
+#region-requisitos.container
+
+  .region
+    .region-title
+      %h1
+        Creando
+        %b
+          requisito
+
+  .region
+    = render 'form'
+
+  .region
+    .admin-controls
+      = link_to 'Regresar', 'javascript:history.back(-1)', class: 'btn btn-warning'

@@ -35,3 +35,7 @@ end
 8.times do
   FactoryGirl.create :transporte
 end
+
+8.times do
+  FactoryGirl.create :requisito
+end
