@@ -31,3 +31,7 @@ end
 8.times do
   FactoryGirl.create :hotel
 end
+
+8.times do
+  FactoryGirl.create :transporte
+end

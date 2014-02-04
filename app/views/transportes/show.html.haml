@@ -1,0 +1,24 @@
+#region-transportes.container
+  .region
+    .region-title
+      %h1= page_title!('transporte')
+
+  .region
+    %p
+      %b Nombre:
+      = @transporte.nombre
+    %p
+      %b Descripcion:
+      = @transporte.descripcion
+    %p
+      %b Email:
+      = @transporte.email
+    %p
+      %b Website:
+      = @transporte.website
+
+  .region
+    - if current_admin
+      .admin-controls
+        = link_to 'Editar', edit_transporte_path(@transporte), class: 'btn btn-success'
+    = link_to 'Regresar', transportes_path, class: 'btn btn-warning'

@@ -1,0 +1,30 @@
+#region-transportes.container
+
+  .region
+    .region-title
+      %h1= page_title!('transportes')
+
+    .region
+      - if current_admin
+        .admin-control
+          = link_to 'Crear Transporte', new_transporte_path, class: 'btn btn-primary'
+
+      .table-responsive
+        %table.table
+          %tr
+            %th Nombre
+            %th Descripcion
+            %th Email
+            %th Website
+            %th
+            %th
+
+          - @transportes.each do |transporte|
+            %tr
+              %td= transporte.nombre
+              %td= transporte.descripcion
+              %td= transporte.email
+              %td= transporte.website
+              - if current_admin
+                %td= link_to 'Editar', edit_transporte_path(transporte), class: 'btn btn-success'
+                %td= link_to 'Eliminar', transporte, :method => :delete, :data => { :confirm => '¿Estás Seguro?' }, class: 'btn btn-danger'
