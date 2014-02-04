@@ -1,0 +1,24 @@
+#region-hoteles.container
+  .region
+    .region-title
+      %h1= page_title!('hotel')
+
+  .region
+    %p
+      %b Nombre:
+      = @hotel.nombre
+    %p
+      %b Descripcion:
+      = @hotel.descripcion
+    %p
+      %b Email:
+      = @hotel.email
+    %p
+      %b Website:
+      = @hotel.website
+
+  .region
+    - if current_admin
+      .admin-controls
+        = link_to 'Editar', edit_hotel_path(@hotel), class: 'btn btn-success'
+    = link_to 'Regresar', hoteles_path, class: 'btn btn-warning'

@@ -4,8 +4,8 @@
     .collapse.navbar-collapse
       - if current_admin
         %ul.nav.navbar-nav
-          %li= link_to 'Inicio', root_path, class: 'active'
-          %li= link_to 'Slides', slides_path
+          %li= link_to 'INICIO', root_path, class: 'active'
+          %li= link_to 'SLIDES', slides_path
           %li.dropdown
             %a{:href => "#", :class => "dropdown-toggle", :data => {:toggle=>"dropdown"}} COMPETENCIA
             %ul.dropdown-menu
@@ -29,11 +29,14 @@
               %li
                 %a.drop-content
                   = link_to 'VISAS', visas_path
+              %li
+                %a.drop-content
+                  = link_to 'HOTELES', hoteles_path
 
 
-          %li= link_to 'Noticias', noticias_path
-          %li= link_to 'Mensaje', mensajes_path
-          %li= link_to 'Cerrar Sesión', destroy_admin_session_path, method: :delete
+          %li= link_to 'NOTICIAS', noticias_path
+          %li= link_to 'MENSAJES', mensajes_path
+          %li= link_to 'CERRAR SESIÓN', destroy_admin_session_path, method: :delete
       - else
         %ul.nav.navbar-nav
           %li= link_to 'INICIO', root_path
@@ -59,6 +62,9 @@
               %li
                 %a.drop-content
                   = link_to 'VISAS', visas_path
+              %li
+                %a.drop-content
+                  = link_to 'HOTELES', hoteles_path
 
           %li= link_to 'NOTICIAS', noticias_path
           %li= link_to 'SEÑAL EN VIVO'

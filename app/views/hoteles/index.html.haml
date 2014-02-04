@@ -1,0 +1,30 @@
+#region-hoteles.container
+
+  .region
+    .region-title
+      %h1= page_title!('hoteles')
+
+    .region
+      - if current_admin
+        .admin-control
+          = link_to 'Crear Hotel', new_hotel_path, class: 'btn btn-primary'
+
+      .table-responsive
+        %table.table
+          %tr
+            %th Nombre
+            %th Descripcion
+            %th Email
+            %th Website
+            %th
+            %th
+
+          - @hoteles.each do |hotel|
+            %tr
+              %td= hotel.nombre
+              %td= hotel.descripcion
+              %td= hotel.email
+              %td= hotel.website
+              - if current_admin
+                %td= link_to 'Editar', edit_hotel_path(hotel), class: 'btn btn-success'
+                %td= link_to 'Eliminar', hotel, :method => :delete, :data => { :confirm => '¿Estás Seguro?' }, class: 'btn btn-danger'
