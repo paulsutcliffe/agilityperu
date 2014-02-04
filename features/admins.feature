@@ -13,5 +13,5 @@ Escenario: Ingresar como administrador
 Escenario: Cerrar sesión
   Dado que he iniciado sesión como administrador
   Y que estoy en la página inicial
-  Cuando hago click en "Cerrar Sesión"
+  Cuando hago click en "CERRAR SESIÓN"
   Entonces debería ver "Has cerrado la sesión."

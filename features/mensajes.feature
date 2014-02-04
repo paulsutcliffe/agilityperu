@@ -13,6 +13,6 @@ Escenario: Eliminar mensajes como administrador
   Dado que existe un mensaje
   Y que he iniciado sesión como administrador
   Y que estoy en la página inicial
-  Cuando hago click en "Mensaje"
+  Cuando hago click en "MENSAJE"
   Y hago click en "Eliminar"
   Entonces debería ver "Mensaje borrado con éxito."

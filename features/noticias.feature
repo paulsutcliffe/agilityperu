@@ -5,7 +5,7 @@ Característica: Administracion de los noticias en la web
 Escenario: Crear Noticia
   Dado que he iniciado sesión como administrador
   Y que estoy en la página inicial
-  Cuando hago click en "Noticia"
+  Cuando hago click en "NOTICIA"
   Y hago click en "Crear Noticia"
   Y lleno el formulario con los datos de la noticia
   Cuando presiono "Guardar"
@@ -15,7 +15,7 @@ Escenario: Editar Noticia
   Dado que existe una noticia
   Y que he iniciado sesión como administrador
   Y que estoy en la página inicial
-  Cuando hago click en "Noticia"
+  Cuando hago click en "NOTICIA"
   Y hago click en "Editar"
   Y lleno "Titulo" con "Nueva noticia"
   Y lleno "Contenido" con "Contenido"
@@ -27,7 +27,7 @@ Escenario: Eliminar Noticia
   Dado que existe una noticia
   Y que he iniciado sesión como administrador
   Y que estoy en la página inicial
-  Cuando hago click en "Noticia"
+  Cuando hago click en "NOTICIA"
   Y hago click en "Eliminar"
   Entonces debería ver "La noticia ha sido eliminado."
 
