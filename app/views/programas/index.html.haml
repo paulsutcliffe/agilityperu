@@ -1,0 +1,26 @@
+#region-programas.container
+
+  .region
+    .region-title
+      %h1= page_title!('programas')
+
+    .region
+      - if current_admin
+        .admin-control
+          = link_to 'Crear Programa', new_programa_path, class: 'btn btn-primary'
+
+      .table-responsive
+        %table.table
+          %tr
+            %th Titulo
+            %th Contenido
+            %th
+            %th
+
+          - @programas.each do |programa|
+            %tr
+              %td= programa.titulo
+              %td= programa.contenido
+              - if current_admin
+                %td= link_to 'Editar', edit_programa_path(programa), class: 'btn btn-success'
+                %td= link_to 'Eliminar', programa, :method => :delete, :data => { :confirm => '¿Estás Seguro?' }, class: 'btn btn-danger'

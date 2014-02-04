@@ -1,0 +1,18 @@
+#region-organizadores.container
+  .region
+    .region-title
+      %h1= page_title!('organizador')
+
+  .region
+    %p
+      %b Titulo:
+      = @organizador.titulo
+    %p
+      %b Contenido:
+      = @organizador.contenido
+
+  .region
+    - if current_admin
+      .admin-controls
+        = link_to 'Editar', edit_organizador_path(@organizador), class: 'btn btn-success'
+    = link_to 'Regresar', organizadores_path, class: 'btn btn-warning'

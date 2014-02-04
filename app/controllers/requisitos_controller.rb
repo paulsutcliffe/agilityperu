@@ -14,6 +14,4 @@ class RequisitosController < InheritedResources::Base
   def destroy
     destroy!( notice: "El requisito ha sido eliminado."){ requisitos_path }
   end
-
-
 end

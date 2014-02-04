@@ -11,6 +11,12 @@
             %ul.dropdown-menu
               %li
                 %a.drop-content
+                  = link_to 'ORGANIZACIÓN', organizadores_path
+              %li
+                %a.drop-content
+                  = link_to 'PROGRAMA', programas_path
+              %li
+                %a.drop-content
                   = link_to 'AUSPICIADORES', auspiciadores_path
 
           %li.dropdown
@@ -50,6 +56,12 @@
           %li.dropdown
             %a{:href => "#", :class => "dropdown-toggle", :data => {:toggle=>"dropdown"}} COMPETENCIA
             %ul.dropdown-menu
+              %li
+                %a.drop-content
+                  = link_to 'ORGANIZACIÓN', organizadores_path
+              %li
+                %a.drop-content
+                  = link_to 'PROGRAMA', programas_path
               %li
                 %a.drop-content
                   = link_to 'AUSPICIADORES', auspiciadores_path

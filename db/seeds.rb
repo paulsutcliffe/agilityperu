@@ -47,3 +47,11 @@ end
 5.times do
   FactoryGirl.create :contacto
 end
+
+6.times do
+  FactoryGirl.create :organizador
+end
+
+6.times do
+  FactoryGirl.create :programa
+end

@@ -1,0 +1,18 @@
+#region-programas.container
+  .region
+    .region-title
+      %h1= page_title!('programa')
+
+  .region
+    %p
+      %b Titulo:
+      = @programa.titulo
+    %p
+      %b Contenido:
+      = @programa.contenido
+
+  .region
+    - if current_admin
+      .admin-controls
+        = link_to 'Editar', edit_programa_path(@programa), class: 'btn btn-success'
+    = link_to 'Regresar', programas_path, class: 'btn btn-warning'
