@@ -1,0 +1,26 @@
+#region-visas.container
+
+  .region
+    .region-title
+      %h1= page_title!('visas')
+
+    .region
+      - if current_admin
+        .admin-control
+          = link_to 'Crear Visa', new_visa_path, class: 'btn btn-primary'
+
+      .table-responsive
+        %table.table
+          %tr
+            %th Titulo
+            %th Imagen
+            %th
+            %th
+
+          - @visas.each do |visa|
+            %tr
+              %td= visa.titulo
+              %td= image_tag visa.imagen_url(:thumb)
+              - if current_admin
+                %td= link_to 'Editar', edit_visa_path(visa), class: 'btn btn-success'
+                %td= link_to 'Eliminar', visa, :method => :delete, :data => { :confirm => '¿Estás Seguro?' }, class: 'btn btn-danger'

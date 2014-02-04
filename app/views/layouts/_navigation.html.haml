@@ -6,14 +6,13 @@
         %ul.nav.navbar-nav
           %li= link_to 'Inicio', root_path, class: 'active'
           %li= link_to 'Slides', slides_path
-          %li= link_to 'Auspiciadores', auspiciadores_path
-          %li= link_to 'Noticias', noticias_path
-          %li= link_to 'Mensaje', mensajes_path
-          %li= link_to 'Cerrar Sesión', destroy_admin_session_path, method: :delete
-      - else
-        %ul.nav.navbar-nav
-          %li= link_to 'INICIO', root_path
-          %li= link_to 'COMPETENCIA'
+          %li.dropdown
+            %a{:href => "#", :class => "dropdown-toggle", :data => {:toggle=>"dropdown"}} COMPETENCIA
+            %ul.dropdown-menu
+              %li
+                %a.drop-content
+                  = link_to 'AUSPICIADORES', auspiciadores_path
+
           %li.dropdown
             %a{:href => "#", :class => "dropdown-toggle", :data => {:toggle=>"dropdown"}} INSCRIPCIONES
             %ul.dropdown-menu
@@ -24,11 +23,44 @@
                 %a.drop-content
                   FORMULARIOS
           %li= link_to 'DELEGACIONES'
-          %li= link_to 'INFORMACIÓN'
+          %li.dropdown
+            %a{:href => "#", :class => "dropdown-toggle", :data => {:toggle=>"dropdown"}} INFORMACIÓN
+            %ul.dropdown-menu
+              %li
+                %a.drop-content
+                  = link_to 'VISAS', visas_path
+
+
+          %li= link_to 'Noticias', noticias_path
+          %li= link_to 'Mensaje', mensajes_path
+          %li= link_to 'Cerrar Sesión', destroy_admin_session_path, method: :delete
+      - else
+        %ul.nav.navbar-nav
+          %li= link_to 'INICIO', root_path
+          %li.dropdown
+            %a{:href => "#", :class => "dropdown-toggle", :data => {:toggle=>"dropdown"}} COMPETENCIA
+            %ul.dropdown-menu
+              %li
+                %a.drop-content
+                  = link_to 'AUSPICIADORES', auspiciadores_path
+          %li.dropdown
+            %a{:href => "#", :class => "dropdown-toggle", :data => {:toggle=>"dropdown"}} INSCRIPCIONES
+            %ul.dropdown-menu
+              %li
+                %a.drop-content
+                  COSTOS
+              %li
+                %a.drop-content
+                  FORMULARIOS
+          %li= link_to 'DELEGACIONES'
+          %li.dropdown
+            %a{:href => "#", :class => "dropdown-toggle", :data => {:toggle=>"dropdown"}} INFORMACIÓN
+            %ul.dropdown-menu
+              %li
+                %a.drop-content
+                  = link_to 'VISAS', visas_path
+
           %li= link_to 'NOTICIAS', noticias_path
           %li= link_to 'SEÑAL EN VIVO'
           %li= link_to 'CONTACTO', new_mensaje_path
 
-
-          -if current_admin
-            %li= link_to 'AUSPICIADORES', auspiciadores_path

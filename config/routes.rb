@@ -1,4 +1,6 @@
 Agilityperu::Application.routes.draw do
+  resources :visas
+
   resources :mensajes
 
   resources :noticias
