@@ -5,7 +5,7 @@
   .region.line
     .region-texto
       %h1 
-        PER&Uacute; LES DA A 
+        PER&Uacute; LES DA LA 
         %span
           BIENVENIDA,
       %p  
@@ -39,18 +39,22 @@
   .region.line.inscripcion
     .region-inscripcion
       .inscrip-info
-        %p
-          FORMULARIO DE INSCRIPCION
-        = image_tag '/assets/img-inscripcion.jpg'
+        .sub-title
+          %p
+            FORMULARIO DE INSCRIPCION
+        .sub-img
+          = image_tag '/assets/img-inscripcion.jpg', class: 'img-info'
       .inscrip-info
-        %p
-          LISTA DE CONTACTOS
-        = link_to (image_tag '/assets/img-contacto.jpg'), contactos_path
+        .sub-title
+          %p
+            LISTA DE CONTACTOS
+        .sub-img
+          = link_to (image_tag '/assets/img-contacto.jpg', class: 'img-info'), contactos_path
     .region-libre
 
   .region
     .region-info
-      =image_tag '/assets/img-ubicacion.jpg'
+      =image_tag '/assets/img-ubicacion.jpg', :class => 'img-responsive'
       .info
         %h4.titulo
           UBICACI&Oacute;N DEL EVENTO
@@ -64,7 +68,7 @@
         %p
           = truncate(@noticia.contenido, length: 200) if @noticia
     .region-info
-      =image_tag '/assets/img-ubicacion.jpg'
+      =image_tag '/assets/img-ubicacion.jpg', class: 'img-responsive'
       .info
         %h4.titulo
           SE&Ntilde;AL EN VIVO
@@ -72,7 +76,7 @@
           Podrá ver en vivo la inaguracion, compenetancias y premiaciones del Campeonato Mundial de Agility de la FCI 2014
 #region-auspicio
   .container-auspicio
-    .region-auspiciadores
+    .container
       %h1
         CONOCE A NUESTROS 
         %span

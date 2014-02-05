@@ -23,28 +23,40 @@ max-width: 100%;
 .region-texto{
 @extend .col-md-6;
 @extend .col-sm-6;
-@extend .col-xs-6;
+@extend .col-xs-12;
 @extend .col-lg-6;
 }
 
 .region-horas{
 @extend .col-md-6;
 @extend .col-sm-6;
-@extend .col-xs-6;
+@extend .col-xs-12;
 @extend .col-lg-6;
 }
 
 
 .region-inscripcion{
 @extend .col-md-4;
-@extend .col-sm-4;
-@extend .col-xs-4;
+@extend .col-sm-6;
+@extend .col-xs-12;
 @extend .col-lg-4;
   .inscrip-info{
   background-color: $orange-info;
   }
   p{
   color: white;
+  }
+  .sub-title{
+  @extend .col-md-6;
+  @extend .col-lg-6;
+  @extend .col-xs-6;
+  @extend .col-sm-6;
+  }
+  .sub-img{
+  @extend .col-md-6;
+  @extend .col-lg-6;
+  @extend .col-xs-6;
+  @extend .col-sm-6;
   }
 }
 
@@ -67,15 +79,14 @@ min-height: 800px;
 @extend .col-xs-12;
 @extend .col-lg-4;
 img{
-width: 339px;
-height: 175px;
+width:100%;
 }
 }
 
 .region-slider .slide{
-@extend .col-md-6;
-@extend .col-sm-6;
-@extend .col-xs-12;
+@extend .col-md-2;
+@extend .col-sm-2;
+@extend .col-xs-4;
 @extend .col-lg-2;
 }
 
@@ -94,16 +105,22 @@ height: 175px;
 }
 .region-offset{
 @extend .col-md-offset-6;
-@extend .col-sm-offset-6;
-@extend .col-xs-offset-6;
+@extend .col-sm-offset-4;
 @extend .col-lg-offset-6;
 
 }
 .region-footer-contacto{
 @extend .col-md-3;
-@extend .col-sm-3;
-@extend .col-xs-3;
+@extend .col-sm-4;
+@extend .col-xs-12;
 @extend .col-lg-3;
 
 }
 
+.footer p{
+@extend .col-xs-12;
+@extend .col-sm-6;
+@extend .col-md-6;
+@extend .col-lg-3;
+
+}

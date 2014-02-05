@@ -1,7 +1,13 @@
-.navigation
-  .container
+.navigation.navbar-navbar-default{role:'navigation'}
+  .container  
     .navbar-header
-    .collapse.navbar-collapse
+      %button.navbar-toggle{"data-target" => ".navbar-bar-1", "data-toggle" => "collapse", type:"button"}
+        MENU
+        %span.sr-only
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+    .collapse.navbar-collapse.navbar-bar-1
       - if current_admin
         %ul.nav.navbar-nav
           %li= link_to 'INICIO', root_path, class: 'active'

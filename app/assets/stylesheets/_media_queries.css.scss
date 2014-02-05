@@ -1,0 +1,28 @@
+/*RESONSIVE NAVBAR*/
+@media(max-width: 767px){
+
+
+}
+/*IPHONE RESOLUTION*/
+@media(max-width: 640px){
+
+}
+
+/*RESPONSIVE SMALL DEVICE*/
+@media(max-width: 361px){
+#region-Inicio .region-horas{
+  .horas{
+    .texto{font-size: 20px;}
+    .numero{font-size: 50px;}
+  }
+}
+#region-auspicio{
+min-height: 420px;
+}
+.region-footer-contacto {
+padding-bottom: 8px;
+}
+
+footer .social {
+min-height: 60px;}
+}

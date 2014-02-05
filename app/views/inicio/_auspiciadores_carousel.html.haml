@@ -14,13 +14,13 @@
         .item.active
           - auspiciador.each do |auspiciador|
             .slide
-              = link_to image_tag(auspiciador.imagen_url(:thumb)), auspiciador.link, target: '_blank'
+              = link_to image_tag(auspiciador.imagen_url(:thumb), class: 'img-responsive'), auspiciador.link, target: '_blank'
 
       - else
         .item
           - auspiciador.each do |auspiciador|
             .slide
-              = link_to image_tag(auspiciador.imagen_url(:thumb)), auspiciador.link, target: '_blank'
+              = link_to image_tag(auspiciador.imagen_url(:thumb), class: 'img-responsive'), auspiciador.link ,target: '_blank'
 
   = link_to content_tag(:span, '', class: 'glyphicon glyphicon-chevron-left'), '#carousel-auspiciadores', :'data-slide' => 'prev', class: 'left carousel-control'
   = link_to content_tag(:span, '', class: 'glyphicon glyphicon-chevron-right'), '#carousel-auspiciadores', :'data-slide' => 'next', class: 'right carousel-control'

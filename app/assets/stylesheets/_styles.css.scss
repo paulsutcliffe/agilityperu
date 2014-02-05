@@ -10,6 +10,10 @@
 }
 .navigation{
 text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.5);
+.nav.navbar-nav a {
+    text-align: center;
+  }
+.navbar-toggle .icon-bar{background-color:#F0ECE1; margin: 5px auto;}
 .drop-content:hover{
 background-color: #f8ac00;
 }
@@ -72,14 +76,18 @@ main{
 
 .inscrip-info{
   margin-top:150px;
+  min-height: 150px;
 }
 
 .region-inscripcion p{
-display: inline-block;
-text-align: right;
-width: 145px;
+margin-top: 50px;
+ width: 145px;
+ width:90%;
 }
 
+.img-info{
+float:right;
+}
 
 /*INFORMACION*/
 
@@ -106,7 +114,7 @@ padding-bottom: 20px;
 
 .container-auspicio{
   margin: 0px auto;
-  width: 1170px;
+  width: 100%;
   padding: 15px 0 60px;
 }
 
@@ -159,17 +167,45 @@ color:white !important;
           }
 
 /*FOOTER*/
-
-.footer{
+.region-facebook.region-facebook-2 > p {
+            width: 100%;
+          }
+.footer
+  {
   background-color: $footer;
   padding-bottom: 1px;
   p{
     display: inline-block;
     margin-top:10px;
-    margin-left: 120px;
+    padding-left:0px;
+    padding-right: 0px;
   }
+  
 }
 footer{
+  .fb{
+  color:white;
+  }
+  .footer-1{
+      margin-left:0px;
+      text-align: center;
+      width: 28% !important;
+  }
+  .footer-2{
+      margin-left:8px;
+      text-align: center;
+      width: 15% !important;
+  }
+  .footer-3{
+      margin-left:17px;
+      text-align: center;
+      width: 17% !important;
+  }
+  .footer-4{
+      margin-left:15px;
+      text-align: center;
+      width: 26% !important;
+  }
   color:white;
   .info{
   margin-top:10px;
