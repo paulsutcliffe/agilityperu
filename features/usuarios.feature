@@ -13,7 +13,7 @@ Escenario: Ingresar como usuario
   Dado que existe un usuario
   Y que estoy en la página inicial
   Cuando hago click en "Ingresa"
-  Y lleno "E-mail" con "adriel@kosmyka.com" 
+  Y lleno "Email" con "adriel@kosmyka.com" 
   Y lleno "Contraseña" con "12345678"
   Cuando presiono "Ingresar"
   Entonces debería ver "Has iniciado sesión."
@@ -23,11 +23,3 @@ Escenario: Cerrar sesión del usuario
   Y que he iniciado sesión como usuario
   Cuando hago click en "Cerrar Sesión"
   Entonces debería ver "Has cerrado la sesión."
-
-Escenario: Eliminar usuario
-  Dado que existe un usuario
-  Y que he iniciado sesión como administrador
-  Y que estoy en la página inicial
-  Cuando hago click en "Usuario"
-  Y hago click en "Eliminar"
-  Entonces debería ver "El usuario se a eliminado con éxito"
