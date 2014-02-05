@@ -8,19 +8,19 @@ telefono = '98765432'
 Dado(/^lleno el formulario con los datos del usuario$/) do
   fill_in "Nombre", with: nombre
   fill_in "Apellido", with: apellido
-  fill_in "Direccion", with: direccion
-  fill_in "Telefono", with: telefono
+  fill_in "Dirección", with: direccion
+  fill_in "Teléfono", with: telefono
   fill_in "Email", with: email
   fill_in "usuario[password]", :with => password
   fill_in "Confirmar Contraseña", :with => password
 end
 
 Dado(/^que existe un usuario$/) do
-  Usuario.new(:name => nombre, :apellido => apellido, :direccion => direccion, :telefono => telefono, :email => email, :password => password, :password_confirmation => password).save!
+  Usuario.new(:nombre => nombre, :apellido => apellido, :direccion => direccion, :telefono => telefono, :email => email, :password => password, :password_confirmation => password).save!
 end
 
 Dado(/^que he iniciado sesión como usuario$/) do
-  Usuario.new(:name => nombre, :apellido => apellido, :direccion => direccion, :telefono => telefono, :email => email, :password => password, :password_confirmation => password).save!
+  Usuario.new(:nombre => nombre, :apellido => apellido, :direccion => direccion, :telefono => telefono, :email => email, :password => password, :password_confirmation => password).save!
   visit('/usuarios/ingresar')
   fill_in "Email", :with => email
   fill_in "Contraseña", :with => password

@@ -8,6 +8,8 @@ DatabaseCleaner.clean
 
 FactoryGirl.create :admin
 
+FactoryGirl.create :usuario
+
 3.times do
   FactoryGirl.create :slide
 end

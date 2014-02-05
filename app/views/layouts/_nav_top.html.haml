@@ -1,0 +1,13 @@
+%ul.nav.nav-pills.navbar-right
+  - if current_usuario
+    %li.link
+      = link_to 'Cerrar Sesión', destroy_usuario_session_path, :id => 'sign_out', :method => :delete
+    %li.link
+      = link_to 'Mis Duplas'
+  - else
+    %li.link.first
+      = link_to 'Regístrate', new_usuario_registration_path
+    %li.link
+      = link_to 'Ingresa', new_usuario_session_path
+  %li
+    = link_to content_tag(:i, '', class: 'icon facebook'), 'https://www.facebook.com/mascotasperdidasperuoficial'
