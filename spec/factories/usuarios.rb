@@ -6,6 +6,8 @@ FactoryGirl.define do
     apellido "pinzas"
     telefono "12345678"
     direccion "salamanca"
+    ciudad "Lima"
+    pais "Peru"
     email "email@domain.com"
     password "12345678"
     password_confirmation "12345678"
