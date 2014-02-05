@@ -4,11 +4,11 @@
 #region-Inicio.container
   .region.line
     .region-texto
-      %h1 
-        PER&Uacute; LES DA LA 
+      %h1
+        PER&Uacute; LES DA LA
         %span
           BIENVENIDA,
-      %p  
+      %p
         El Kennel Club Peruano tiene el honor de organizar el XIV Campeonato de Agility de las Americas y el Caribe de la FCI, a llevarse a cabo del 3 al 6 de Abril del 2014.
         %br
         %br
@@ -35,7 +35,7 @@
           %br
           %span.texto
             minutos
-  
+
   .region.line.inscripcion
     .region-inscripcion
       .inscrip-info
@@ -49,17 +49,17 @@
           %p
             LISTA DE CONTACTOS
         .sub-img
-          = link_to (image_tag '/assets/img-contacto.jpg', class: 'img-info'), contactos_path
+          = link_to image_path('img-contacto.jpg'), class: 'img-info'), contactos_path
     .region-libre
 
   .region
     .region-info
-      =image_tag '/assets/img-ubicacion.jpg', :class => 'img-responsive'
+      =image_tag image_path('img-ubicacion.jpg'), :class => 'img-responsive'
       .info
         %h4.titulo
           UBICACI&Oacute;N DEL EVENTO
         %p
-          El Complejo Deportivo cuenta con 5 canchas de futbol adyacentes con superficie de gras artificial. Se utilizara la cancha del medio para instalar la pista de 
+          El Complejo Deportivo cuenta con 5 canchas de futbol adyacentes con superficie de gras artificial. Se utilizara la cancha del medio para instalar la pista de
     .region-info
       = link_to image_tag(@noticia.foto_url(:thumb)), @noticia if @noticia
       .info
@@ -68,7 +68,7 @@
         %p
           = truncate(@noticia.contenido, length: 200) if @noticia
     .region-info
-      =image_tag '/assets/img-ubicacion.jpg', class: 'img-responsive'
+      =image_tag image_path('img-ubicacion.jpg'), class: 'img-responsive'
       .info
         %h4.titulo
           SE&Ntilde;AL EN VIVO
@@ -78,7 +78,7 @@
   .container-auspicio
     .container
       %h1
-        CONOCE A NUESTROS 
+        CONOCE A NUESTROS
         %span
           AUSPICIADORES
     .region-slider
