@@ -14,16 +14,18 @@
           %li= link_to 'SLIDES', slides_path
           %li.dropdown
             %a{:href => "#", :class => "dropdown-toggle", :data => {:toggle=>"dropdown"}} COMPETENCIA
-            %ul.dropdown-menu
-              %li
-                %a.drop-content
-                  = link_to 'ORGANIZACIÓN', organizadores_path
-              %li
-                %a.drop-content
-                  = link_to 'PROGRAMA', programas_path
-              %li
-                %a.drop-content
-                  = link_to 'AUSPICIADORES', auspiciadores_path
+            .dropdown-menu
+              %p.arrow
+              %ul.dropdown-list
+                %li
+                  %a.drop-content
+                    = link_to 'ORGANIZACIÓN', organizadores_path
+                %li
+                  %a.drop-content
+                    = link_to 'PROGRAMA', programas_path
+                %li
+                  %a.drop-content
+                    = link_to 'AUSPICIADORES', auspiciadores_path
 
           %li.dropdown
             %a{:href => "#", :class => "dropdown-toggle", :data => {:toggle=>"dropdown"}} INSCRIPCIONES
@@ -61,42 +63,54 @@
           %li= link_to 'INICIO', root_path
           %li.dropdown
             %a{:href => "#", :class => "dropdown-toggle", :data => {:toggle=>"dropdown"}} COMPETENCIA
-            %ul.dropdown-menu
-              %li
-                %a.drop-content
-                  = link_to 'ORGANIZACIÓN', organizadores_path
-              %li
-                %a.drop-content
-                  = link_to 'PROGRAMA', programas_path
-              %li
-                %a.drop-content
-                  = link_to 'AUSPICIADORES', auspiciadores_path
+            .dropdown-menu
+              %p.arrow
+                %ul.dropdown-list
+                  %li
+                    %a.drop-content
+                      = link_to 'ORGANIZACIÓN', organizadores_path
+                  %li
+                    %a.drop-content
+                      = link_to 'PROGRAMA', programas_path
+                  %li
+                    %a.drop-content
+                      = link_to 'AUSPICIADORES', auspiciadores_path
           %li.dropdown
             %a{:href => "#", :class => "dropdown-toggle", :data => {:toggle=>"dropdown"}} INSCRIPCIONES
-            %ul.dropdown-menu
-              %li
-                %a.drop-content
-                  COSTOS
-              %li
-                %a.drop-content
-                  = link_to 'INSCRIBIRSE', new_dupla_path
+            .dropdown-menu
+              %p.arrow
+                %ul.dropdown-list
+                  %li
+                    %a.drop-content
+                      COSTOS
+                  %li
+                    %a.drop-content
+                      = link_to 'INSCRIBIRSE', new_dupla_path
 
           %li= link_to 'DELEGACIONES'
           %li.dropdown
             %a{:href => "#", :class => "dropdown-toggle", :data => {:toggle=>"dropdown"}} INFORMACIÓN
-            %ul.dropdown-menu
-              %li
-                %a.drop-content
-                  = link_to 'VISAS', visas_path
-              %li
-                %a.drop-content
-                  = link_to 'REQUISITOS PARA CANES', requisitos_path
-              %li
-                %a.drop-content
-                  = link_to 'HOTELES', hoteles_path
-              %li
-                %a.drop-content
-                  = link_to 'TRANSPORTES', transportes_path
+            .dropdown-menu
+              %p.arrow
+                %ul.dropdown-list
+                  %li
+                    %a.drop-content
+                      COSTOS
+                  %li
+                    %a.drop-content
+                      = link_to 'INSCRIBIRSE', new_dupla_path
+                  %li
+                    %a.drop-content
+                      = link_to 'VISAS', visas_path
+                  %li
+                    %a.drop-content
+                      = link_to 'REQUISITOS PARA CANES', requisitos_path
+                  %li
+                    %a.drop-content
+                      = link_to 'HOTELES', hoteles_path
+                  %li
+                    %a.drop-content
+                      = link_to 'TRANSPORTES', transportes_path
 
           %li= link_to 'NOTICIAS', noticias_path
           %li= link_to 'SEÑAL EN VIVO', streamings_path

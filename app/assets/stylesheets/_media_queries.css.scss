@@ -1,6 +1,12 @@
 /*RESONSIVE NAVBAR*/
 @media(max-width: 767px){
 
+footer .social {
+min-height: 60px;
+}
+.region-footer-contacto {
+padding-bottom: 8px;
+}
 
 }
 /*IPHONE RESOLUTION*/
@@ -19,10 +25,12 @@
 #region-auspicio{
 min-height: 420px;
 }
-.region-footer-contacto {
-padding-bottom: 8px;
 }
 
-footer .social {
-min-height: 60px;}
+/*SLIDER AUSPICIO*/
+@media(min-width:362px)and(max-width:767px){
+#region-auspicio{
+  min-height:500px;
 }
+}
+

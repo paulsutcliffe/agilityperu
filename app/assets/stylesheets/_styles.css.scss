@@ -28,13 +28,39 @@ ul li a:hover, ul li a:focus{
 }
 
 .dropdown-menu{
-  background-color: none;
-  background: url('text.png') no-repeat center;
-  background-size: cover;
   border: none;
-text-shadow:none;
+  text-shadow:none;
+  box-shadow:none;
+  background-color:inherit;
+  padding: 5px 0px;
+  margin-top: -6px !important;
   a{
   color:white !important;
+  }
+  .arrow{
+  background: url(image_path('arrow.png')) no-repeat center top;
+  margin: 0px 0px -2px 0px;
+  min-height: 8px;
+  padding: 0px;
+  }
+  .dropdown-list{
+  background-color: orange;
+  border-radius: 8px;
+  }
+  ul {
+    text-align:center;
+    padding: 10px 0px;
+    li{
+    list-style:none;
+        padding-bottom: 5px;
+    }
+    a{
+    padding-bottom: 5px;
+    }
+  }
+  ul li a:hover{
+  background-color:orange;
+  text-decoration:none;
   }
 }
 }
@@ -47,7 +73,15 @@ main{
   marin-left:0px;
   bottom: -42px !important;
   }
-  ul li{}
+  .fecha{
+    border: medium none;
+    bottom: 0;
+    color: #FFFFFF;
+    padding: 0;
+    position: absolute;
+    width: 100%;
+    margin: 0;
+  }
 }
 
 #region-Inicio{
@@ -99,7 +133,7 @@ background-color:white;
 padding-left: 10px;
 padding-right: 10px;
 padding-bottom: 20px;
-  min-height: 180px;
+height: 250px;
   }
 }
 
@@ -140,7 +174,8 @@ padding-bottom: 20px;
    background-color: #999999;
   }
   .carousel.slide{
-  width:100%;
+  margin-left: 5%;
+  width: 90%;
   }
   .carousel-control{
     width: 0px;
