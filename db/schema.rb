@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140205191519) do
+ActiveRecord::Schema.define(version: 20140205213415) do
 
   create_table "admins", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -45,6 +45,24 @@ ActiveRecord::Schema.define(version: 20140205191519) do
     t.text     "contenido"
     t.string   "email"
     t.string   "website"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "duplas", force: true do |t|
+    t.string   "nombre"
+    t.string   "pais"
+    t.string   "registro_genealogico"
+    t.string   "raza"
+    t.string   "color"
+    t.string   "sexo"
+    t.string   "categoria"
+    t.string   "grado"
+    t.string   "tatuaje_microchip"
+    t.string   "prueba"
+    t.string   "fotografia"
+    t.date     "fecha_nacimiento"
+    t.integer  "usuario_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

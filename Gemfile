@@ -49,6 +49,8 @@ group :test do
   gem 'database_cleaner'
   gem 'selenium-webdriver'
 end
+gem 'countries'
+gem 'country_select'
 gem "bootstrap-sass", "~> 3.0.3.0"
 gem "compass-rails", group: :assets
 gem "rails_layout", group: :development

@@ -1,0 +1,12 @@
+#region-duplas.container
+
+  .region
+    .region-title
+      %h1= page_title!('Duplas')
+
+    .region
+      - if current_usuario
+        .admin-control
+          = link_to 'Crear Dupla', new_dupla_path, class: 'btn btn-primary'
+
+

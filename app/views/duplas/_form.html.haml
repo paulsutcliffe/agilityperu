@@ -1,0 +1,76 @@
+= form_for @dupla, :html => { class: 'form-horizontal', role: 'form' } do |f|
+  - if @dupla.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@dupla.errors.count, "error")}"
+      %ul
+        - @dupla.errors.full_messages.each do |msg|
+          %li= msg
+
+  .form-group
+    = f.label :nombre, class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.text_field :nombre, class: 'form-control'
+  .form-group
+    = f.label :pais, class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.text_field :pais, class: 'form-control'
+  .form-group
+    = f.label :registro_genealogico, class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.text_field :registro_genealogico, class: 'form-control'
+  .form-group
+    = f.label :raza, class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.text_field :raza, class: 'form-control'
+  .form-group
+    = f.label :color, class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.text_field :color, class: 'form-control'
+  .form-group
+    = f.label :sexo, class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.label :sexo, "Macho"
+      = f.radio_button :sexo, "Macho"
+      = f.label :sexo, "Hembra"
+      = f.radio_button :sexo, "Hembra"
+  .form-group
+    = f.label :fecha_nacimiento, class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.date_select :fecha_nacimiento, class: 'form-control'
+  .form-group
+    = f.label :categoria, class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.label :categoria, "Small"
+      = f.radio_button :categoria, "Small"
+      = f.label :categoria, "Medium"
+      = f.radio_button :categoria, "Medium"
+      = f.label :categoria, "Large"
+      = f.radio_button :categoria, "Large"
+  .form-group
+    = f.label :grado, class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.label :grado, "G1"
+      = f.radio_button :grado, "G1"
+      = f.label :grado, "G2"
+      = f.radio_button :grado, "G2"
+      = f.label :grado, "G3"
+      = f.radio_button :grado, "G3"
+  .form-group
+    = f.label :tatuaje_microchip, class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.text_field :tatuaje_microchip, class: 'form-control'
+  .form-group
+    = f.label :prueba, class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.label :prueba, "Especial G1"
+      = f.check_box :prueba
+      = f.label :prueba, "Open A&C"
+      = f.check_box :prueba
+      = f.label :prueba, "A&C Oficial"
+      = f.check_box :prueba
+  .form-group
+    = f.label :fotografia, class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.file_field :fotografia, class: 'form-control'
+  .actions
+    = f.submit 'Guardar', class: 'btn btn-default'

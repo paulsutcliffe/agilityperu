@@ -1,0 +1,48 @@
+#region-duplas.container
+
+  .region
+    .region-title
+      %h1= page_title!('duplas')
+
+    .region
+      - if current_admin
+        .admin-control
+          = link_to 'Crear Dupla', new_dupla_path, class: 'btn btn-primary'
+
+      .table-responsive
+        %table.table
+          %tr
+            %th Nombre
+            %th Pais
+            %th Registro genealogico
+            %th Raza
+            %th Color
+            %th Sexo
+            %th Categoria
+            %th Grado
+            %th Tatuaje microchip
+            %th Prueba
+            %th Fotografia
+            %th Fecha nacimiento
+            %th
+            %th
+            %th
+
+          - @duplas.each do |dupla|
+            %tr
+              %td= dupla.nombre
+              %td= dupla.pais
+              %td= dupla.registro_genealogico
+              %td= dupla.raza
+              %td= dupla.color
+              %td= dupla.sexo
+              %td= dupla.categoria
+              %td= dupla.grado
+              %td= dupla.tatuaje_microchip
+              %td= dupla.prueba
+              %td= dupla.fotografia
+              %td= dupla.fecha_nacimiento
+              %td= link_to 'Ver', dupla, class: 'btn btn-info'
+              - if current_admin
+                %td= link_to 'Editar', edit_dupla_path(dupla), class: 'btn btn-success'
+                %td= link_to 'Eliminar', dupla, :method => :delete, :data => { :confirm => '¿Estás Seguro?' }, class: 'btn btn-danger'

@@ -1,6 +1,9 @@
 Agilityperu::Application.routes.draw do
 
-  
+  match '/duplas/mis-dublas' => 'duplas#mis_duplas', via: :get, as: 'mis_duplas'
+
+  resources :duplas
+
   resources :programas
 
   resources :organizadores

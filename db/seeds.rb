@@ -57,3 +57,7 @@ end
 6.times do
   FactoryGirl.create :programa
 end
+
+12.times do
+  FactoryGirl.create :dupla
+end

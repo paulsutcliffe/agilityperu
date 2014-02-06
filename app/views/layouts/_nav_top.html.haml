@@ -3,7 +3,7 @@
     %li.link
       = link_to 'Cerrar Sesión', destroy_usuario_session_path, :id => 'sign_out', :method => :delete
     %li.link
-      = link_to 'Mis Duplas'
+      = link_to 'Mis Duplas', mis_duplas_path
   - else
     %li.link.first
       = link_to 'Regístrate', new_usuario_registration_path
