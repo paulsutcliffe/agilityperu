@@ -2,10 +2,10 @@
   .container
     .social
       .region-footer-contacto
-        = image_tag '/assets/mail.png'
-        %a info@agilityperu2016.com
+        = image_tag image_path('mail.png')
+        %a info@agilityperu2014.com
       .region-footer-contacto.region-offset
-        = image_tag '/assets/camara.png'
+        = image_tag image_path('camara.png')
         %a Melissa Thereliz
 
     .info
@@ -13,9 +13,9 @@
         %p
           Puedes encontrarnos en :
         %div
-          =image_tag '/assets/facebook.png';
+          = image_tag image_path('facebook.png')
           %span.fb
-            '/agilityperu2014'
+            agilityperu2014
       .region-facebook.region-facebook-2
         %h2
           %b
@@ -33,4 +33,4 @@
     %p.footer-3
       Mariscal Miller N°2649, Lince
     %p.footer-4
-      441-1367 / 441-1247 / 441-1207 
+      441-1367 / 441-1247 / 441-1207
