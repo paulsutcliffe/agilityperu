@@ -36,7 +36,7 @@
               %li
                 %a.drop-content
                   FORMULARIOS
-          %li= link_to 'DELEGACIONES'
+          %li= link_to 'DELEGACIONES', duplas_path
           %li.dropdown
             %a{:href => "#", :class => "dropdown-toggle", :data => {:toggle=>"dropdown"}} INFORMACIÓN
             %ul.dropdown-menu
@@ -87,15 +87,12 @@
                     %a.drop-content
                       = link_to 'INSCRIBIRSE', new_dupla_path
 
-          %li= link_to 'DELEGACIONES'
+          %li= link_to 'DELEGACIONES', duplas_path
           %li.dropdown
             %a{:href => "#", :class => "dropdown-toggle", :data => {:toggle=>"dropdown"}} INFORMACIÓN
             .dropdown-menu
               %p.arrow
                 %ul.dropdown-list
-                  %li
-                    %a.drop-content
-                      COSTOS
                   %li
                     %a.drop-content
                       = link_to 'INSCRIBIRSE', new_dupla_path

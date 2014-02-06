@@ -1,4 +1,4 @@
-= form_for @dupla, :html => { class: 'form-horizontal', role: 'form' } do |f|
+= form_for [@usuario, @dupla], :html => { class: 'form-horizontal', role: 'form' } do |f|
   - if @dupla.errors.any?
     #error_explanation
       %h2= "#{pluralize(@dupla.errors.count, "error")}"
@@ -13,7 +13,7 @@
   .form-group
     = f.label :pais, class: 'col-sm-2 control-label'
     .col-sm-10
-      = f.text_field :pais, class: 'form-control'
+      = country_select("dupla", "pais")
   .form-group
     = f.label :registro_genealogico, class: 'col-sm-2 control-label'
     .col-sm-10
