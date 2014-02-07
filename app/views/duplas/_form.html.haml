@@ -1,4 +1,4 @@
-= form_for [@usuario, @dupla], :html => { class: 'form-horizontal', role: 'form' } do |f|
+= nested_form_for [@usuario, @dupla], :html => { class: 'form-horizontal', role: 'form', :multipart => true } do |f|
   - if @dupla.errors.any?
     #error_explanation
       %h2= "#{pluralize(@dupla.errors.count, "error")}"
@@ -15,7 +15,7 @@
     .col-sm-10
       = country_select("dupla", "pais")
   .form-group
-    = f.label :registro_genealogico, class: 'col-sm-2 control-label'
+    = f.label :registro_genealogico, "Registro Genealógico", class: 'col-sm-2 control-label'
     .col-sm-10
       = f.text_field :registro_genealogico, class: 'form-control'
   .form-group
@@ -56,21 +56,33 @@
       = f.label :grado, "G3"
       = f.radio_button :grado, "G3"
   .form-group
-    = f.label :tatuaje_microchip, class: 'col-sm-2 control-label'
+    = f.label :tatuaje_microchip,"Tatuaje/Microchip", class: 'col-sm-2 control-label'
     .col-sm-10
       = f.text_field :tatuaje_microchip, class: 'form-control'
   .form-group
     = f.label :prueba, class: 'col-sm-2 control-label'
     .col-sm-10
       = f.label :prueba, "Especial G1"
-      = f.check_box :prueba
+      = f.check_box :prueba, {:multiple => true }, "Especial G1"
       = f.label :prueba, "Open A&C"
-      = f.check_box :prueba
+      = f.check_box :prueba, {:multiple => true }, "Open A&C"
       = f.label :prueba, "A&C Oficial"
-      = f.check_box :prueba
+      = f.check_box :prueba, {:multiple => true }, "A&C Oficial"
   .form-group
     = f.label :fotografia, class: 'col-sm-2 control-label'
     .col-sm-10
       = f.file_field :fotografia, class: 'form-control'
+
+  .form-group
+    = f.label 'Guias', class: 'col-sm-2 control-label'
+    .col-sm-8
+      = f.fields_for :guias do |guia_form|
+        = guia_form.text_field :nombre, placeholder: "Nombre", class: 'form-control'
+        = guia_form.text_field :apellido, placeholder: "Apellido", class: 'form-control'
+        = guia_form.text_field :direccion, placeholder: "Direccion", class: 'form-control'
+        = guia_form.text_field :telefono, placeholder: "Telefono", class: 'form-control'
+        = guia_form.text_field :email, placeholder: "Email", class: 'form-control'
+        = guia_form.link_to_remove "Eliminar Guia", class: 'btn btn-danger'
+      = f.link_to_add "Agregar Guia", :guias, class: 'btn btn-primary'
   .actions
     = f.submit 'Guardar', class: 'btn btn-default'

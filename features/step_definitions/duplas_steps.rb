@@ -3,7 +3,7 @@ Cuando(/^selecciono "(.*?)" con "(.*?)"$/) do |valor, campo|
 end
 
 Cuando(/^en "(.*?)" elijo "(.*?)"$/) do |label, valor|
-  choose(campo)
+  choose(valor)
 end
 
 Cuando(/^en "(.*?)" marco "(.*?)"$/) do |label, valor|

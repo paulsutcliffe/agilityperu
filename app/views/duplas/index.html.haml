@@ -5,9 +5,9 @@
       %h1= page_title!('duplas')
 
     .region
-      - if current_admin
+      - if current_usuario
         .admin-control
-          = link_to 'Crear Dupla', new_dupla_path, class: 'btn btn-primary'
+          = link_to 'Inscribir una Nueva Dupla', new_dupla_path, class: 'btn btn-primary'
 
   .region
     #duplas

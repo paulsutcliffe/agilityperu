@@ -1,0 +1,18 @@
+- page_title!('Editando guia')
+
+#region-guias.container
+
+  .region
+    .region-title
+      %h1
+        Editando
+        %b
+          guia
+
+  .region
+    = render 'form'
+
+  .region
+    .admin-controls
+      = link_to 'Ver', @guia, class: 'btn btn-info'
+      = link_to 'Regresar', 'javascript:history.back(-1)', class: 'btn btn-warning'

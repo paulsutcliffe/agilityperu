@@ -1,0 +1,27 @@
+#region-guias.container
+  .region
+    .region-title
+      %h1= page_title!('guia')
+
+  .region
+    %p
+      %b Nombre:
+      = @guia.nombre
+    %p
+      %b Apellido:
+      = @guia.apellido
+    %p
+      %b Direccion:
+      = @guia.direccion
+    %p
+      %b Telefeno:
+      = @guia.telefeno
+    %p
+      %b Email:
+      = @guia.email
+
+  .region
+    - if current_admin
+      .admin-controls
+        = link_to 'Editar', edit_guia_path(@guia), class: 'btn btn-success'
+    = link_to 'Regresar', guias_path, class: 'btn btn-warning'

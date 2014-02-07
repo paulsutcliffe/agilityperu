@@ -6,7 +6,7 @@ class DuplasController < InheritedResources::Base
   before_filter :setup_usuario
   
   def permitted_params
-    params.permit(:dupla => [:nombre, :pais, :registro_genealogico, :raza, :color, :sexo, :categoria, :grado, :tatuaje_microchip, :prueba, :fotografia, :fecha_nacimiento, :usuario_id])
+    params.permit(:dupla => [:nombre, :pais, :registro_genealogico, :raza, :color, :sexo, :categoria, :grado, :tatuaje_microchip, :prueba, :fotografia, :fecha_nacimiento, :usuario_id, guias_attributes: [:nombre, :apellido, :direccion, :telefono, :email]])
   end
 
   def index
