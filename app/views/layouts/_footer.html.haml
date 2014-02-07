@@ -12,10 +12,11 @@
       .region-facebook
         %p.region-texto
           Puedes encontrarnos en :
-        .inner-facebook.region-texto
-          = image_tag image_path('facebook.png')
-          %p.fb
-            agilityperu2014
+        = link_to ('http://facebook.com/agilityperu2014'), target: '_blank'  do 
+          .inner-facebook.region-texto
+            = image_tag image_path('facebook.png')
+            %p.fb
+              &#47;agilityperu2014
       .region-facebook.region-facebook-2
         %h2
           %b
