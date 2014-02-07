@@ -1,15 +1,15 @@
-#region-organizadores.container
+#region-organizadores.container.seccion
 
   .region
     .region-title
-      %h1= page_title!('organizadores')
+      %h1= page_title!('ORGANIZADORES')
 
     .region
       - if current_admin
         .admin-control
           = link_to 'Crear Organizador', new_organizador_path, class: 'btn btn-primary'
 
-      .table-responsive
+      -#.table-responsive
         %table.table
           %tr
             %th Titulo
@@ -17,10 +17,13 @@
             %th
             %th
 
-          - @organizadores.each do |organizador|
-            %tr
-              %td= organizador.titulo
-              %td= organizador.contenido
-              - if current_admin
-                %td= link_to 'Editar', edit_organizador_path(organizador), class: 'btn btn-success'
-                %td= link_to 'Eliminar', organizador, :method => :delete, :data => { :confirm => '¿Estás Seguro?' }, class: 'btn btn-danger'
+      - @organizadores.each do |organizador|
+        %h3.titulos
+          = image_tag(image_path('icon-organizador.png'))
+          = organizador.titulo
+        %ul
+          %li= organizador.contenido
+          - if current_admin
+            %td= link_to 'Editar', edit_organizador_path(organizador), class: 'btn btn-success'
+            %td= link_to 'Eliminar', organizador, :method => :delete, :data => { :confirm => '¿Estás Seguro?' }, class: 'btn btn-danger'
+

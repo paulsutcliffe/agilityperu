@@ -58,6 +58,7 @@
       .info
         %h4.titulo
           UBICACI&Oacute;N DEL EVENTO
+          = image_tag (image_path('icon-ubicacion.png')), class: 'icon'
         %p
           El Complejo Deportivo cuenta con 5 canchas de futbol adyacentes con superficie de gras artificial. Se utilizara la cancha del medio para instalar la pista de
     .region-info
@@ -65,13 +66,15 @@
       .info
         %h4.titulo
           JUECES
+          = image_tag (image_path('icon-jueces.png')), class: 'icon'
         %p
           = truncate(@noticia.contenido, length: 200) if @noticia
     .region-info
       =image_tag image_path('img-ubicacion.jpg'), class: 'img-responsive'
       .info
         %h4.titulo
-          ULTIMAS NOTICIAS
+          %span ULTIMAS NOTICIAS
+          = image_tag (image_path('icon-noticias.png')), class: 'icon'
         %p
           Podrá ver en vivo la inaguracion, compenetancias y premiaciones del Campeonato Mundial de Agility de la FCI 2014
     .region-info
@@ -79,6 +82,7 @@
       .info
         %h4.titulo
           SE&Ntilde;AL EN VIVO
+          = image_tag (image_path('icon-transmision.png')), class: 'icon'
         %p
           Podrá ver en vivo la inaguracion, compenetancias y premiaciones del Campeonato Mundial de Agility de la FCI 2014
     .region-info
@@ -86,6 +90,7 @@
       .info
         %h4.titulo
           RESULTADOS
+          = image_tag (image_path('icon-resultados.png')), class: 'icon'
         %p
           Podrá ver en vivo la inaguracion, compenetancias y premiaciones del Campeonato Mundial de Agility de la FCI 2014
     .region-info
@@ -93,6 +98,7 @@
       .info
         %h4.titulo
           PISTAS
+          = image_tag (image_path('icon-pistas.png')), class: 'icon'
         %p
           Podrá ver en vivo la inaguracion, compenetancias y premiaciones del Campeonato Mundial de Agility de la FCI 2014
 #region-auspicio
