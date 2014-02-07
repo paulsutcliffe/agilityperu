@@ -5,6 +5,6 @@ FactoryGirl.define do
     titulo { Faker::Name.title}
     foto { Rack::Test::UploadedFile.new(File.join(Rails.root,'features','support','foto_noticia1.jpg'))}
     fecha "2014-02-03"
-    contenido { Faker::Lorem.paragraph }
+    contenido { Faker::Lorem.paragraphs }
   end
 end
