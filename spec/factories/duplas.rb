@@ -14,5 +14,6 @@ FactoryGirl.define do
     prueba { ["Especial G1", "Open A&C", "A&C Oficial"].sample }
     fotografia { Rack::Test::UploadedFile.new(File.join(Rails.root,'features','support','fotografia1.jpg'))}
     fecha_nacimiento "2014-02-05"
+    usuario_id 1
   end
 end

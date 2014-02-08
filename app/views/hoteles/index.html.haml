@@ -1,4 +1,4 @@
-#region-hoteles.container
+#region-hoteles.container.seccion
 
   .region
     .region-title
@@ -9,22 +9,19 @@
         .admin-control
           = link_to 'Crear Hotel', new_hotel_path, class: 'btn btn-primary'
 
-      .table-responsive
-        %table.table
-          %tr
-            %th Nombre
-            %th Descripcion
-            %th Email
-            %th Website
-            %th
-            %th
 
-          - @hoteles.each do |hotel|
-            %tr
-              %td= hotel.nombre
-              %td= hotel.descripcion
-              %td= hotel.email
-              %td= hotel.website
-              - if current_admin
-                %td= link_to 'Editar', edit_hotel_path(hotel), class: 'btn btn-success'
-                %td= link_to 'Eliminar', hotel, :method => :delete, :data => { :confirm => '¿Estás Seguro?' }, class: 'btn btn-danger'
+    - @hoteles.each do |hotel|
+      %h3.titulos
+        = hotel.nombre
+      
+      .descripcion
+        = hotel.descripcion
+      
+      .contactos
+        = hotel.email
+        %br
+        = link_to hotel.website, :target => '_blank'
+    
+    - if current_admin
+      = link_to 'Editar', edit_hotel_path(hotel), class: 'btn btn-success'
+      = link_to 'Eliminar', hotel, :method => :delete, :data => { :confirm => '¿Estás Seguro?' }, class: 'btn btn-danger'

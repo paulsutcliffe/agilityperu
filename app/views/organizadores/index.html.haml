@@ -4,7 +4,7 @@
     .region-title
       %h1= page_title!('ORGANIZADORES')
 
-    .region
+    %div
       - if current_admin
         .admin-control
           = link_to 'Crear Organizador', new_organizador_path, class: 'btn btn-primary'

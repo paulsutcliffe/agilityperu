@@ -1,17 +1,43 @@
-%ul.dupla
-  %li= dupla.usuario_id
-  %li= dupla.nombre
-  %li= dupla.pais
-  %li= dupla.registro_genealogico
-  %li= dupla.raza
-  %li= dupla.color
-  %li= dupla.sexo
-  %li= dupla.categoria
-  %li= dupla.grado
-  %li= dupla.tatuaje_microchip
-  %li= dupla.prueba
-  %li= image_tag dupla.fotografia_url(:thumb)
-  %li= dupla.fecha_nacimiento
+.region-datos
+  .region-info-title
+    .region-pais
+      %p.pais
+        =dupla.usuario.pais
+      %p.compartir 
+        COMPARTIR
+        =image_tag image_path 'facebook-gray.png'
+
+  .region-imagen
+    = image_tag dupla.fotografia_url(:thumb)
+  .region-informacion
+    %ul.dupla
+      -#%li.datos= dupla.usuario_id
+      %li.titulo-dato NOMBRE:
+      %li.datos= dupla.nombre
+      %li.titulo-dato PA&Iacute;S:
+      %li.datos= dupla.pais
+      %li.titulo-dato RAZA:
+      %li.datos= dupla.raza
+      %li.titulo-dato PRUEBA:
+      %li.datos= dupla.prueba
+      %li.titulo-dato PROPIETARIO:
+      %li.datos= dupla.usuario.nombre + ' ' + dupla.usuario.apellido
+      %li.titulo-dato FECHA NACIMIENTO:
+      %li.datos= dupla.fecha_nacimiento
+      %li.titulo-dato REGISTRO GENEALOGICO:
+      %li.datos= dupla.registro_genealogico
+      %li.titulo-dato COLOR:
+      %li.datos= dupla.color
+      %li.titulo-dato SEXO:
+      %li.datos= dupla.sexo
+      %li.titulo-dato CATEGORIA:
+      %li.datos= dupla.categoria
+      %li.titulo-dato GRADO:
+      %li.datos= dupla.grado
+      %li.titulo-dato TATUAJE/MICROCHIP:
+      %li.datos= dupla.tatuaje_microchip
+
+
 - if current_admin
   = link_to 'Editar', edit_dupla_path(dupla), class: 'btn btn-success'
   = link_to 'Eliminar', dupla, :method => :delete, :data => { :confirm => '¿Estás Seguro?' }, class: 'btn btn-danger'

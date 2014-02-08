@@ -124,3 +124,46 @@ width:100%;
 @extend .col-lg-3;
 
 }
+
+#noticia{
+.region-titulo{
+@extend .col-xs-12;
+@extend .col-sm-6;
+@extend .col-md-6;
+@extend .col-lg-4;
+}
+.region-contenido{
+@extend .col-xs-12;
+@extend .col-sm-6;
+@extend .col-md-6;
+@extend .col-lg-8;
+}
+}
+
+#region-duplas{
+.region-informacion{
+@extend .col-xs-12;
+@extend .col-sm-6;
+@extend .col-md-6;
+@extend .col-lg-6;
+}
+.region-pais{
+@extend .col-xs-12;
+@extend .col-sm-12;
+@extend .col-md-12;
+@extend .col-lg-12;
+
+}
+.region-datos{
+@extend .col-xs-12;
+@extend .col-sm-12;
+@extend .col-md-12;
+@extend .col-lg-12;
+}
+.region-imagen{
+@extend .col-xs-12;
+@extend .col-sm-6;
+@extend .col-md-6;
+@extend .col-lg-6;
+}
+}

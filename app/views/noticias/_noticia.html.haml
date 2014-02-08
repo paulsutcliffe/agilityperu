@@ -1,19 +1,26 @@
-#noticia
-  %ul.top-nav
-    - if @noticia.siguiente_noticia
-      %li
-        = link_to '>', @noticia.siguiente_noticia, remote: true
-    - if @noticia.noticia_anterior
-      %li
-        = link_to '<', @noticia.noticia_anterior, remote: true
+.region-titulo
   %h2.title.ajax-title= @noticia.titulo
-
+  .image-noticia
+    = image_tag image_path'img-ubicacion.jpg'
+  .social-share
+    .compartir-fb
+      %p
+        %b
+          COMPARTIR
+          =image_tag image_path 'facebook.png'    
+      %br
+      .noticias-arrows
+        = link_to content_tag(:i, '', class: 'icon facebook_3'), 'https://www.facebook.com/sharer/sharer.php?u=' + request.original_url, target: '_blank'
+        = link_to content_tag(:i, '', class: 'icon linkedin_3'), 'http://www.linkedin.com/shareArticle?mini=true&amp;url=' + request.original_url + '&amp;title=MCIF&amp;summary=MCIF', target: '_blank'
+    %br
+    %ul.top-nav
+      - if @noticia.noticia_anterior
+        %li
+          = link_to '', @noticia.noticia_anterior, remote: true, class: 'arrow_left'
+      -  if @noticia.siguiente_noticia
+        %li
+          = link_to '', @noticia.siguiente_noticia, remote: true, class:'arrow_right'
+.region-contenido
   %p
     = raw(@noticia.contenido)
-  %br
-  .social-share
-    %b.pull-left
-      COMPARTIR EN:
-    = link_to content_tag(:i, '', class: 'icon facebook_3'), 'https://www.facebook.com/sharer/sharer.php?u=' + request.original_url, target: '_blank'
-    = link_to content_tag(:i, '', class: 'icon linkedin_3'), 'http://www.linkedin.com/shareArticle?mini=true&amp;url=' + request.original_url + '&amp;title=MCIF&amp;summary=MCIF', target: '_blank'
 

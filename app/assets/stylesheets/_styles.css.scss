@@ -354,7 +354,123 @@ background-color: white;
 padding:25px 0px;
 text-align: center;
 margin: 5px 0px;
-.noticias-fecha{display:inline-block; width:20%; font-weight: 700; color:#58575F;}
+.noticias-fecha{display:inline-block; width:20%; font-weight: 700; color:#58575f;}
 .noticias-titulo{display:inline-block; width:40%; text-align: left;padding: 0px;}
-.titulos{border:none;}
+.titulos{border:none; text-transform: uppercase;}
+}
+
+/*NOTICIAS*/
+#region-noticias-list{
+  h2,h3{
+    color: $gray;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-style: normal;
+  }
+  .region-inner{border-bottom: 1px solid $gray;}
+  .arrow_right{    
+    background-image: url(image_path("arrows.png"));
+      background-position: right center;
+        margin-right: 20px;
+          padding: 41px 61px 0 0;}
+  .arrow_left{    
+    background-image: url(image_path("arrows.png"));
+      background-position: left center;
+        margin-right: 20px;
+          padding: 41px 61px 0 0;}
+  #noticia{
+
+    .region-titulo{
+      .top-nav{
+        li{
+        display: inline-block;
+        }
+      }
+    .social-share{
+    text-align: right;
+      .compartir-fb{
+        display:inline;
+      b{
+      background-color: $yellow;
+      text-align: right;
+      padding: 7px 7px 7px 50px;
+      color:white;
+      border-radius: 5px;
+        img{
+        margin-left:10px;
+        width: 20px;
+        }
+      }
+      }
+    }
+    .image-noticia{
+      img{width: 100%;}
+    margin-bottom: 50px;
+    }
+  }
+    .region-contenido{
+      padding-top: 20px;
+    p{
+    font-weight: 700;
+    }
+    }
+  }
+}
+
+
+#region-duplas{
+
+   #duplas{
+     .titulo-dato{
+     margin-bottom: 0;
+     }
+    .region{
+      padding:0px;
+      .region-datos{ 
+      margin-bottom:20px;
+        padding: 15px 0px;
+      border-top: 1px solid black;
+      .region-imagen{
+        padding-left: 0px; 
+      }
+      .region-info-title{
+        padding:0px;
+        .region-pais{
+        margin-bottom:15px;
+        background-color:white;
+        p{
+          display:inline-block;
+          padding: 10px;
+          margin: 2px 0px 0px 0px;
+          color: $orange;
+          font-size: 17px;
+          
+        }
+        .pais{
+        float: left;
+       font-weight: 700; 
+      }
+        .compartir{
+        float:right;
+        color: #e0ddd6;
+        }
+      }
+      }
+    }
+    }
+   } 
+  text-transform: uppercase;
+  .titulo-dato{font-size: 14px;}
+  .datos{color: black; font-weight: 700; font-size: 18px;}
+  .region-imagen img{width: 100%;}
+}
+
+
+#region-hoteles{
+
+.descripcion{
+margin-bottom: 20px;
+}
+
+
 }

@@ -4,10 +4,10 @@
     .region-title
       %h1= page_title!('Noticias')
 
-    .region
-      - if current_admin
-        .admin-control
-          = link_to 'Crear Noticia', new_noticia_path, class: 'btn btn-primary'
+    
+    - if current_admin
+      .admin-control
+        = link_to 'Crear Noticia', new_noticia_path, class: 'btn btn-primary'
 
       -# .table-responsive
         %table.table
@@ -32,12 +32,13 @@
                 %td= link_to 'Eliminar', noticia, :method => :delete, :data => { :confirm => '¿Estás Seguro?' }, class: 'btn btn-danger'
 
 
-#region-noticias-list.container
-  .region-inner.region-title
-    = render @noticia
+    #region-noticias-list
+      .region-inner.region-title
+        #noticia
+          = render @noticia
 
-  .container
-    .region
+  
+    -#.region
       .region-inner.region-title.sidebar
         %h2.title= I18n.t 'noticias.titulo'
         %ul.active-list
@@ -58,7 +59,7 @@
         .noticias-fecha
           = l noticia.created_at, format: :short
         .noticias-titulo.titulos
-          = noticia.titulo
+          %h3= noticia.titulo
         
       - if current_admin
         = link_to 'Editar', edit_noticia_path(noticia), class: 'btn btn-success'
