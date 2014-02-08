@@ -47,7 +47,7 @@
       .inscrip-info
         .sub-title
           %p
-            LISTA DE CONTACTOS
+            INFORMACI&Oacute;N
         .sub-img
           = link_to image_tag(image_path('img-contacto.jpg')), contactos_path, class: 'img-info'
     .region-libre
@@ -57,49 +57,55 @@
       =image_tag image_path('img-ubicacion.jpg'), :class => 'img-responsive'
       .info
         %h4.titulo
-          UBICACI&Oacute;N DEL EVENTO
+          %span UBICACI&Oacute;N
           = image_tag (image_path('icon-ubicacion.png')), class: 'icon'
-        %p
+        .clear
+        %p.info-descrip
           El Complejo Deportivo cuenta con 5 canchas de futbol adyacentes con superficie de gras artificial. Se utilizara la cancha del medio para instalar la pista de
     .region-info
       = link_to image_tag(@noticia.foto_url(:thumb)), @noticia if @noticia
       .info
         %h4.titulo
-          JUECES
+          %span JUECES
           = image_tag (image_path('icon-jueces.png')), class: 'icon'
-        %p
+        .clear
+        %p.info-descrip
           = truncate(@noticia.contenido, length: 200) if @noticia
     .region-info
       =image_tag image_path('img-ubicacion.jpg'), class: 'img-responsive'
       .info
         %h4.titulo
-          %span ULTIMAS NOTICIAS
+          %span NOTICIAS
           = image_tag (image_path('icon-noticias.png')), class: 'icon'
-        %p
+        .clear
+        %p.info-descrip
           Podrá ver en vivo la inaguracion, compenetancias y premiaciones del Campeonato Mundial de Agility de la FCI 2014
     .region-info
       =image_tag image_path('img-ubicacion.jpg'), class: 'img-responsive'
       .info
         %h4.titulo
-          SE&Ntilde;AL EN VIVO
+          %span SE&Ntilde;AL EN VIVO
           = image_tag (image_path('icon-transmision.png')), class: 'icon'
-        %p
+        .clear
+        %p.info-descrip
           Podrá ver en vivo la inaguracion, compenetancias y premiaciones del Campeonato Mundial de Agility de la FCI 2014
     .region-info
       =image_tag image_path('img-ubicacion.jpg'), class: 'img-responsive'
       .info
         %h4.titulo
-          RESULTADOS
+          %span RESULTADOS
           = image_tag (image_path('icon-resultados.png')), class: 'icon'
-        %p
+        .clear
+        %p.info-descrip
           Podrá ver en vivo la inaguracion, compenetancias y premiaciones del Campeonato Mundial de Agility de la FCI 2014
     .region-info
       =image_tag image_path('img-ubicacion.jpg'), class: 'img-responsive'
       .info
         %h4.titulo
-          PISTAS
+          %span PISTAS
           = image_tag (image_path('icon-pistas.png')), class: 'icon'
-        %p
+        .clear
+        %p.info-descrip
           Podrá ver en vivo la inaguracion, compenetancias y premiaciones del Campeonato Mundial de Agility de la FCI 2014
 #region-auspicio
   .container-auspicio

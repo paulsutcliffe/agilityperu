@@ -1,4 +1,4 @@
-#region-noticias.container
+#region-noticias.container.seccion
 
   .region
     .region-title
@@ -52,3 +52,14 @@
                     = link_to 'Eliminar', noticia, :method => :delete, :data => { :confirm => '¿Estás Seguro?' }, class: 'btn btn-danger'
 
 
+
+    - @noticias.each do |noticia|
+      .noticias-container
+        .noticias-fecha
+          = l noticia.created_at, format: :short
+        .noticias-titulo.titulos
+          = noticia.titulo
+        
+      - if current_admin
+        = link_to 'Editar', edit_noticia_path(noticia), class: 'btn btn-success'
+        = link_to 'Eliminar', noticia, :method => :delete, :data => { :confirm => '¿Estás Seguro?' }, class: 'btn btn-danger'

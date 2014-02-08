@@ -49,6 +49,7 @@ group :test do
   gem 'database_cleaner'
   gem 'selenium-webdriver'
 end
+gem "nested_form"
 gem 'countries'
 gem 'country_select'
 gem "bootstrap-sass", "~> 3.0.3.0"

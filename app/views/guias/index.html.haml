@@ -1,0 +1,34 @@
+#region-guias.container
+
+  .region
+    .region-title
+      %h1= page_title!('guias')
+
+    .region
+      - if current_admin
+        .admin-control
+          = link_to 'Crear Guia', new_guia_path, class: 'btn btn-primary'
+
+      .table-responsive
+        %table.table
+          %tr
+            %th Nombre
+            %th Apellido
+            %th Direccion
+            %th Telefeno
+            %th Email
+            %th
+            %th
+            %th
+
+          - @guias.each do |guia|
+            %tr
+              %td= guia.nombre
+              %td= guia.apellido
+              %td= guia.direccion
+              %td= guia.telefeno
+              %td= guia.email
+              %td= link_to 'Ver', guia, class: 'btn btn-info'
+              - if current_admin
+                %td= link_to 'Editar', edit_guia_path(guia), class: 'btn btn-success'
+                %td= link_to 'Eliminar', guia, :method => :delete, :data => { :confirm => '¿Estás Seguro?' }, class: 'btn btn-danger'

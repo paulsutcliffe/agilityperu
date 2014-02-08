@@ -10,6 +10,7 @@ ActiveSupport::Inflector.inflections(:en) do |inflect|
   inflect.irregular 'noticia', 'noticias'
   inflect.irregular 'hotel', 'hoteles'
   inflect.irregular 'organizador', 'organizadores'
+  inflect.irregular 'guia', 'guias'
 #   inflect.uncountable %w( fish sheep )
 end
 

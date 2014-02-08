@@ -10,7 +10,7 @@
   %li= dupla.grado
   %li= dupla.tatuaje_microchip
   %li= dupla.prueba
-  %li= dupla.fotografia
+  %li= image_tag dupla.fotografia_url(:thumb)
   %li= dupla.fecha_nacimiento
 - if current_admin
   = link_to 'Editar', edit_dupla_path(dupla), class: 'btn btn-success'

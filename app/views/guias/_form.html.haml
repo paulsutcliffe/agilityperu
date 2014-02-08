@@ -1,0 +1,30 @@
+= form_for @guia, :html => { class: 'form-horizontal', role: 'form' } do |f|
+  - if @guia.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@guia.errors.count, "error")}"
+      %ul
+        - @guia.errors.full_messages.each do |msg|
+          %li= msg
+
+  .form-group
+    = f.label :nombre, class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.text_field :nombre, class: 'form-control'
+  .form-group
+    = f.label :apellido, class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.text_field :apellido, class: 'form-control'
+  .form-group
+    = f.label :direccion, class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.text_field :direccion, class: 'form-control'
+  .form-group
+    = f.label :telefeno, class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.text_field :telefeno, class: 'form-control'
+  .form-group
+    = f.label :email, class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.text_field :email, class: 'form-control'
+  .actions
+    = f.submit 'Guardar', class: 'btn btn-default'
