@@ -33,7 +33,7 @@ Escenario: Editar Duplas
   Y que estoy en la página inicial
   Cuando hago click en "Mis Duplas"
   Y hago click en "Editar"
-  Y lleno "Nombre" con "Nueva dupla"
+  Y lleno "dupla_nombre" con "Nueva dupla"
   Y lleno "Raza" con "Raza"
   Cuando presiono "Guardar"
   Entonces debería ver "La dupla ha sido editada."

@@ -1,0 +1,18 @@
+#region-reglamentos.container
+  .region
+    .region-title
+      %h1= page_title!('reglamento')
+
+  .region
+    %p
+      %b Titulo:
+      = @reglamento.titulo
+    %p
+      %b Contenido:
+      = @reglamento.contenido
+
+  .region
+    - if current_admin
+      .admin-controls
+        = link_to 'Editar', edit_reglamento_path(@reglamento), class: 'btn btn-success'
+    = link_to 'Regresar', reglamentos_path, class: 'btn btn-warning'

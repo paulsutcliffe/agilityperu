@@ -1,5 +1,7 @@
 Agilityperu::Application.routes.draw do
 
+  resources :reglamentos
+
   resources :guias
 
   resources :duplas

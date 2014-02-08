@@ -3,7 +3,7 @@
     .region-pais
       %p.pais
         =dupla.usuario.pais
-      %p.compartir 
+      %p.compartir
         COMPARTIR
         =image_tag image_path 'facebook-gray.png'
 
@@ -38,6 +38,6 @@
       %li.datos= dupla.tatuaje_microchip
 
 
-- if current_admin
-  = link_to 'Editar', edit_dupla_path(dupla), class: 'btn btn-success'
-  = link_to 'Eliminar', dupla, :method => :delete, :data => { :confirm => '¿Estás Seguro?' }, class: 'btn btn-danger'
+      - if params[:usuario_id]
+        = link_to 'Editar', edit_dupla_path(dupla), class: 'btn btn-success'
+        = link_to 'Eliminar', dupla, :method => :delete, :data => { :confirm => '¿Estás Seguro?' }, class: 'btn btn-danger'

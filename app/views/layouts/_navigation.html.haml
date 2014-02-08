@@ -1,5 +1,5 @@
 .navigation.navbar-navbar-default{role:'navigation'}
-  .container  
+  .container
     .navbar-header
       %button.navbar-toggle{"data-target" => ".navbar-bar-1", "data-toggle" => "collapse", type:"button"}
         MENU
@@ -20,6 +20,9 @@
                 %li
                   %a.drop-content
                     = link_to 'ORGANIZACIÓN', organizadores_path
+                %li
+                  %a.drop-content
+                    = link_to 'REGLAMENTO', reglamentos_path
                 %li
                   %a.drop-content
                     = link_to 'PROGRAMA', programas_path
@@ -69,6 +72,9 @@
                   %li
                     %a.drop-content
                       = link_to 'ORGANIZACIÓN', organizadores_path
+                  %li
+                    %a.drop-content
+                      = link_to 'REGLAMENTO', reglamentos_path
                   %li
                     %a.drop-content
                       = link_to 'PROGRAMA', programas_path

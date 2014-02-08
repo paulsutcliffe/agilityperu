@@ -61,3 +61,7 @@ end
 12.times do
   FactoryGirl.create :dupla
 end
+
+11.times do
+  FactoryGirl.create :reglamento
+end
