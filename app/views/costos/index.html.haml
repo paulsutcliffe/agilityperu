@@ -16,13 +16,11 @@
             %th Contenido
             %th
             %th
-            %th
 
           - @costos.each do |costo|
             %tr
               %td= costo.titulo
               %td= costo.contenido
-              %td= link_to 'Ver', costo, class: 'btn btn-info'
               - if current_admin
                 %td= link_to 'Editar', edit_costo_path(costo), class: 'btn btn-success'
                 %td= link_to 'Eliminar', costo, :method => :delete, :data => { :confirm => '¿Estás Seguro?' }, class: 'btn btn-danger'
