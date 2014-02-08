@@ -5,31 +5,31 @@ Característica: Administracion de los noticias en la web
 Escenario: Crear Noticia
   Dado que he iniciado sesión como administrador
   Y que estoy en la página inicial
-  Cuando hago click en "NOTICIA"
+  Cuando hago click en "NOTICIAS"
   Y hago click en "Crear Noticia"
   Y lleno el formulario con los datos de la noticia
   Cuando presiono "Guardar"
-  Entonces debería ver "Noticia creado con éxito."
+  Entonces debería ver "Noticia creada con éxito."
 
 Escenario: Editar Noticia
   Dado que existe una noticia
   Y que he iniciado sesión como administrador
   Y que estoy en la página inicial
-  Cuando hago click en "NOTICIA"
+  Cuando hago click en "NOTICIAS"
   Y hago click en "Editar"
   Y lleno "Titulo" con "Nueva noticia"
   Y lleno "Contenido" con "Contenido"
   Y uso la foto "foto_noticia2.jpg"
   Cuando presiono "Guardar"
-  Entonces debería ver "La noticia ha sido editado."
+  Entonces debería ver "La noticia ha sido editada."
 
 Escenario: Eliminar Noticia
   Dado que existe una noticia
   Y que he iniciado sesión como administrador
   Y que estoy en la página inicial
-  Cuando hago click en "NOTICIA"
+  Cuando hago click en "NOTICIAS"
   Y hago click en "Eliminar"
-  Entonces debería ver "La noticia ha sido eliminado."
+  Entonces debería ver "La noticia ha sido eliminada."
 
 Esquema del escenario: las noticias pueden verse en la página de inicio
   Dado que existe la noticia "<foto>" con título "<titulo>" con fecha "<fecha>" con contenido "<contenido>"

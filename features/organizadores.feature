@@ -28,7 +28,7 @@ Escenario: Eliminar Organizador
   Dado que existe un organizador
   Y que he iniciado sesión como administrador
   Y que estoy en la página inicial
-  Cuando hago click en "INFORMACIÓN"
+  Cuando hago click en "COMPETENCIA"
   Y hago click en "ORGANIZACIÓN"
   Y hago click en "Eliminar"
   Entonces debería ver "El organizador ha sido eliminado."

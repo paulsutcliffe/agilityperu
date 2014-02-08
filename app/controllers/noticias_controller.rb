@@ -19,15 +19,15 @@ class NoticiasController < InheritedResources::Base
   end
 
   def create
-    create!( notice: "Noticia creado con éxito."){ noticias_path }
+    create!( notice: "Noticia creada con éxito."){ noticias_path }
   end
 
   def update
-    update!( notice: "La noticia ha sido editado."){ noticias_path }
+    update!( notice: "La noticia ha sido editada."){ noticias_path }
   end
 
   def destroy
-    destroy!( notice: "La noticia ha sido eliminado."){ noticias_path }
+    destroy!( notice: "La noticia ha sido eliminada."){ noticias_path }
   end
 
 

@@ -1,0 +1,18 @@
+#region-costos.container
+  .region
+    .region-title
+      %h1= page_title!('costo')
+
+  .region
+    %p
+      %b Titulo:
+      = @costo.titulo
+    %p
+      %b Contenido:
+      = @costo.contenido
+
+  .region
+    - if current_admin
+      .admin-controls
+        = link_to 'Editar', edit_costo_path(@costo), class: 'btn btn-success'
+    = link_to 'Regresar', costos_path, class: 'btn btn-warning'

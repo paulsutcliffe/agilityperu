@@ -13,15 +13,15 @@
     - @hoteles.each do |hotel|
       %h3.titulos
         = hotel.nombre
-      
+
       .descripcion
         = hotel.descripcion
-      
+
       .contactos
         = hotel.email
-        %br
-        = link_to hotel.website, :target => '_blank'
-    
-    - if current_admin
-      = link_to 'Editar', edit_hotel_path(hotel), class: 'btn btn-success'
-      = link_to 'Eliminar', hotel, :method => :delete, :data => { :confirm => '¿Estás Seguro?' }, class: 'btn btn-danger'
+      %br
+      = link_to hotel.website, :target => '_blank'
+
+      - if current_admin
+        = link_to 'Editar', edit_hotel_path(hotel), class: 'btn btn-success'
+        = link_to 'Eliminar', hotel, :method => :delete, :data => { :confirm => '¿Estás Seguro?' }, class: 'btn btn-danger'

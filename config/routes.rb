@@ -1,5 +1,7 @@
 Agilityperu::Application.routes.draw do
 
+  resources :costos
+
   resources :reglamentos
 
   resources :guias

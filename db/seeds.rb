@@ -65,3 +65,7 @@ end
 11.times do
   FactoryGirl.create :reglamento
 end
+
+3.times do
+  FactoryGirl.create :costo
+end

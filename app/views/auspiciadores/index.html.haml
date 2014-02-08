@@ -10,12 +10,12 @@
 
     - @auspiciadores.each do |auspiciador|
       .auspicios-container
-        = link_to image_tag(auspiciador.imagen_url(:thumb)), auspiciador.link  
+        = link_to image_tag(auspiciador.imagen_url(:thumb)), auspiciador.link
         %h3.titulos
           = auspiciador.nombre
-      .auspicios-descripcion  
+      .auspicios-descripcion
         = auspiciador.descripcion
 
-    - if current_admin
-      = link_to 'Editar', edit_auspiciador_path(auspiciador), class: 'btn btn-success'
-      = link_to 'Eliminar', auspiciador, :method => :delete, :data => { :confirm => '¿Estás Seguro?' }, class: 'btn btn-danger'
+      - if current_admin
+        = link_to 'Editar', edit_auspiciador_path(auspiciador), class: 'btn btn-success'
+        = link_to 'Eliminar', auspiciador, :method => :delete, :data => { :confirm => '¿Estás Seguro?' }, class: 'btn btn-danger'
