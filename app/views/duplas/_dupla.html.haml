@@ -4,8 +4,9 @@
       %p.pais
         =dupla.usuario.pais
       %p.compartir
-        COMPARTIR
-        =image_tag image_path 'facebook-gray.png'
+        = link_to 'https://www.facebook.com/sharer/sharer.php?u=' + request.original_url, target: '_blank' do
+          COMPARTIR
+          =image_tag image_path 'facebook-gray.png'
 
   .region-imagen
     = image_tag dupla.fotografia_url(:thumb)

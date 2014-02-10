@@ -5,13 +5,12 @@
   .social-share
     .compartir-fb
       %p
-        %b
-          COMPARTIR
-          =image_tag image_path 'facebook.png'    
+        = link_to 'https://www.facebook.com/sharer/sharer.php?u=' + request.original_url, target: '_blank' do
+          %b
+            COMPARTIR
+            = image_tag image_path 'facebook.png'    
       %br
       .noticias-arrows
-        = link_to content_tag(:i, '', class: 'icon facebook_3'), 'https://www.facebook.com/sharer/sharer.php?u=' + request.original_url, target: '_blank'
-        = link_to content_tag(:i, '', class: 'icon linkedin_3'), 'http://www.linkedin.com/shareArticle?mini=true&amp;url=' + request.original_url + '&amp;title=MCIF&amp;summary=MCIF', target: '_blank'
     %br
     %ul.top-nav
       - if @noticia.noticia_anterior

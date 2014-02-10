@@ -338,12 +338,14 @@ padding:0px;
 .titulos{
 display:inline;
 border: none;
-margin-left: 20px;
 }
 .auspicios-container{
 background-color: white;
 padding: 10px 10px;
 margin: 20px 0px;
+}
+.region-titulo{
+padding-top: 50px;
 }
 .auspicios-descripcion{
 color:#868a7e;
@@ -356,10 +358,10 @@ font-weight: 700;
 
 .noticias-container{
 background-color: white;
-padding:25px 0px;
+padding:20px 0px;
 text-align: center;
-margin: 5px 0px;
-.noticias-fecha{display:inline-block; width:20%; font-weight: 700; color:#58575f;}
+margin: 10px 0px;
+.noticias-fecha{display:inline-block; width:20%; font-weight: 700; color:#58575f; padding-top: 25px; text-align: right;}
 .noticias-titulo{display:inline-block; width:40%; text-align: left;padding: 0px;}
 .titulos{border:none; text-transform: uppercase;}
 }
@@ -372,6 +374,7 @@ margin: 5px 0px;
     text-transform: uppercase;
     font-style: normal;
   }
+  .compartir-fb{a:hover{text-decoration: none;}}
   .region-inner{border-bottom: 1px solid $gray;}
   .arrow_right{    
     background-image: url(image_path("arrows.png"));
@@ -422,7 +425,6 @@ margin: 5px 0px;
 
 
 #region-duplas{
-
    #duplas{
      .titulo-dato{
      margin-bottom: 0;
@@ -455,13 +457,13 @@ margin: 5px 0px;
       }
         .compartir{
         float:right;
-        color: #e0ddd6;
+          a{color: #e0ddd6;}
         }
       }
       }
     }
     }
-   } 
+   }
   text-transform: uppercase;
   .titulo-dato{font-size: 14px;}
   .datos{color: black; font-weight: 700; font-size: 18px;}

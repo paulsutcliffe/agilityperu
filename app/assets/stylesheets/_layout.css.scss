@@ -138,6 +138,18 @@ width:100%;
 @extend .col-md-6;
 @extend .col-lg-8;
 }
+.noticias-fecha{
+@extend .col-xs-12;
+@extend .col-sm-4;
+@extend .col-md-4;
+@extend .col-lg-4;
+}
+.noticias-titulo{
+@extend .col-xs-12;
+@extend .col-sm-8;
+@extend .col-md-8;
+@extend .col-lg-8;
+}
 }
 
 #region-duplas{
@@ -165,5 +177,21 @@ width:100%;
 @extend .col-sm-6;
 @extend .col-md-6;
 @extend .col-lg-6;
+}
+}
+
+#region-auspiciadores{
+.region-imagen{
+@extend .col-xs-12;
+@extend .col-sm-4;
+@extend .col-md-4;
+@extend .col-lg-4;
+}
+
+.region-titulo{
+@extend .col-xs-12;
+@extend .col-sm-8;
+@extend .col-md-8;
+@extend .col-lg-8;
 }
 }
