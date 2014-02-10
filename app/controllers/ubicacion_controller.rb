@@ -1,6 +1,6 @@
 class UbicacionController < ApplicationController
   def permitted_params
-    params.permit(:transporte => [:lugar, :direccion, :descripcion, :lat, :lng, :imagen1, :imagen2, :imagen3])
+    params.permit(:ubicacion => [:lugar, :direccion, :descripcion, :lat, :lng, :imagen1, :imagen2, :imagen3])
   end
 
   def index

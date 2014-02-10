@@ -1,0 +1,28 @@
+#region-jueces.container
+
+  .region
+    .region-title
+      %h1= page_title!('jueces')
+
+    .region
+      - if current_admin
+        .admin-control
+          = link_to 'Crear Juez', new_juez_path, class: 'btn btn-primary'
+
+      .table-responsive
+        %table.table
+          %tr
+            %th Foto
+            %th Nombre
+            %th Descripcion
+            %th
+            %th
+
+          - @jueces.each do |juez|
+            %tr
+              %td= image_tag juez.foto_url(:regular)
+              %td= juez.nombre
+              %td= juez.descripcion
+              - if current_admin
+                %td= link_to 'Editar', edit_juez_path(juez), class: 'btn btn-success'
+                %td= link_to 'Eliminar', juez, :method => :delete, :data => { :confirm => '¿Estás Seguro?' }, class: 'btn btn-danger'

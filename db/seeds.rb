@@ -34,9 +34,9 @@ end
   FactoryGirl.create :hotel
 end
 
-#8.times do
-#  FactoryGirl.create :transporte
-#end
+8.times do
+  FactoryGirl.create :transporte
+end
 
 8.times do
   FactoryGirl.create :requisito
@@ -68,6 +68,10 @@ end
 
 3.times do
   FactoryGirl.create :costo
+end
+
+4.times do
+  FactoryGirl.create :juez
 end
 
 #FactoryGirl.create :ubicacion

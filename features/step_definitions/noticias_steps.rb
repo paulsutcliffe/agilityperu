@@ -21,3 +21,8 @@ Dado(/^que existe la noticia "(.*?)" con título "(.*?)" con fecha "(.*?)" con c
                  fecha: fecha,
                  contenido: contenido).save!
 end
+Cuando(/^hago click (accept|dismiss) en la alerta "(.*?)"$/) do |action, text|
+  alert = page.driver.browser.switch_to.alert
+  alert.text.should eq(text)
+  alert.send(action)
+end

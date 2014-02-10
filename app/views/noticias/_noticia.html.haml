@@ -1,7 +1,7 @@
 .region-titulo
   %h2.title.ajax-title= @noticia.titulo
   .image-noticia
-    = image_tag image_path'img-ubicacion.jpg'
+    = image_tag noticia.foto_url(:thumb)
   .social-share
     .compartir-fb
       %p

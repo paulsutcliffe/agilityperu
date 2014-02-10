@@ -7,7 +7,7 @@
         = link_to 'Crear Noticia', new_noticia_path, class: 'btn btn-primary'
     #region-noticias-list
       #noticia
-        = render @noticia
+        = render @noticia if @noticia
     .clear
     - @noticias.each do |noticia|
       .noticias-container.region
@@ -18,9 +18,9 @@
             = link_to noticia.titulo, noticia, remote: true, anchor: 'noticia'
             
 
-      - if current_admin
-        = link_to 'Editar', edit_noticia_path(noticia), class: 'btn btn-success'
-        = link_to 'Eliminar', noticia, :method => :delete, :data => { :confirm => '¿Estás Seguro?' }, class: 'btn btn-danger'
+        - if current_admin
+          = link_to 'Editar', edit_noticia_path(noticia), class: 'btn btn-success'
+          = link_to 'Eliminar', noticia, :method => :delete, :data => { :confirm => '¿Estás Seguro?' }, class: 'btn btn-danger'
 
       -# .table-responsive
         %table.table

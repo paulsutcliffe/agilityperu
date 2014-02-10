@@ -1,0 +1,21 @@
+#region-jueces.container
+  .region
+    .region-title
+      %h1= page_title!('juez')
+
+  .region
+    %p
+      %b Foto:
+      = @juez.foto
+    %p
+      %b Nombre:
+      = @juez.nombre
+    %p
+      %b Descripcion:
+      = @juez.descripcion
+
+  .region
+    - if current_admin
+      .admin-controls
+        = link_to 'Editar', edit_juez_path(@juez), class: 'btn btn-success'
+    = link_to 'Regresar', jueces_path, class: 'btn btn-warning'
