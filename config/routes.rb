@@ -1,5 +1,7 @@
 Agilityperu::Application.routes.draw do
 
+  get '/ubicacion' => 'ubicacion#index'
+
   resources :costos
 
   resources :reglamentos

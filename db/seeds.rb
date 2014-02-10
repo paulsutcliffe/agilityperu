@@ -34,9 +34,9 @@ end
   FactoryGirl.create :hotel
 end
 
-8.times do
-  FactoryGirl.create :transporte
-end
+#8.times do
+#  FactoryGirl.create :transporte
+#end
 
 8.times do
   FactoryGirl.create :requisito
@@ -69,3 +69,6 @@ end
 3.times do
   FactoryGirl.create :costo
 end
+
+#FactoryGirl.create :ubicacion
+Ubicacion.create(lugar: 'Estadio Municipal de La Molina', direccion: 'Avenida La Molina, Las Lagunas, La Molina', descripcion: 'Capacidad: 5000 personas')

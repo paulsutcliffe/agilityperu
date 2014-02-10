@@ -1,0 +1,19 @@
+- content_for :javascript do
+  = google_maps_api
+
+#region-ubicacion.container
+  .region
+    .region-title
+      %h1= page_title!('Ubicación')
+
+.map-wrapper
+  = render 'mapa'
+
+#region-direccion.container
+  .region
+    = @ubicacion.lugar
+    = @ubicacion.direccion
+    = @ubicacion.descripcion
+    = image_tag @ubicacion.imagen1_url(:thumb) if @ubicacion.imagen1
+    = image_tag @ubicacion.imagen2_url(:thumb) if @ubicacion.imagen2
+    = image_tag @ubicacion.imagen3_url(:thumb) if @ubicacion.imagen3
