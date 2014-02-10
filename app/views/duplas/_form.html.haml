@@ -71,18 +71,24 @@
   .form-group
     = f.label :fotografia, class: 'col-sm-2 control-label'
     .col-sm-10
-      = f.file_field :fotografia, class: 'form-control'
+      = f.file_field :fotografia
 
   .form-group
     = f.label 'Guias', class: 'col-sm-2 control-label'
     .col-sm-8
       = f.fields_for :guias do |guia_form|
         = guia_form.text_field :nombre, placeholder: "Nombre", class: 'form-control'
+        %br
         = guia_form.text_field :apellido, placeholder: "Apellido", class: 'form-control'
+        %br
         = guia_form.text_field :direccion, placeholder: "Direccion", class: 'form-control'
+        %br
         = guia_form.text_field :telefono, placeholder: "Telefono", class: 'form-control'
+        %br
         = guia_form.text_field :email, placeholder: "Email", class: 'form-control'
+        %br
         = guia_form.link_to_remove "Eliminar Guia", class: 'btn btn-danger'
+        %br
       = f.link_to_add "Agregar Guia", :guias, class: 'btn btn-primary'
   .actions
     = f.submit 'Guardar', class: 'btn btn-default'

@@ -1,4 +1,4 @@
-#region-reglamentos.container
+#region-reglamentos.container.seccion
 
   .region
     .region-title
@@ -9,18 +9,11 @@
         .admin-control
           = link_to 'Crear Reglamento', new_reglamento_path, class: 'btn btn-primary'
 
-      .table-responsive
-        %table.table
-          %tr
-            %th Titulo
-            %th Contenido
-            %th
-            %th
-
-          - @reglamentos.each do |reglamento|
-            %tr
-              %td= reglamento.titulo
-              %td= reglamento.contenido
-              - if current_admin
-                %td= link_to 'Editar', edit_reglamento_path(reglamento), class: 'btn btn-success'
-                %td= link_to 'Eliminar', reglamento, :method => :delete, :data => { :confirm => '¿Estás Seguro?' }, class: 'btn btn-danger'
+    - @reglamentos.each do |reglamento|
+      %h3.titulos
+        = reglamento.titulo
+      .descripcion
+        = reglamento.contenido
+      - if current_admin
+        = link_to 'Editar', edit_reglamento_path(reglamento), class: 'btn btn-success'
+        = link_to 'Eliminar', reglamento, :method => :delete, :data => { :confirm => '¿Estás Seguro?' }, class: 'btn btn-danger'

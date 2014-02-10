@@ -1,4 +1,4 @@
-#region-streamings.container
+#region-streamings.container.seccion
 
   .region
     .region-title
@@ -9,16 +9,11 @@
         .admin-control
           = link_to 'Crear Señal en Vivo', new_streaming_path, class: 'btn btn-primary'
 
-      .table-responsive
-        %table.table
-          %tr
-            %th Codigo embed
-            %th
-            %th
-
-          - @streamings.each do |streaming|
-            %tr
-              %td= link_to streaming.codigo_embed
-              - if current_admin
-                %td= link_to 'Editar', edit_streaming_path(streaming), class: 'btn btn-success'
-                %td= link_to 'Eliminar', streaming, :method => :delete, :data => { :confirm => '¿Estás Seguro?' }, class: 'btn btn-danger'
+    %h3.titulos
+      Codigo Embed
+    - @streamings.each do |streaming|
+      = link_to streaming.codigo_embed
+      %br
+      - if current_admin
+        = link_to 'Editar', edit_streaming_path(streaming), class: 'btn btn-success'
+        = link_to 'Eliminar', streaming, :method => :delete, :data => { :confirm => '¿Estás Seguro?' }, class: 'btn btn-danger'

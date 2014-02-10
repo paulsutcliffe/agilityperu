@@ -1,4 +1,4 @@
-#region-requisitos.container
+#region-requisitos.container.seccion
 
   .region
     .region-title
@@ -9,18 +9,12 @@
         .admin-control
           = link_to 'Crear Requisito', new_requisito_path, class: 'btn btn-primary'
 
-      .table-responsive
-        %table.table
-          %tr
-            %th Pais
-            %th Contenido
-            %th
-            %th
 
-          - @requisitos.each do |requisito|
-            %tr
-              %td= requisito.pais
-              %td= requisito.contenido
-              - if current_admin
-                %td= link_to 'Editar', edit_requisito_path(requisito), class: 'btn btn-success'
-                %td= link_to 'Eliminar', requisito, :method => :delete, :data => { :confirm => '¿Estás Seguro?' }, class: 'btn btn-danger'
+      - @requisitos.each do |requisito|
+        %h3.titulos
+          = requisito.pais
+        .descripcion
+          = requisito.contenido
+        - if current_admin
+          = link_to 'Editar', edit_requisito_path(requisito), class: 'btn btn-success'
+          = link_to 'Eliminar', requisito, :method => :delete, :data => { :confirm => '¿Estás Seguro?' }, class: 'btn btn-danger'

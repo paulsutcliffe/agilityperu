@@ -284,6 +284,11 @@ footer{
 
 /*ORGANIZADORES, PROGRAMAS y AUSPICIADORES*/
 .seccion{
+  .region{
+    .admin-control{
+    margin-bottom: 20px;
+    }
+  }
   margin-bottom: 20px;
   h1{
   text-transform: uppercase;
@@ -360,7 +365,7 @@ margin: 5px 0px;
 }
 
 /*NOTICIAS*/
-#region-noticias-list{
+#region-noticias{
   h2,h3{
     color: $gray;
     font-weight: 300;
@@ -378,7 +383,6 @@ margin: 5px 0px;
       background-position: left center;
         margin-right: 20px;
           padding: 41px 61px 0 0;}
-  #noticia{
 
     .region-titulo{
       .top-nav{
@@ -414,7 +418,6 @@ margin: 5px 0px;
     font-weight: 700;
     }
     }
-  }
 }
 
 
