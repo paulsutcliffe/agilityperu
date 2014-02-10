@@ -17,7 +17,7 @@
             = auspiciador.nombre
       .clear
       .auspicios-descripcion
-        = auspiciador.descripcion
+        = raw(auspiciador.descripcion)
 
       - if current_admin
         = link_to 'Editar', edit_auspiciador_path(auspiciador), class: 'btn btn-success'
