@@ -5,8 +5,8 @@ require "rvm/capistrano"
 set :rvm_ruby_string, '2.1.0'
 set :rvm_type, :user  # Don't use system-wide RVM
 
-#server "kosmyka.com", :web, :app, :db, primary: true
-server 'kosmyka.com', user: 'paul', roles: %w{web app db}
+server "kosmyka.com", :web, :app, :db, user: "paul", primary: true
+#server 'kosmyka.com', user: 'paul', roles: %w{web app db}
 
 set :application, "agilityperu"
 set :user, "paul"
