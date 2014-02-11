@@ -53,15 +53,20 @@
     .region-libre
 
   .region
-    .region-info
-      =image_tag image_path('img-ubicacion.jpg'), :class => 'img-responsive'
-      .info
-        %h4.titulo
-          %span UBICACI&Oacute;N
-          = image_tag (image_path('icon-ubicacion.png')), class: 'icon'
-        .clear
-        %p.info-descrip
-          El Complejo Deportivo cuenta con 5 canchas de futbol adyacentes con superficie de gras artificial. Se utilizara la cancha del medio para instalar la pista de
+    = link_to(ubicacion_path) do
+      .region-info
+        = image_tag @ubicacion.imagen1_url(:thumb), :class => 'img-responsive' if @ubicacion
+        .info
+          %h4.titulo
+            %span UBICACI&Oacute;N
+            = image_tag (image_path('icon-ubicacion.png')), class: 'icon'
+          .clear
+          %p.info-descrip
+            = @ubicacion.lugar if @ubicacion
+          %p
+            = @ubicacion.direccion if @ubicacion
+          %p
+            = @ubicacion.descripcion if @ubicacion
     = link_to(jueces_path) do
       .region-info
         = image_tag @juez.foto_url(:thumb), :class => 'img-responsive' if @juez

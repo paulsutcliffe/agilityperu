@@ -4,5 +4,6 @@ class InicioController < ApplicationController
     @auspiciadores = Auspiciador.all
     @noticia = Noticia.last
     @juez = Juez.last
+    @ubicacion = Ubicacion.first
   end
 end
