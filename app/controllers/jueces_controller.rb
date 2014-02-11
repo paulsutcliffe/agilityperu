@@ -1,4 +1,5 @@
 class JuecesController < InheritedResources::Base
+  before_filter :authenticate_admin!, except: [:index]
   def permitted_params
     params.permit(:juez => [:foto, :nombre, :descripcion])
   end

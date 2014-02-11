@@ -1,0 +1,34 @@
+= form_for @ubicacion, url: ubicacion_update_ubicacion_path, method: :put, :html => { class: 'form-horizontal', role: 'form' } do |f|
+  - if @ubicacion.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@ubicacion.errors.count, "error")}"
+      %ul
+        - @ubicacion.errors.full_messages.each do |msg|
+          %li= msg
+
+  .form-group
+    = f.label :lugar, class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.text_field :lugar, class: 'form-control'
+  .form-group
+    = f.label :direccion, class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.text_field :direccion, class: 'form-control'
+  .form-group
+    = f.label :descripcion, class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.text_field :descripcion, class: 'form-control'
+  .form-group
+    = f.label :imagen1, class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.file_field :imagen1, class: 'form-control'
+  .form-group
+    = f.label :imagen2, class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.file_field :imagen2, class: 'form-control'
+  .form-group
+    = f.label :imagen3, class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.file_field :imagen3, class: 'form-control'
+  .actions
+    = f.submit 'Guardar', class: 'btn btn-default'

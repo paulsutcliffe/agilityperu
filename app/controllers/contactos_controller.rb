@@ -1,4 +1,5 @@
 class ContactosController < InheritedResources::Base
+  before_filter :authenticate_admin!, except: [:index]
   def permitted_params
     params.permit(:contacto => [:titulo, :contenido, :email, :website])
   end

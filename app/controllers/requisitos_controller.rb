@@ -1,4 +1,5 @@
 class RequisitosController < InheritedResources::Base
+  before_filter :authenticate_admin!, except:[:index]
   def permitted_params
     params.permit(:requisito => [:pais, :contenido])
   end

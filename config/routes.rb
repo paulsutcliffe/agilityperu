@@ -2,6 +2,10 @@ Agilityperu::Application.routes.draw do
 
   resources :jueces
 
+  get 'ubicacion/editar_ubicacion'
+
+  put 'ubicacion/update_ubicacion'
+
   get '/ubicacion' => 'ubicacion#index'
 
   resources :costos

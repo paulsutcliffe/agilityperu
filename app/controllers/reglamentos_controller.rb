@@ -1,4 +1,5 @@
 class ReglamentosController < InheritedResources::Base
+  before_filter :authenticate_admin!, except:[:index]
   def permitted_params
     params.permit(:reglamento => [:titulo, :contenido])
   end

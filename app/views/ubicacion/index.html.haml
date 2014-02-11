@@ -6,6 +6,10 @@
     .region-title
       %h1= page_title!('Ubicación')
 
+  .region
+    - if current_admin
+      = link_to 'Editar ubicacion', ubicacion_editar_ubicacion_path, class: 'btn btn-success'
+
 .map-wrapper
   = render 'mapa'
 

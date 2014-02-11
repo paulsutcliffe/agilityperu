@@ -63,11 +63,11 @@
     = f.label :prueba, class: 'col-sm-2 control-label'
     .col-sm-10
       = f.label :prueba, "Especial G1"
-      = f.check_box :prueba, {:multiple => true }, "Especial G1"
+      = f.check_box :prueba, {}, "Especial G1"
       = f.label :prueba, "Open A&C"
-      = f.check_box :prueba, {:multiple => true }, "Open A&C"
+      = f.check_box :prueba, {}, "Open A&C"
       = f.label :prueba, "A&C Oficial"
-      = f.check_box :prueba, {:multiple => true }, "A&C Oficial"
+      = f.check_box :prueba, {checked: "true"}, "A&C Oficial"
   .form-group
     = f.label :fotografia, class: 'col-sm-2 control-label'
     .col-sm-10

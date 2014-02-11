@@ -1,4 +1,5 @@
 class AuspiciadoresController < InheritedResources::Base
+  before_filter :authenticate_admin!, except: [:index]
   def permitted_params
     params.permit(:auspiciador => [:imagen, :nombre, :descripcion, :link])
   end

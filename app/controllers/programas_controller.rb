@@ -1,4 +1,5 @@
 class ProgramasController < InheritedResources::Base
+  before_filter :authenticate_admin!, except: [:index]
   def permitted_params
     params.permit(:programa => [:titulo, :contenido])
   end

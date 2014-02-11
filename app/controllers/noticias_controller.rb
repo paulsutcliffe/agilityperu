@@ -1,4 +1,5 @@
 class NoticiasController < InheritedResources::Base
+  before_filter :authenticate_admin!, only: [:new, :create]
   def permitted_params
     params.permit(:noticia => [:titulo, :foto, :fecha, :contenido])
   end
