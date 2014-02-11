@@ -252,7 +252,7 @@ PLATFORMS
 
 DEPENDENCIES
   bootstrap-sass (~> 3.0.3.0)
-  capistrano
+  capistrano (= 2.15.5)
   capybara (~> 2.2.1)
   carrierwave
   coffee-rails (~> 4.0.0)
