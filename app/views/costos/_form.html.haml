@@ -1,3 +1,5 @@
+= tinymce_assets
+= tinymce
 = form_for @costo, :html => { class: 'form-horizontal', role: 'form' } do |f|
   - if @costo.errors.any?
     #error_explanation
@@ -13,6 +15,6 @@
   .form-group
     = f.label :contenido, class: 'col-sm-2 control-label'
     .col-sm-10
-      = f.text_area :contenido, class: 'form-control'
+      = f.text_area :contenido, class: 'tinymce', :rows => 15, :cols => 30
   .actions
     = f.submit 'Guardar', class: 'btn btn-default'

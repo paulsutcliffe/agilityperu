@@ -12,7 +12,7 @@
       = @juez.nombre
     %p
       %b Descripcion:
-      = @juez.descripcion
+      = raw(@juez.descripcion)
 
   .region
     - if current_admin

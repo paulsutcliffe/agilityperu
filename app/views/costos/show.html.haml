@@ -9,7 +9,7 @@
       = @costo.titulo
     %p
       %b Contenido:
-      = @costo.contenido
+      = raw(@costo.contenido)
 
   .region
     - if current_admin

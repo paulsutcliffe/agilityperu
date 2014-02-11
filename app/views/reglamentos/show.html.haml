@@ -9,7 +9,7 @@
       = @reglamento.titulo
     %p
       %b Contenido:
-      = @reglamento.contenido
+      = raw(@reglamento.contenido)
 
   .region
     - if current_admin

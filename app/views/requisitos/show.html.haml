@@ -9,7 +9,7 @@
       = @requisito.pais
     %p
       %b Contenido:
-      = @requisito.contenido
+      = raw(@requisito.contenido)
 
   .region
     - if current_admin

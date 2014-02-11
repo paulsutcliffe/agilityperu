@@ -1,3 +1,5 @@
+= tinymce_assets
+= tinymce
 = form_for @hotel, :html => { class: 'form-horizontal', role: 'form' } do |f|
   - if @hotel.errors.any?
     #error_explanation
@@ -13,7 +15,7 @@
   .form-group
     = f.label :descripcion, class: 'col-sm-2 control-label'
     .col-sm-10
-      = f.text_area :descripcion, class: 'form-control'
+      = f.text_area :descripcion, class: 'tinymce', :rows => 15, :cols => 30
   .form-group
     = f.label :email, class: 'col-sm-2 control-label'
     .col-sm-10

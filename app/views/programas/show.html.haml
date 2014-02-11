@@ -9,7 +9,7 @@
       = @programa.titulo
     %p
       %b Contenido:
-      = @programa.contenido
+      = raw(@programa.contenido)
 
   .region
     - if current_admin

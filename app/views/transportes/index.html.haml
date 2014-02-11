@@ -14,7 +14,7 @@
         %h3.titulos
           = transporte.nombre
         .descripcion
-          = transporte.descripcion
+          = raw(transporte.descripcion)
         .datos
           = mail_to transporte.email
           %br

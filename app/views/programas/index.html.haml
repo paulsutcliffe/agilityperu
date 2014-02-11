@@ -15,8 +15,8 @@
         = image_tag(image_path('icon-calendario.png'))
         = programa.titulo
       %ul
-        %li= programa.contenido
-          
+        %li= raw(programa.contenido)
+
         - if current_admin
           %td= link_to 'Editar', edit_programa_path(programa), class: 'btn btn-success'
           %td= link_to 'Eliminar', programa, :method => :delete, :data => { :confirm => '¿Estás Seguro?' }, class: 'btn btn-danger'
