@@ -18,7 +18,6 @@ Esquema del escenario: Crear una dupla
   Y lleno "Tatuaje/Microchip" con "<tatuaje/microchip>"
   Y en "Prueba" marco "<prueba>"
   Y agrego la fotografia "<fotografia>"
-  Y lleno el formulario con los datos del guia
   Y presiono "Guardar"
   Entonces debería ver "<mensaje>"
 

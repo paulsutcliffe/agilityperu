@@ -1,3 +1,6 @@
+- content_for :javascript do
+  = javascript_include_tag 'duplas.js'
+
 = nested_form_for [@usuario, @dupla], :html => { class: 'form-horizontal', role: 'form', :multipart => true } do |f|
   - if @dupla.errors.any?
     #error_explanation
@@ -74,7 +77,7 @@
       = f.file_field :fotografia
 
   .form-group
-    = f.label 'Guias', class: 'col-sm-2 control-label'
+    = f.label 'Guias / Guia Suplente', class: 'col-sm-2 control-label'
     .col-sm-8
       = f.fields_for :guias do |guia_form|
         = guia_form.text_field :nombre, placeholder: "Nombre", class: 'form-control'

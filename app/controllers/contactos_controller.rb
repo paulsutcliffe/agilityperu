@@ -5,14 +5,14 @@ class ContactosController < InheritedResources::Base
   end
 
   def create
-    create!( notice: "Contacto creado con éxito."){ organizadores_path }
+    create!( notice: "Contacto creado con éxito."){ contactos_path }
   end
 
   def update
-    update!( notice: "El contacto ha sido editado."){ organizadores_path }
+    update!( notice: "El contacto ha sido editado."){ contactos_path }
   end
 
   def destroy
-    destroy!( notice: "El contacto ha sido eliminado."){ organizadores_path }
+    destroy!( notice: "El contacto ha sido eliminado."){ contactos_path }
   end
 end

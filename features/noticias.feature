@@ -5,7 +5,7 @@ Característica: Administracion de los noticias en la web
 Escenario: Crear Noticia
   Dado que he iniciado sesión como administrador
   Y que estoy en la página inicial
-  Cuando hago click en "NOTICIAS"
+  Cuando hago click en "Icon noticias"
   Y hago click en "Crear Noticia"
   Y lleno el formulario con los datos de la noticia
   Cuando presiono "Guardar"
@@ -18,7 +18,7 @@ Escenario: Editar Noticia
   Cuando hago click en "NOTICIAS"
   Y hago click en "Editar"
   Y lleno "Titulo" con "Nueva noticia"
-  Y lleno "Contenido" con "Contenido"
+  Y lleno "noticia[contenido]" con "Contenido"
   Y uso la foto "foto_noticia2.jpg"
   Cuando presiono "Guardar"
   Entonces debería ver "La noticia ha sido editada."
