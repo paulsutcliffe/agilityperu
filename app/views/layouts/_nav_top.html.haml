@@ -1,13 +1,16 @@
 %ul.nav.nav-pills.navbar-right
-  - if current_usuario
-    %li.link
-      = link_to 'Cerrar Sesión', destroy_usuario_session_path, :id => 'sign_out', :method => :delete
-    %li.link
-      = link_to 'Mis Duplas', usuario_duplas_path(current_usuario.id)
+  - if current_admin
+    %li= link_to 'Cerrar sesión de Administrador', destroy_admin_session_path, method: :delete
   - else
-    %li.link.first
-      = link_to 'Regístrate', new_usuario_registration_path
-    %li.link
-      = link_to 'Ingresa', new_usuario_session_path
+    - if current_usuario
+      %li.link
+        = link_to 'Cerrar Sesión', destroy_usuario_session_path, :id => 'sign_out', :method => :delete
+      %li.link
+        = link_to 'Mis Duplas', usuario_duplas_path(current_usuario.id)
+    - else
+      %li.link.first
+        = link_to 'Regístrate', new_usuario_registration_path
+      %li.link
+        = link_to 'Ingresa', new_usuario_session_path
   %li
-    = link_to content_tag(:i, '', class: 'icon facebook'), 'https://www.facebook.com/'
+    = link_to content_tag(:i, '', class: 'icon facebook'), 'https://www.facebook.com/agilityperu2014'
