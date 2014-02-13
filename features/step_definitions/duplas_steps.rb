@@ -7,7 +7,9 @@ Cuando(/^en "(.*?)" elijo "(.*?)"$/) do |label, valor|
 end
 
 Cuando(/^en "(.*?)" marco "(.*?)"$/) do |label, valor|
-  check(valor)
+  valor.split(", ").each do |value|
+    check(value)
+  end
 end
 
 Cuando(/^agrego la fotografia "(.*?)"$/) do |archivo|
@@ -32,7 +34,9 @@ Dado(/^que existe una dupla$/) do
                categoria: "Large",
                grado: "G3",
                tatuaje_microchip: "Tatuaje",
-               prueba: "Open A&C",
+               especial_g1: "Especial g1",
+               open_ac: "open ac",
+               ac_oficial: "ac oficial",
                fotografia: File.new("features/support/fotografia3.jpg"),
                usuario_id: 1).save!
   Guia.create(nombre: "adriel",

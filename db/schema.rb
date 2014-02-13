@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140210195706) do
+ActiveRecord::Schema.define(version: 20140213201240) do
 
   create_table "admins", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -66,12 +66,14 @@ ActiveRecord::Schema.define(version: 20140210195706) do
     t.string   "categoria"
     t.string   "grado"
     t.string   "tatuaje_microchip"
-    t.string   "prueba"
     t.string   "fotografia"
     t.date     "fecha_nacimiento"
     t.integer  "usuario_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "especial_g1"
+    t.boolean  "open_ac"
+    t.boolean  "ac_oficial"
   end
 
   create_table "guias", force: true do |t|

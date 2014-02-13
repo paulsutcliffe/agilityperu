@@ -1,5 +1,5 @@
 #language: es
-@javascript
+
 Característica: Administracion de los noticias en la web
 
 Escenario: Crear Noticia
@@ -29,7 +29,6 @@ Escenario: Eliminar Noticia
   Y que estoy en la página inicial
   Cuando hago click en "NOTICIAS"
   Y hago click en "Eliminar"
-  Cuando hago click en "accept" en la alerta "¿Estás Seguro?"
   Entonces debería ver "La noticia ha sido eliminada."
 
 Esquema del escenario: las noticias pueden verse en la página de inicio

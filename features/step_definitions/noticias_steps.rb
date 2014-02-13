@@ -26,3 +26,7 @@ Cuando(/^hago click (accept|dismiss) en la alerta "(.*?)"$/) do |action, text|
   alert.text.should eq(text)
   alert.send(action)
 end
+
+Cuando(/^espero (\d+) segundos$/) do |n|
+  sleep(n.to_i)
+end

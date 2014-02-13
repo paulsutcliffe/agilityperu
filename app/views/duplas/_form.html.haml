@@ -1,5 +1,6 @@
 - content_for :javascript do
   = javascript_include_tag 'duplas.js'
+  = javascript_include_tag 'nested_form.js'
 
 = nested_form_for [@usuario, @dupla], :html => { class: 'form-horizontal', role: 'form', :multipart => true } do |f|
   - if @dupla.errors.any?
@@ -65,12 +66,12 @@
   .form-group
     = f.label :prueba, class: 'col-sm-2 control-label'
     .col-sm-10
-      = f.label :prueba, "Especial G1"
-      = f.check_box :prueba, {}, "Especial G1"
-      = f.label :prueba, "Open A&C"
-      = f.check_box :prueba, {}, "Open A&C"
-      = f.label :prueba, "A&C Oficial"
-      = f.check_box :prueba, {checked: "true"}, "A&C Oficial"
+      = f.label :especial_g1, "Especial G1"
+      = f.check_box :especial_g1
+      = f.label :open_ac, "Open A&C"
+      = f.check_box :open_ac
+      = f.label :ac_oficial, "A&C Oficial"
+      = f.check_box :ac_oficial
   .form-group
     = f.label :fotografia, class: 'col-sm-2 control-label'
     .col-sm-10

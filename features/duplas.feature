@@ -22,9 +22,9 @@ Esquema del escenario: Crear una dupla
   Entonces debería ver "<mensaje>"
 
   Ejemplos:
-      | nombre    | pais      | registro_genealogico | raza        | color    | sexo              | categoria             | grado             | tatuaje/microchip | prueba                   | fotografia      | mensaje                    |
-      | solar     | Argentina | 12345                | doberman    | negro    | dupla_sexo_macho  | dupla_categoria_large | dupla_grado_g2    | tatuaje           | dupla_prueba_open_ac     | fotografia1.jpg | Se ha Creado Exitosamente. |
-      | luna      | Perú      | 54321                | dalmata     | blanco   | dupla_sexo_hembra | dupla_categoria_small | dupla_grado_g1    | microchip         | dupla_prueba_especial_g1 | fotografia2.jpg | Se ha Creado Exitosamente. |
+      | nombre | pais      | registro_genealogico | raza     | color    | sexo              | categoria             | grado          | tatuaje/microchip | prueba                          | fotografia      | mensaje                |
+      | solar  | Argentina | 12345                | doberman | negro    | dupla_sexo_macho  | dupla_categoria_large | dupla_grado_g2 | tatuaje           | dupla_especial_g1               | fotografia1.jpg | Dupla creada con éxito |
+      | luna   | Perú      | 54321                | dalmata  | blanco   | dupla_sexo_hembra | dupla_categoria_small | dupla_grado_g1 | microchip         | dupla_ac_oficial, dupla_open_ac | fotografia2.jpg | Dupla creada con éxito |
 
 Escenario: Editar Duplas
   Dado que existe una dupla

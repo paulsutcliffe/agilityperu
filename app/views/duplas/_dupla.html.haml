@@ -19,8 +19,14 @@
       %li.datos= dupla.pais
       %li.titulo-dato RAZA:
       %li.datos= dupla.raza
-      %li.titulo-dato PRUEBA:
-      %li.datos= dupla.prueba
+      %li.titulo-dato PRUEBAS:
+      %li.datos
+        - if dupla.especial_g1
+          .btn.btn-success.btn-sm.disabled Especial G1
+        - if dupla.open_ac
+          .btn.btn-success.btn-sm.disabled Open A&C
+        - if dupla.ac_oficial
+          .btn.btn-success.btn-sm.disabled A&C Oficial
       %li.titulo-dato PROPIETARIO:
       %li.datos= dupla.usuario.nombre + ' ' + dupla.usuario.apellido
       %li.titulo-dato FECHA NACIMIENTO:
