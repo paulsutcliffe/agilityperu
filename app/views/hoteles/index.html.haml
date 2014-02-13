@@ -18,9 +18,9 @@
         = raw(hotel.descripcion)
 
       .contactos
-        = hotel.email
-      %br
-      = link_to hotel.website, :target => '_blank'
+        = mail_to hotel.email
+        %br
+        = link_to hotel.website, :target => '_blank'
 
       - if current_admin
         = link_to 'Editar', edit_hotel_path(hotel), class: 'btn btn-success'

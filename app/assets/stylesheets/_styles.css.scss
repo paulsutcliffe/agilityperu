@@ -88,7 +88,7 @@ main{
 
 #region-Inicio{
   margin-top: 40px;
-
+  span{color:$orange;}
   .region-horas{
     h2{
     text-align:right;
@@ -285,6 +285,7 @@ footer{
 }
 
 /*ORGANIZADORES, PROGRAMAS y AUSPICIADORES*/
+
 .seccion{
   .region{
     .admin-control{
@@ -312,6 +313,7 @@ footer{
   margin-bottom:10px;
   color: #58575f;
   }
+  .descripcion{color:$gray-text;margin-left:40px;}
 }
 
 .icon{
@@ -370,12 +372,13 @@ margin: 10px 0px;
 
 /*NOTICIAS*/
 #region-noticias{
-  h2,h3{
+  h2,h3,a{
     color: $gray;
     font-weight: 300;
     text-transform: uppercase;
     font-style: normal;
   }
+  a:hover{color:$gray-text;}
   .compartir-fb{a:hover{text-decoration: none;}}
   .region-inner{border-bottom: 1px solid $gray;}
   .arrow_right{
@@ -474,10 +477,16 @@ margin: 10px 0px;
 
 
 #region-hoteles{
-
 .descripcion{
 margin-bottom: 20px;
 }
-
-
+}
+#region-jueces{
+.region-contenido{
+margin-top: 20px;
+color: $gray-text;
+}
+.datos{
+margin-bottom: 60px;
+}
 }
