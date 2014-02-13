@@ -12,51 +12,12 @@
     - @noticias.each do |noticia|
       .noticias-container.region
         .noticias-fecha
-          = l noticia.created_at, format: :short
+          = l noticia.fecha, format: :short
         .noticias-titulo.titulos
           %h3
             = link_to noticia.titulo, noticia, remote: true, anchor: 'noticia'
-            
+
 
         - if current_admin
           = link_to 'Editar', edit_noticia_path(noticia), class: 'btn btn-success'
           = link_to 'Eliminar', noticia, :method => :delete, :data => { :confirm => '¿Estás Seguro?' }, class: 'btn btn-danger'
-
-      -# .table-responsive
-        %table.table
-          %tr
-            %th Titulo
-            %th Foto
-            %th Fecha
-            %th Contenido
-            %th
-            %th
-            %th
-
-          - @noticias.each do |noticia|
-            %tr
-              %td= noticia.titulo
-              %td= image_tag noticia.foto_url(:thumb)
-              %td= noticia.fecha
-              %td= noticia.contenido
-              %td= link_to 'Ver', noticia, class: 'btn btn-info'
-              - if current_admin
-                %td= link_to 'Editar', edit_noticia_path(noticia), class: 'btn btn-success'
-                %td= link_to 'Eliminar', noticia, :method => :delete, :data => { :confirm => '¿Estás Seguro?' }, class: 'btn btn-danger'
-
-
-    -#.region
-      .region-inner.region-title.sidebar
-        %h2.title= I18n.t 'noticias.titulo'
-        %ul.active-list
-          - @noticias.each do |noticia|
-            %li
-              .vertical-wrapper
-                .vertical
-                  %h3.vertical-inner
-                    = link_to noticia.titulo, noticia, remote: true
-                  - if current_admin
-                    = link_to 'Editar', edit_noticia_path(noticia), class: 'btn btn-success'
-                    = link_to 'Eliminar', noticia, :method => :delete, :data => { :confirm => '¿Estás Seguro?' }, class: 'btn btn-danger'
-
-
