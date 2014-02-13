@@ -1,4 +1,6 @@
 es:
+  app:
+    name: XIV Campeonato de Agility Las Américas y el Caribe Lima Perú 2014
   date:
     abbr_day_names:
     - dom

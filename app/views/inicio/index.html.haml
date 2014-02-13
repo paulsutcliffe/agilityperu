@@ -1,3 +1,17 @@
+- content_for :javascript do
+  = stylesheet_link_tag 'jquery.countdown/jquery.countdown.css'
+  = javascript_include_tag 'jquery.countdown/jquery.plugin.min.js', 'jquery.countdown/jquery.countdown.min.js', 'jquery.countdown/jquery.countdown-es.js'
+  :javascript
+    $(document).ready(function() {
+    $(function () {
+      	var austDay = new Date();
+      	austDay = new Date(2014, 4-1, 03);
+      	$('#contador').countdown({until: austDay, format: 'wdH'});
+      });
+    });
+
+- page_title!('Inicio')
+
 .container-slider
   = render 'bootstrap3_carousel'
 
@@ -13,28 +27,11 @@
         %br
         %br
         El lugar será el complejo Deportivo de la Costa Verde en el Circuito de Playas de Magdalena del Mar, Lima. Perú.
+
     .region-horas
       %h2
         FALTAN:
-      .region
-        .horas
-          %span.numero
-            24
-          %br
-          %span.texto
-            d&iacute;as
-        .horas
-          %span.numero
-            30
-          %br
-          %span.texto
-            horas
-        .horas
-          %span.numero
-            50
-          %br
-          %span.texto
-            minutos
+      #contador
 
   .region.line.inscripcion
     .region-inscripcion
@@ -66,7 +63,7 @@
           %p
             = @ubicacion.direccion if @ubicacion
           %p
-            = @ubicacion.descripcion if @ubicacion
+            = raw(@ubicacion.descripcion) if @ubicacion
     = link_to(jueces_path) do
       .region-info
         = image_tag @juez.foto_url(:thumb), :class => 'img-responsive' if @juez
@@ -76,7 +73,7 @@
             = image_tag (image_path('icon-jueces.png')), class: 'icon'
           .clear
           %p.info-descrip
-            = truncate(@juez.descripcion, length: 200) if @juez
+            = truncate(raw(@juez.descripcion), length: 200) if @juez
     = link_to(noticias_path) do
       .region-info
         = image_tag @noticia.foto_url(:thumb), :class => 'img-responsive' if @noticia
@@ -86,7 +83,7 @@
             = image_tag (image_path('icon-noticias.png')), class: 'icon'
           .clear
           %p.info-descrip
-            = truncate(@noticia.contenido, length: 200) if @noticia
+            = truncate(raw(@noticia.contenido), length: 200) if @noticia
     .region-info
       .info
         %h4.titulo
@@ -102,7 +99,7 @@
           = image_tag (image_path('icon-resultados.png')), class: 'icon'
         .clear
         %p.info-descrip
-          Podrá ver en vivo la inaguracion, compenetancias y premiaciones del Campeonato Mundial de Agility de la FCI 2014
+          Podrá ver los resultados a tiempo real de las competencias y premiaciones del Campeonato Mundial de Agility de la FCI 2014
     .region-info
       .info
         %h4.titulo
@@ -110,7 +107,7 @@
           = image_tag (image_path('icon-pistas.png')), class: 'icon'
         .clear
         %p.info-descrip
-          Podrá ver en vivo la inaguracion, compenetancias y premiaciones del Campeonato Mundial de Agility de la FCI 2014
+          Al finalizar cada día podrá ver las pistas en las que se compitieron
 #region-auspicio
   .container-auspicio
     .container

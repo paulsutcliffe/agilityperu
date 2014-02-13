@@ -1,4 +1,5 @@
 - content_for :javascript do
+  = javascript_include_tag 'ubicacion.js.coffee'
   = google_maps_api
 
 #region-ubicacion.container.seccion
@@ -18,12 +19,12 @@
     %h3.titulos
       = image_tag image_path ('img-ubicacion.png')
       = @ubicacion.lugar
-    
+
     %p
       = @ubicacion.direccion
     %p
       = @ubicacion.descripcion
-    
+
     = image_tag @ubicacion.imagen1_url(:thumb) if @ubicacion.imagen1
     = image_tag @ubicacion.imagen2_url(:thumb) if @ubicacion.imagen2
     = image_tag @ubicacion.imagen3_url(:thumb) if @ubicacion.imagen3

@@ -65,7 +65,9 @@ ul li a:hover, ul li a:focus{
 }
 }
 
-
+.alert-info{
+  margin-top: 20px;
+}
 
 main{
   .carousel-indicators{
@@ -92,11 +94,11 @@ main{
     text-align:right;
     font-weight: bold;
     }
-    .numero{
+    .countdown-amount{
     font-size: 72px;
     font-weight: bold;
     }
-    .texto{
+    .countdown-period{
     font-size: 30px;
     }
   }
@@ -140,7 +142,7 @@ height: 250px;
   }
   span{
   float: left;
-  margin-top: 12px;  
+  margin-top: 12px;
 }
   .icon{
   float:right;
@@ -293,7 +295,7 @@ footer{
   h1{
   text-transform: uppercase;
   color: #58575f;
-  font-weight: 700; 
+  font-weight: 700;
   border:none;
   background-color: #e6dfd5;
   padding: 40px 30px;
@@ -334,7 +336,7 @@ padding:0px;
 }
 
 
-#region-auspiciadores{ 
+#region-auspiciadores{
 .titulos{
 display:inline;
 border: none;
@@ -376,12 +378,12 @@ margin: 10px 0px;
   }
   .compartir-fb{a:hover{text-decoration: none;}}
   .region-inner{border-bottom: 1px solid $gray;}
-  .arrow_right{    
+  .arrow_right{
     background-image: url(image_path("arrows.png"));
       background-position: right center;
         margin-right: 20px;
           padding: 41px 61px 0 0;}
-  .arrow_left{    
+  .arrow_left{
     background-image: url(image_path("arrows.png"));
       background-position: left center;
         margin-right: 20px;
@@ -431,12 +433,12 @@ margin: 10px 0px;
      }
     .region{
       padding:0px;
-      .region-datos{ 
+      .region-datos{
       margin-bottom:20px;
         padding: 15px 0px;
       border-top: 1px solid black;
       .region-imagen{
-        padding-left: 0px; 
+        padding-left: 0px;
       }
       .region-info-title{
         padding:0px;
@@ -449,11 +451,11 @@ margin: 10px 0px;
           margin: 2px 0px 0px 0px;
           color: $orange;
           font-size: 17px;
-          
+
         }
         .pais{
         float: left;
-       font-weight: 700; 
+       font-weight: 700;
       }
         .compartir{
         float:right;
