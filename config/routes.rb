@@ -8,6 +8,8 @@ Agilityperu::Application.routes.draw do
 
   get '/ubicacion' => 'ubicacion#index'
 
+  get 'tags/:tag', to: 'duplas#index', as: :tag
+
   resources :costos
 
   resources :reglamentos

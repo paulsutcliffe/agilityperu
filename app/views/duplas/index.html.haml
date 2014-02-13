@@ -8,6 +8,14 @@
       - if current_usuario
         .admin-control
           = link_to 'Inscribir una Nueva Dupla', new_dupla_path, class: 'btn btn-primary'
+  .region
+    .region-inner.sidebar.region-title
+      - unless params[:usuario_id]
+        %h2.title Tags
+        %ul.taglist
+          - @tags.each do |tag|
+            %li
+              = link_to tag.name, tag_path(tag.name)
 
   .region
     #duplas

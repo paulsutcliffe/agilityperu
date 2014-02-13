@@ -10,10 +10,15 @@ class DuplasController < InheritedResources::Base
   end
 
   def index
+    @tags = Dupla.tag_counts_on(:tags)
     if params[:usuario_id]
       @duplas = Dupla.where("usuario_id = ?", @usuario.id)
     else
-      @duplas = Dupla.all
+      if params[:tag]
+        @duplas = Dupla.tagged_with(params[:tag])
+      else
+        @duplas = Dupla.all
+      end
     end
     respond_to do |format|
       format.html
