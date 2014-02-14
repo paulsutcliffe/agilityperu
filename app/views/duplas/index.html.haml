@@ -12,10 +12,9 @@
     .region-inner.sidebar.region-title
       - unless params[:usuario_id]
         %h2.title Tags
-        %ul.taglist
-          - @tags.each do |tag|
-            %li
-              = link_to tag.name, tag_path(tag.name)
+        - @tags.each do |tag|
+          %button.btn.btn-warning= link_to tag.name, tag_path(tag.name)
+          
 
   .region
     #duplas

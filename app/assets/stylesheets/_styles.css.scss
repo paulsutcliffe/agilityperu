@@ -378,6 +378,7 @@ margin: 10px 0px;
     text-transform: uppercase;
     font-style: normal;
   }
+  .btn {color: white;}
   a:hover{color:$gray-text;}
   .compartir-fb{a:hover{text-decoration: none;}}
   .region-inner{border-bottom: 1px solid $gray;}
@@ -430,6 +431,11 @@ margin: 10px 0px;
 
 
 #region-duplas{
+  .btn-warning{
+    margin-bottom: 20px;
+    margin-right: 10px;
+    a{color:white;}
+  }
    #duplas{
      .titulo-dato{
      margin-bottom: 0;
@@ -490,3 +496,5 @@ color: $gray-text;
 margin-bottom: 60px;
 }
 }
+
+
