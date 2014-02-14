@@ -13,7 +13,7 @@
       - unless params[:usuario_id]
         %h2.title Tags
         - @tags.each do |tag|
-          %button.btn.btn-warning= link_to tag.name, tag_path(tag.name)
+          = link_to tag.name, tag_path(tag.name), class: 'btn btn-warning'
           
 
   .region
