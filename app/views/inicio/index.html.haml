@@ -3,11 +3,20 @@
   = javascript_include_tag 'jquery.countdown/jquery.plugin.min.js', 'jquery.countdown/jquery.countdown.min.js', 'jquery.countdown/jquery.countdown-es.js'
   :javascript
     $(document).ready(function() {
+      $('#carousel-generic').carousel({
+        interval: 3000,
+        wrap: true
+        });
+      $('#carousel-auspiciadores').carousel({
+       interval: 2000,
+        wrap: true
+        });
     $(function () {
       	var austDay = new Date();
       	austDay = new Date(2014, 4-1, 03);
       	$('#contador').countdown({until: austDay, format: 'wdH'});
       });
+
     });
 
 - page_title!('Inicio')
@@ -44,9 +53,9 @@
       .inscrip-info
         .sub-title
           %p
-            INFORMACI&Oacute;N
+            = mail_to 'info@agilityperu2014.com'
         .sub-img
-          = link_to image_tag(image_path('img-contacto.jpg')), contactos_path, class: 'img-info'
+          = image_tag(image_path('img-contacto.jpg'), class: 'img-info')
     .region-libre
 
   .region
