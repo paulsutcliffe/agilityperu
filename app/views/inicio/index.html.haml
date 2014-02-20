@@ -82,7 +82,7 @@
             = image_tag (image_path('icon-jueces.png')), class: 'icon'
           .clear
           %p.info-descrip
-            = truncate(raw(@juez.descripcion), length: 200) if @juez
+            = raw(truncate(@juez.descripcion, length: 200)) if @juez
     = link_to(noticias_path) do
       .region-info
         = image_tag @noticia.foto_url(:thumb), :class => 'img-responsive' if @noticia
@@ -92,7 +92,7 @@
             = image_tag (image_path('icon-noticias.png')), class: 'icon'
           .clear
           %p.info-descrip
-            = truncate(raw(@noticia.contenido), length: 200) if @noticia
+            = raw(truncate(@noticia.contenido, length: 200)) if @noticia
     .region-info
       .info
         %h4.titulo
