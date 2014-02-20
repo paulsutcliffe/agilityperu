@@ -93,13 +93,12 @@ width:100%;
 .region-facebook{
 @extend .col-md-4;
 @extend .col-sm-4;
-@extend .col-xs-4;
+@extend .col-xs-12;
 @extend .col-lg-4;
 }
 .region-facebook-2{
 @extend .col-md-offset-4;
 @extend .col-sm-offset-4;
-@extend .col-xs-offset-4;
 @extend .col-lg-offset-4;
 
 }
