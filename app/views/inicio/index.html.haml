@@ -83,6 +83,7 @@
             = image_tag (image_path('icon-jueces.png')), class: 'icon'
           .clear
           %p.info-descrip
+            Conoce al jurado de alto nivel para tan importante competencia
     = link_to(noticias_path) do
       .region-info
         = image_tag @noticia.foto_url(:thumb), :class => 'img-responsive' if @noticia
@@ -91,7 +92,8 @@
             %span NOTICIAS
             = image_tag (image_path('icon-noticias.png')), class: 'icon'
           .clear
-          %p.info-descrip
+            %p.info-descrip
+              Lea las más resaltantes noticias antes, durante y despues de la competencia aquí
     .region-info
       .info
         %h4.titulo
