@@ -19,8 +19,8 @@
       map: map,
     animation: google.maps.Animation.DROP,
     position: new google.maps.LatLng(-12.085317,-76.89065),
-    icon: '/assets/gmaps-marker.png'
+    icon: '/assets/gmaps-marker-186a761a2c94865c8c05a60334b8a106.png'
     });
     });
     }).
-    call(this); 
+    call(this);
