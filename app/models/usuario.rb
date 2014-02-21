@@ -5,4 +5,10 @@ class Usuario < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
   
   has_many :duplas
+
+  validates :nombre, presence: true
+  validates :apellido, presence: true
+  validates :direccion, presence: true
+  validates :telefono, presence: true
+  validates :ciudad, presence: true
 end

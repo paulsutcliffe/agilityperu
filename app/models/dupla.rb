@@ -12,4 +12,12 @@ class Dupla < ActiveRecord::Base
   def override_tag
     self.tag_list << self.pais
   end
+  validates :nombre, presence: true
+  validates :registro_genealogico, presence: true
+  validates :raza, presence: true
+  validates :color, presence: true
+  validates :categoria, presence: true
+  validates :grado, presence: true
+  validates :fotografia, presence: true
+  
 end

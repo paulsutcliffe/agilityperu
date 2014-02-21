@@ -11,7 +11,7 @@
   .region
     .region-inner.sidebar.region-title
       - unless params[:usuario_id]
-        %h2.title Tags
+        %h2.title Paises
         - @tags.each do |tag|
           = link_to tag.name, tag_path(tag.name), class: 'btn btn-warning'
           
