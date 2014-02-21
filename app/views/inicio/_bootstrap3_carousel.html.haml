@@ -12,8 +12,8 @@
         .item.active
           = image_tag slide.imagen_url(:full)
           .carousel-caption
-            %h1.fecha
-              Del 3 al 6 de Abril 
+            -# %h1.fecha
+              Del 3 al 6 de Abril
             %p
               = slide.titulo if slide.titulo
       - else
@@ -21,7 +21,7 @@
           = image_tag slide.imagen_url(:full)
           .carousel-caption
             %h1.fecha
-              Del 3 al 6 de Abril 
+              Del 3 al 6 de Abril
             %p
               = slide.titulo if slide.titulo
 
