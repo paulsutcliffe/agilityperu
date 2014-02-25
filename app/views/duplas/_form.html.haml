@@ -76,7 +76,8 @@
     = f.label :fotografia, class: 'col-sm-2 control-label'
     .col-sm-10
       = f.file_field :fotografia
-
+      %span#span_size
+        (460px x 460px MÌNIMO)
   .form-group
     = f.label 'Guias / Guia Suplente', class: 'col-sm-2 control-label'
     .col-sm-8

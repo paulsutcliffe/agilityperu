@@ -23,13 +23,13 @@
         .col-sm-10
           = f.text_field :telefono, class: 'form-control'
       .form-group
-        = f.label :ciudad, 'Ciudad', class: 'col-sm-2 control-label'
-        .col-sm-10
-          = f.text_field :ciudad, class: 'form-control'
-      .form-group
         = f.label :pais, 'País', class: 'col-sm-2 control-label'
         .col-sm-10
           = country_select("usuario", "pais")
+      .form-group
+        = f.label :ciudad, 'Ciudad', class: 'col-sm-2 control-label'
+        .col-sm-10
+          = f.text_field :ciudad, class: 'form-control'
       .form-group
         = f.label :email, 'Email', class: 'col-sm-2 control-label'
         .col-sm-10

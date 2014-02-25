@@ -13,6 +13,7 @@ ActiveSupport::Inflector.inflections(:en) do |inflect|
   inflect.irregular 'guia', 'guias'
   inflect.irregular 'ubicacion', 'ubicaciones'
   inflect.irregular 'juez', 'jueces'
+  inflect.irregular 'error', 'errores'
 #   inflect.uncountable %w( fish sheep )
 end
 
