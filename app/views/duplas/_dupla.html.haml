@@ -75,6 +75,17 @@
         = link_to 'Eliminar', dupla, :method => :delete, :data => { :confirm => '¿Estás Seguro?' }, class: 'btn btn-danger'
         - if dupla.guias.any?
           = link_to 'Editar Guias', guias_path(dupla_id: dupla.id), class: 'btn btn-success'
-
-    .2co
-      = render 'grado1'
+  .clear
+  .compras
+    Comprar / Buy:
+    %br
+    %br
+    = render 'grado1'
+    = render 'fciopen'
+    = render 'fci2doperro'
+    = render 'fci3erperro'
+    = render 'open'
+    = render 'open2doperro'
+    = render 'open3erperro'
+    %span
+      2Checkout.com Inc. (Ohio, USA) is a payment facilitator for goods and services provided by KENNEL CLUB PERUANO.
