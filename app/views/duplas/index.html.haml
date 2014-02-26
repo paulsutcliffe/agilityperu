@@ -14,7 +14,7 @@
         %h2.title Paises
         - @tags.each do |tag|
           = link_to tag.name, tag_path(tag.name), class: 'btn btn-warning'
-          
+        = link_to "Todos", duplas_path, class: 'btn btn-warning'
 
   .region
     #duplas
