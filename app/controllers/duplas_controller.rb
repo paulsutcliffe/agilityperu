@@ -15,9 +15,9 @@ class DuplasController < InheritedResources::Base
       @duplas = Dupla.where("usuario_id = ?", @usuario.id)
     else
       if params[:tag]
-        @duplas = Dupla.tagged_with(params[:tag])
+        @duplas = Dupla.tagged_with(params[:tag]).page(params[:page])
       else
-        @duplas = Dupla.all
+        @duplas = Dupla.page(params[:page])
       end
     end
     respond_to do |format|

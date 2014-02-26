@@ -51,6 +51,7 @@ group :test do
   gem 'database_cleaner'
   gem 'selenium-webdriver'
 end
+gem 'kaminari'
 gem 'acts-as-taggable-on'
 gem "nested_form"
 gem 'countries'
