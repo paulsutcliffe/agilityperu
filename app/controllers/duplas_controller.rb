@@ -12,7 +12,7 @@ class DuplasController < InheritedResources::Base
   def index
     @tags = Dupla.tag_counts_on(:tags)
     if params[:usuario_id]
-      @duplas = Dupla.where("usuario_id = ?", @usuario.id)
+      @duplas = Dupla.where("usuario_id = ?", @usuario.id).page(params[:page])
     else
       if params[:tag]
         @duplas = Dupla.tagged_with(params[:tag]).page(params[:page])
@@ -48,6 +48,6 @@ class DuplasController < InheritedResources::Base
   end
 
   def destroy
-    destroy!( notice: "La dupla ha sido eliminada."){ params[:usuario_id] }
+    destroy!( notice: "La dupla ha sido eliminada."){ usuario_duplas_path(params[:usuario_id]) }
   end
 end
