@@ -16,3 +16,5 @@
 // require_tree .
 //= require bootstrap
 //= require tinymce
+//= require jquery.infinitescroll.min.js
+//= require endless.js.coffee
