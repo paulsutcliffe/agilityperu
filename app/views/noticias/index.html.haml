@@ -15,7 +15,7 @@
           = l noticia.fecha, format: :short
         .noticias-titulo.titulos
           %h3
-            = link_to noticia.titulo, noticia, remote: true, anchor: 'noticia'
+            = link_to noticia.titulo, noticia_path(noticia, anchor: "region-noticias"), remote: true
 
 
         - if current_admin
