@@ -488,7 +488,18 @@ margin: 10px 0px;
   .region-imagen img{width: 100%;}
 }
 
+#region-admin, #region-mensajes{
+margin-top: 50px;
+  margin-bottom: 50px;
+}
 
+#region-admin .btn-default{
+margin-top: 20px;
+}
+
+#region-mensajes{
+textarea.form-control{line-height: 4 !important;}
+}
 #region-hoteles{
 .descripcion{
 margin-bottom: 20px;
