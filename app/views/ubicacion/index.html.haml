@@ -1,5 +1,5 @@
 - content_for :javascript do
-  
+
   = javascript_include_tag 'ubicacion.js'
   = google_maps_api
 
@@ -11,9 +11,6 @@
   .region
     - if current_admin
       = link_to 'Editar ubicacion', ubicacion_editar_ubicacion_path, class: 'btn btn-success'
-
-.map-wrapper
-  = render 'mapa'
 
 #region-direccion.container.seccion
   .region
@@ -29,3 +26,6 @@
     = image_tag @ubicacion.imagen1_url(:thumb) if @ubicacion.imagen1
     = image_tag @ubicacion.imagen2_url(:thumb) if @ubicacion.imagen2
     = image_tag @ubicacion.imagen3_url(:thumb) if @ubicacion.imagen3
+
+.map-wrapper
+  = render 'mapa'
