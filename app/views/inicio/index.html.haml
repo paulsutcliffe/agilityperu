@@ -86,7 +86,7 @@
             Conoce al jurado de alto nivel para tan importante competencia
     = link_to(noticias_path) do
       .region-info
-        = image_tag @noticia.foto_url(:thumb), :class => 'img-responsive' if @noticia
+        = image_tag @noticia.first.foto_url(:thumb), :class => 'img-responsive' if @noticia
         .info
           %h4.titulo
             %span NOTICIAS

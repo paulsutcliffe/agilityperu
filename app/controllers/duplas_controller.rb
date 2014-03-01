@@ -28,7 +28,7 @@ class DuplasController < InheritedResources::Base
   end
 
   def setup_usuario
-    @usuario = Usuario.find(current_usuario.id) if current_usuario
+    @usuario = current_usuario ? Usuario.find(current_usuario.id) : Usuario.find(params[:usuario_id])
   end
 
   def mis_duplas
@@ -40,14 +40,14 @@ class DuplasController < InheritedResources::Base
     end
   end
   def create
-    create!( notice: "Dupla creada con éxito."){ usuario_duplas_path }
+    create!( notice: "Dupla creada con éxito."){ usuario_duplas_path(@usuario) }
   end
 
   def update
-    update!( notice: "La dupla ha sido editada."){ usuario_duplas_path }
+    update!( notice: "La dupla ha sido editada."){ usuario_duplas_path(@usuario) }
   end
 
   def destroy
-    destroy!( notice: "La dupla ha sido eliminada."){ usuario_duplas_path(params[:usuario_id]) }
+    destroy!( notice: "La dupla ha sido eliminada."){ usuario_duplas_path(@usuario) }
   end
 end
