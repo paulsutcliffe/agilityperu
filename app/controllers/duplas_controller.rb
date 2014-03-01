@@ -28,7 +28,13 @@ class DuplasController < InheritedResources::Base
   end
 
   def setup_usuario
-    @usuario = current_usuario ? Usuario.find(current_usuario.id) : Usuario.find(params[:usuario_id])
+    if current_usuario
+      @usuario = Usuario.find(current_usuario.id)
+    else
+      if params[:usuario_id]
+        @usuario = Usuario.find(params[:usuario_id])
+      end
+    end
   end
 
   def mis_duplas
