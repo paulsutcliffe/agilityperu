@@ -70,11 +70,11 @@
         %li.titulo-dato PROPIETARIO:
         %li.datos= dupla.usuario.nombre + ' ' + dupla.usuario.apellido
 
-      - if params[:usuario_id] or current_admin
-        = link_to 'Editar', edit_usuario_dupla_path(dupla.usuario, dupla), class: 'btn btn-success'
-        = link_to 'Eliminar', usuario_dupla_path(dupla.usuario, dupla), :method => :delete, :data => { :confirm => '¿Estás Seguro?' }, class: 'btn btn-danger'
-        - if dupla.guias.any?
-          = link_to 'Editar Guias', guias_path(dupla_id: dupla.id), class: 'btn btn-success'
+    - if params[:usuario_id] or current_admin
+      = link_to 'Editar', edit_usuario_dupla_path(dupla.usuario, dupla), class: 'btn btn-success'
+      = link_to 'Eliminar', usuario_dupla_path(dupla.usuario, dupla), :method => :delete, :data => { :confirm => '¿Estás Seguro?' }, class: 'btn btn-danger'
+      - if dupla.guias.any?
+        = link_to 'Editar Guias', guias_path(dupla_id: dupla.id), class: 'btn btn-success'
   - if params[:usuario_id]
     .clear
     .compras
