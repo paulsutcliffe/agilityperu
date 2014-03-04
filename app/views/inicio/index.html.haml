@@ -92,8 +92,8 @@
             %span NOTICIAS
             = image_tag (image_path('icon-noticias.png')), class: 'icon'
           .clear
-            %p.info-descrip
-              Lea las más resaltantes noticias antes, durante y despues de la competencia aquí
+          %p.info-descrip
+            = raw @noticia.first.contenido.truncate(150)
     .region-info
       .info
         %h4.titulo

@@ -23,6 +23,8 @@ class DuplasController < InheritedResources::Base
     respond_to do |format|
       format.html
       format.js {}
+      format.csv { send_data  @duplas.to_csv}
+      format.xls
       format.json { render json: @duplas }
     end
   end

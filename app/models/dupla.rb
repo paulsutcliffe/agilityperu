@@ -1,6 +1,16 @@
+require 'csv'
+
 class Dupla < ActiveRecord::Base
   mount_uploader :fotografia, FotografiaUploader
 
+  def self.to_csv(options = {})
+    CSV.generate(options) do |csv|
+      csv << column_names
+      all.each do |dupla|
+        csv << dupla.attributes.values_at(*column_names)
+      end
+    end
+  end
   belongs_to :usuario
   has_many :guias
   accepts_nested_attributes_for :guias
@@ -19,5 +29,7 @@ class Dupla < ActiveRecord::Base
   validates :categoria, presence: true
   validates :grado, presence: true
   validates :fotografia, presence: true
+
+
 
 end

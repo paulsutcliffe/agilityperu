@@ -9,6 +9,13 @@
         .admin-control
           = link_to 'Inscribir una Nueva Dupla', new_dupla_path, class: 'btn btn-primary'
   .region
+    .descarga
+      Download:
+      = link_to "CSV", duplas_path(format: "csv"), class: 'btn btn-warning'
+      = link_to "Excel", duplas_path(format: "xls"), class: 'btn btn-warning'
+
+
+
     .region-inner.sidebar.region-title
       - unless params[:usuario_id]
         %h2.title Paises
