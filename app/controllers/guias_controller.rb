@@ -1,5 +1,6 @@
 class GuiasController < InheritedResources::Base
-  before_filter :authenticate_usuario!
+  before_filter :authenticate_usuario!, only: [:new, :create]
+
   def permitted_params
     params.permit(:guia => [:nombre, :apellido, :direccion, :telefono, :email, :dupla_id])
   end

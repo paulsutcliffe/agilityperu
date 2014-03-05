@@ -1,48 +1,6 @@
-#region-duplas.container
-  .region
-    .region-title
-      %h1= page_title!('dupla')
+#region-duplas.container.seccion
 
   .region
-    %p
-      %b Nombre:
-      = @dupla.nombre
-    %p
-      %b Pais:
-      = @dupla.pais
-    %p
-      %b Registro genealogico:
-      = @dupla.registro_genealogico
-    %p
-      %b Raza:
-      = @dupla.raza
-    %p
-      %b Color:
-      = @dupla.color
-    %p
-      %b Sexo:
-      = @dupla.sexo
-    %p
-      %b Categoria:
-      = @dupla.categoria
-    %p
-      %b Grado:
-      = @dupla.grado
-    %p
-      %b Tatuaje microchip:
-      = @dupla.tatuaje_microchip
-    %p
-      %b Prueba:
-      = @dupla.prueba
-    %p
-      %b Fotografia:
-      = @dupla.fotografia
-    %p
-      %b Fecha nacimiento:
-      = @dupla.fecha_nacimiento
-
-  .region
-    - if current_admin
-      .admin-controls
-        = link_to 'Editar', edit_dupla_path(@dupla), class: 'btn btn-success'
-    = link_to 'Regresar', duplas_path, class: 'btn btn-warning'
+    #duplas
+      .region
+        = render @dupla
