@@ -1,6 +1,9 @@
 require 'csv'
 
 class Dupla < ActiveRecord::Base
+
+  default_scope  { order("created_at DESC") }
+
   mount_uploader :fotografia, FotografiaUploader
 
   def self.to_csv(options = {})
