@@ -8,11 +8,11 @@
       - if current_usuario
         .admin-control
           = link_to 'Inscribir una Nueva Dupla', new_dupla_path, class: 'btn btn-primary'
-  - if current_admin
-    .region
-      .descarga
-        =# link_to "CSV", duplas_path(format: "csv"), class: 'btn btn-warning'
-        = link_to "Descargar Todas las duplas en Excel", duplas_path(format: "xls"), class: 'btn btn-warning'
+    - if current_admin
+      .region
+        .descarga
+          =# link_to "CSV", duplas_path(format: "csv"), class: 'btn btn-warning'
+          = link_to "Descargar Todas las duplas en Excel", duplas_path(format: "xls"), class: 'btn btn-warning'
 
     .region-inner.sidebar.region-title
       - unless params[:usuario_id]
