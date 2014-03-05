@@ -8,6 +8,7 @@
       <Table>
         <Row>
           <Cell><Data ss:Type="String">ID</Data></Cell>
+          <Cell><Data ss:Type="String">Fecha Inscripcion</Data></Cell>
           <Cell><Data ss:Type="String">Nombre</Data></Cell>
           <Cell><Data ss:Type="String">Pais</Data></Cell>
           <Cell><Data ss:Type="String">N Registro</Data></Cell>
@@ -37,6 +38,7 @@
         <% @duplas.each do |dupla| %>
         <Row>
           <Cell><Data ss:Type="Number"><%= dupla.id %></Data></Cell>
+          <Cell><Data ss:Type="Number"><%= dupla.created_at %></Data></Cell>
           <Cell><Data ss:Type="String"><%= dupla.nombre %></Data></Cell>
           <Cell><Data ss:Type="String"><%= dupla.pais %></Data></Cell>
           <Cell><Data ss:Type="String"><%= dupla.registro_genealogico %></Data></Cell>
