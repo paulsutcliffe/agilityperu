@@ -28,6 +28,11 @@
           <Cell><Data ss:Type="String">Pais</Data></Cell>
           <Cell><Data ss:Type="String">Telefono</Data></Cell>
           <Cell><Data ss:Type="String">Email</Data></Cell>
+          <Cell><Data ss:Type="String">Nombre</Data></Cell>
+          <Cell><Data ss:Type="String">Apellido</Data></Cell>
+          <Cell><Data ss:Type="String">Direccion</Data></Cell>
+          <Cell><Data ss:Type="String">Telefono</Data></Cell>
+          <Cell><Data ss:Type="String">Email</Data></Cell>
         </Row>
         <% @duplas.each do |dupla| %>
         <Row>
@@ -52,6 +57,13 @@
           <Cell><Data ss:Type="String"><%= dupla.usuario.pais %></Data></Cell>
           <Cell><Data ss:Type="String"><%= dupla.usuario.telefono %></Data></Cell>
           <Cell><Data ss:Type="String"><%= dupla.usuario.email %></Data></Cell>
+          <% if dupla.guias.any? %>
+            <Cell><Data ss:Type="String"><%= dupla.guias.first.nombre %></Data></Cell>
+            <Cell><Data ss:Type="String"><%= dupla.guias.first.apellido %></Data></Cell>
+            <Cell><Data ss:Type="String"><%= dupla.guias.first.direccion %></Data></Cell>
+            <Cell><Data ss:Type="String"><%= dupla.guias.first.telefono %></Data></Cell>
+            <Cell><Data ss:Type="String"><%= dupla.guias.first.email %></Data></Cell>
+          <% end %>
         </Row>
         <% end %>
       </Table>
