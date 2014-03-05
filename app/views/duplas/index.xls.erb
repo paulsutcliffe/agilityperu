@@ -10,26 +10,48 @@
           <Cell><Data ss:Type="String">ID</Data></Cell>
           <Cell><Data ss:Type="String">Nombre</Data></Cell>
           <Cell><Data ss:Type="String">Pais</Data></Cell>
-          <Cell><Data ss:Type="String">Fecha Nacimiento</Data></Cell>
+          <Cell><Data ss:Type="String">N Registro</Data></Cell>
           <Cell><Data ss:Type="String">Raza</Data></Cell>
-          <Cell><Data ss:Type="String">Sexo</Data></Cell>
           <Cell><Data ss:Type="String">Color</Data></Cell>
+          <Cell><Data ss:Type="String">Sexo</Data></Cell>
+          <Cell><Data ss:Type="String">Fecha Nacimiento</Data></Cell>
           <Cell><Data ss:Type="String">Categoria</Data></Cell>
           <Cell><Data ss:Type="String">Grado</Data></Cell>
-          <Cell><Data ss:Type="String">Tatuaje y/o Microchip</Data></Cell>
+          <Cell><Data ss:Type="String">Chip/Tatuaje</Data></Cell>
+          <Cell><Data ss:Type="String">Especial G1</Data></Cell>
+          <Cell><Data ss:Type="String">Open AC</Data></Cell>
+          <Cell><Data ss:Type="String">AC Oficial</Data></Cell>
+          <Cell><Data ss:Type="String">Nombre</Data></Cell>
+          <Cell><Data ss:Type="String">Apellido</Data></Cell>
+          <Cell><Data ss:Type="String">Direccion</Data></Cell>
+          <Cell><Data ss:Type="String">Ciudad</Data></Cell>
+          <Cell><Data ss:Type="String">Pais</Data></Cell>
+          <Cell><Data ss:Type="String">Telefono</Data></Cell>
+          <Cell><Data ss:Type="String">Email</Data></Cell>
         </Row>
         <% @duplas.each do |dupla| %>
         <Row>
           <Cell><Data ss:Type="Number"><%= dupla.id %></Data></Cell>
           <Cell><Data ss:Type="String"><%= dupla.nombre %></Data></Cell>
           <Cell><Data ss:Type="String"><%= dupla.pais %></Data></Cell>
-          <Cell><Data ss:Type="String"><%= dupla.fecha_nacimiento %></Data></Cell>
+          <Cell><Data ss:Type="String"><%= dupla.registro_genealogico %></Data></Cell>
           <Cell><Data ss:Type="String"><%= dupla.raza %></Data></Cell>
-          <Cell><Data ss:Type="String"><%= dupla.sexo %></Data></Cell>
           <Cell><Data ss:Type="String"><%= dupla.color %></Data></Cell>
+          <Cell><Data ss:Type="String"><%= dupla.sexo %></Data></Cell>
+          <Cell><Data ss:Type="String"><%= dupla.fecha_nacimiento %></Data></Cell>
           <Cell><Data ss:Type="String"><%= dupla.categoria %></Data></Cell>
           <Cell><Data ss:Type="String"><%= dupla.grado %></Data></Cell>
           <Cell><Data ss:Type="String"><%= dupla.tatuaje_microchip %></Data></Cell>
+          <Cell><Data ss:Type="String"><%= dupla.especial_g1 %></Data></Cell>
+          <Cell><Data ss:Type="String"><%= dupla.open_ac %></Data></Cell>
+          <Cell><Data ss:Type="String"><%= dupla.ac_oficial %></Data></Cell>
+          <Cell><Data ss:Type="String"><%= dupla.usuario.nombre %></Data></Cell>
+          <Cell><Data ss:Type="String"><%= dupla.usuario.apellido %></Data></Cell>
+          <Cell><Data ss:Type="String"><%= dupla.usuario.direccion %></Data></Cell>
+          <Cell><Data ss:Type="String"><%= dupla.usuario.ciudad %></Data></Cell>
+          <Cell><Data ss:Type="String"><%= dupla.usuario.pais %></Data></Cell>
+          <Cell><Data ss:Type="String"><%= dupla.usuario.telefono %></Data></Cell>
+          <Cell><Data ss:Type="String"><%= dupla.usuario.email %></Data></Cell>
         </Row>
         <% end %>
       </Table>

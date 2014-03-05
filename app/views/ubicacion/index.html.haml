@@ -23,9 +23,12 @@
     %p
       = @ubicacion.descripcion
 
+  .region
     = image_tag @ubicacion.imagen1_url(:thumb) if @ubicacion.imagen1
     = image_tag @ubicacion.imagen2_url(:thumb) if @ubicacion.imagen2
     = image_tag @ubicacion.imagen3_url(:thumb) if @ubicacion.imagen3
+  .region
+    = render 'clima'
 
 .map-wrapper
   = render 'mapa'
