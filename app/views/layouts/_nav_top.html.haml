@@ -1,6 +1,7 @@
 %ul.nav.nav-pills.navbar-right
   - if current_admin
     %li= link_to 'Cerrar sesión de Administrador', destroy_admin_session_path, method: :delete
+    %li= link_to 'Administrar Usuarios', usuarios_path
   - else
     - if current_usuario
       %li.link
@@ -10,10 +11,10 @@
           Mis Duplas
           %span.badge
             = current_usuario.duplas.count
+      %li.link
+        = link_to 'Editar Mis Datos', edit_usuario_registration_path
     - else
       %li.link.first
         = link_to 'Regístrate', new_usuario_registration_path
       %li.link
         = link_to 'Ingresa', new_usuario_session_path
-  %li
-    = link_to content_tag(:i, '', class: 'icon facebook'), 'https://www.facebook.com/agilityperu2014'

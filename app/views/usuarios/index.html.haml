@@ -1,4 +1,4 @@
-#region-usuarios.container
+#region-usuarios.container.seccion
 
   .region
     .region-title
@@ -31,4 +31,3 @@
               %td= l usuario.last_sign_in_at, format: :short if usuario.last_sign_in_at
               %td= l usuario.created_at, format: :short
               %td= link_to 'Eliminar', usuario, :method => :delete, :data => { :confirm => '¿Estás Seguro?' }, class: 'btn btn-danger'
-              %td= link_to 'Editar', edit_usuario_path(usuario), class: 'btn btn-success'

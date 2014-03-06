@@ -7,27 +7,56 @@
     = form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { method: :put, class: 'form-horizontal' }) do |f|
       = devise_error_messages!
       .form-group
+        = f.label :nombre, class: 'col-sm-2 control-label'
+        .col-sm-10
+          = f.text_field :nombre, class: 'form-control'
+      .form-group
+        = f.label :apellido, class: 'col-sm-2 control-label'
+        .col-sm-10
+          = f.text_field :apellido, class: 'form-control'
+      .form-group
+        = f.label :telefono, class: 'col-sm-2 control-label'
+        .col-sm-10
+          = f.text_field :telefono, class: 'form-control'
+      .form-group
+        = f.label :direccion, class: 'col-sm-2 control-label'
+        .col-sm-10
+          = f.text_field :direccion, class: 'form-control'
+      .form-group
+        = f.label :ciudad, class: 'col-sm-2 control-label'
+        .col-sm-10
+          = f.text_field :ciudad, class: 'form-control'
+      .form-group
+        = f.label :pais, class: 'col-sm-2 control-label'
+        .col-sm-10
+          = country_select("usuario", "pais")
+      .form-group
         = f.label :email, class: 'col-sm-2 control-label'
         .col-sm-10
-          = f.email_field :email, :autofocus => true
+          = f.email_field :email, :autofocus => true, class: 'form-control'
       - if devise_mapping.confirmable? && resource.pending_reconfirmation?
         %div
           Currently waiting confirmation for: #{resource.unconfirmed_email}
       .form-group
-        = f.label :password, class: 'col-sm-2 control-label'
-        %i (leave blank if you don't want to change it)
+        = f.label :password, 'Contraseña', class: 'col-sm-2 control-label'
+        %i (dejalo en blanco sino quieres cambiar la contraseña)
         .col-sm-10
-          = f.password_field :password, :autocomplete => "off"
-      %div
-        = f.label :password_confirmation
-        %br/
-        = f.password_field :password_confirmation
-      %div
-        = f.label :current_password
-        %i (we need your current password to confirm your changes)
-        %br/
-        = f.password_field :current_password
-      %div= f.submit "Update"
-    %h3 Cancel my account
-    %p
-      Unhappy? #{button_to "Cancel my account", registration_path(resource_name), :data => { :confirm => "Are you sure?" }, :method => :delete}
+          = f.password_field :password, :autocomplete => "off", class: 'form-control'
+      .form-group
+        = f.label :password_confirmation, class: 'col-sm-2 control-label'
+        .col-sm-10
+          = f.password_field :password_confirmation, class: 'form-control'
+      .form-group
+        = f.label :current_password, 'Contraseña Actual', class: 'col-sm-2 control-label'
+        %i (necesitamos tu contraseña para poder realizar los cambios)
+        .col-sm-10
+          = f.password_field :current_password, class: 'form-control'
+      %div= f.submit "Guardar", class: 'btn btn-default'
+
+#region-usuario.container.seccion
+  .region
+    .region-title
+      %h1 Cancelar mi cuenta
+
+  .region
+    = button_to "Cancelar mi cuenta", registration_path(resource_name), :data => { :confirm => "Estas Seguro?" }, :method => :delete, class: 'btn btn-danger'
