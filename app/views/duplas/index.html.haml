@@ -24,4 +24,6 @@
   .region
     #duplas
       .region
-        = render @duplas
+        %ul.duplas-list
+          = render @duplas
+  = paginate @duplas

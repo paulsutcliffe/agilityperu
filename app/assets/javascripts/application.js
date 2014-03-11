@@ -17,3 +17,5 @@
 //= require bootstrap
 //= require tinymce
 //= require ubicacion.js.coffee
+//= require jquery.infinitescroll
+//= require endless.js.coffee

@@ -1,6 +1,6 @@
 
-$(document).ready ->
-  ("#region-duplas").infinitescroll
+$(documet).ready ->
+  $("ul.duplas-list").infinitescroll
     loading: {
       finished: undefined,
       finishedMsg: null,
@@ -12,4 +12,5 @@ $(document).ready ->
     }
     navSelector: "nav.pagination" # selector for the paged navigation (it will be hidden)
     nextSelector: "nav.pagination a[rel=next]" # selector for the NEXT link (to page 2)
-    itemSelector: "#region-duplas #duplas" # selector for all items you'll retrieve
+    itemSelector: "ul.duplas-list li.dupla" # selector for all items you'll retrieve
+

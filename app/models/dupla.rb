@@ -20,6 +20,8 @@ class Dupla < ActiveRecord::Base
 
   acts_as_taggable
 
+  paginates_per 5
+
   before_save :override_tag
 
   def override_tag
