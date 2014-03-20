@@ -1,96 +1,95 @@
-%li.dupla
-  .region-datos
-    .region-info-title
-      .region-pais
-        %p.pais
-          = dupla.pais
-        %p.compartir
-          - if params[:action] == 'index'
-            = link_to 'https://www.facebook.com/sharer/sharer.php?u=' + usuario_dupla_url(dupla.usuario, dupla), target: '_blank' do
-              COMPARTIR
-              =image_tag image_path 'facebook-gray.png'
-  
-    .region-imagen
-      = image_tag dupla.fotografia_url(:regular)
-    .region-informacion
-      - if current_usuario
-        %ul.dupla
-          -#%li.datos= dupla.usuario_id
-          %li.titulo-dato NOMBRE:
-          %li.datos= dupla.nombre
-          %li.titulo-dato PA&Iacute;S:
-          %li.datos= dupla.pais
-          %li.titulo-dato RAZA:
-          %li.datos= dupla.raza
-          %li.titulo-dato PRUEBAS:
-          %li.datos
-            - if dupla.especial_g1
-              .btn.btn-success.btn-sm.disabled Especial G1
-            - if dupla.open_ac
-              .btn.btn-success.btn-sm.disabled Open A&C
-            - if dupla.ac_oficial
-              .btn.btn-success.btn-sm.disabled A&C Oficial
-          %li.titulo-dato PROPIETARIO:
-          %li.datos= dupla.usuario.nombre + ' ' + dupla.usuario.apellido
-          %li.titulo-dato FECHA NACIMIENTO:
-          %li.datos= dupla.fecha_nacimiento
-          %li.titulo-dato REGISTRO GENEALOGICO:
-          %li.datos= dupla.registro_genealogico
-          %li.titulo-dato COLOR:
-          %li.datos= dupla.color
-          %li.titulo-dato SEXO:
-          %li.datos= dupla.sexo
-          %li.titulo-dato CATEGORIA:
-          %li.datos= dupla.categoria
-          %li.titulo-dato GRADO:
-          %li.datos= dupla.grado
-          %li.titulo-dato TATUAJE/MICROCHIP:
-          %li.datos= dupla.tatuaje_microchip
-      - else
-        %ul.dupla
-          %li.titulo-dato NOMBRE:
-          %li.datos= dupla.nombre
-          %li.titulo-dato RAZA:
-          %li.datos= dupla.raza
-          %li.titulo-dato SEXO:
-          %li.datos= dupla.sexo
-          %li.titulo-dato CATEGORIA:
-          %li.datos= dupla.categoria
-          %li.titulo-dato GRADO:
-          %li.datos= dupla.grado
-          %li.titulo-dato PRUEBAS:
-          %li.datos
-            - if dupla.especial_g1
-              .btn.btn-success.btn-sm.disabled Especial G1
-            - if dupla.open_ac
-              .btn.btn-success.btn-sm.disabled Open A&C
-            - if dupla.ac_oficial
-              .btn.btn-success.btn-sm.disabled A&C Oficial
-          - if dupla.guias.any?
-            %li.titulo-dato GUIA:
-            %li.datos= dupla.guias.first.nombre + ' ' + dupla.guias.first.apellido
-          %li.titulo-dato PROPIETARIO:
-          %li.datos= dupla.usuario.nombre + ' ' + dupla.usuario.apellido
-  
-      - if params[:usuario_id] or current_admin
-        = link_to 'Editar', edit_usuario_dupla_path(dupla.usuario, dupla), class: 'btn btn-success'
-        = link_to 'Eliminar', usuario_dupla_path(dupla.usuario, dupla), :method => :delete, :data => { :confirm => '¿Estás Seguro?' }, class: 'btn btn-danger'
+.region-datos
+  .region-info-title
+    .region-pais
+      %p.pais
+        = dupla.pais
+      %p.compartir
+        - if params[:action] == 'index'
+          = link_to 'https://www.facebook.com/sharer/sharer.php?u=' + usuario_dupla_url(dupla.usuario, dupla), target: '_blank' do
+            COMPARTIR
+            =image_tag image_path 'facebook-gray.png'
+
+  .region-imagen
+    = image_tag dupla.fotografia_url(:regular)
+  .region-informacion
+    - if current_usuario
+      %ul.dupla
+        -#%li.datos= dupla.usuario_id
+        %li.titulo-dato NOMBRE:
+        %li.datos= dupla.nombre
+        %li.titulo-dato PA&Iacute;S:
+        %li.datos= dupla.pais
+        %li.titulo-dato RAZA:
+        %li.datos= dupla.raza
+        %li.titulo-dato PRUEBAS:
+        %li.datos
+          - if dupla.especial_g1
+            .btn.btn-success.btn-sm.disabled Especial G1
+          - if dupla.open_ac
+            .btn.btn-success.btn-sm.disabled Open A&C
+          - if dupla.ac_oficial
+            .btn.btn-success.btn-sm.disabled A&C Oficial
+        %li.titulo-dato PROPIETARIO:
+        %li.datos= dupla.usuario.nombre + ' ' + dupla.usuario.apellido
+        %li.titulo-dato FECHA NACIMIENTO:
+        %li.datos= dupla.fecha_nacimiento
+        %li.titulo-dato REGISTRO GENEALOGICO:
+        %li.datos= dupla.registro_genealogico
+        %li.titulo-dato COLOR:
+        %li.datos= dupla.color
+        %li.titulo-dato SEXO:
+        %li.datos= dupla.sexo
+        %li.titulo-dato CATEGORIA:
+        %li.datos= dupla.categoria
+        %li.titulo-dato GRADO:
+        %li.datos= dupla.grado
+        %li.titulo-dato TATUAJE/MICROCHIP:
+        %li.datos= dupla.tatuaje_microchip
+    - else
+      %ul.dupla
+        %li.titulo-dato NOMBRE:
+        %li.datos= dupla.nombre
+        %li.titulo-dato RAZA:
+        %li.datos= dupla.raza
+        %li.titulo-dato SEXO:
+        %li.datos= dupla.sexo
+        %li.titulo-dato CATEGORIA:
+        %li.datos= dupla.categoria
+        %li.titulo-dato GRADO:
+        %li.datos= dupla.grado
+        %li.titulo-dato PRUEBAS:
+        %li.datos
+          - if dupla.especial_g1
+            .btn.btn-success.btn-sm.disabled Especial G1
+          - if dupla.open_ac
+            .btn.btn-success.btn-sm.disabled Open A&C
+          - if dupla.ac_oficial
+            .btn.btn-success.btn-sm.disabled A&C Oficial
         - if dupla.guias.any?
-          = link_to 'Editar Guias', guias_path(dupla_id: dupla.id), class: 'btn btn-success'
-    - if params[:usuario_id]
-      .clear
-      .compras
-        Comprar / Buy:
-        %br
-        %br
-        = render 'grado1'
-        = render 'fciopen'
-        = render 'fci2doperro'
-        = render 'fci3erperro'
-        = render 'open'
-        = render 'open2doperro'
-        = render 'open3erperro'
-        %span
-          = link_to image_tag('https://www.2checkout.com/upload/images/paymentlogoshorizontal.png'), 'https://www.2checkout.com'
-        %span
-          2Checkout.com Inc. (Ohio, USA) is a payment facilitator for goods and services provided by KENNEL CLUB PERUANO.
+          %li.titulo-dato GUIA:
+          %li.datos= dupla.guias.first.nombre + ' ' + dupla.guias.first.apellido
+        %li.titulo-dato PROPIETARIO:
+        %li.datos= dupla.usuario.nombre + ' ' + dupla.usuario.apellido
+
+    - if params[:usuario_id] or current_admin
+      = link_to 'Editar', edit_usuario_dupla_path(dupla.usuario, dupla), class: 'btn btn-success'
+      = link_to 'Eliminar', usuario_dupla_path(dupla.usuario, dupla), :method => :delete, :data => { :confirm => '¿Estás Seguro?' }, class: 'btn btn-danger'
+      - if dupla.guias.any?
+        = link_to 'Editar Guias', guias_path(dupla_id: dupla.id), class: 'btn btn-success'
+  - if params[:usuario_id]
+    .clear
+    .compras
+      Comprar / Buy:
+      %br
+      %br
+      = render 'grado1'
+      = render 'fciopen'
+      = render 'fci2doperro'
+      = render 'fci3erperro'
+      = render 'open'
+      = render 'open2doperro'
+      = render 'open3erperro'
+      %span
+        = link_to image_tag('https://www.2checkout.com/upload/images/paymentlogoshorizontal.png'), 'https://www.2checkout.com'
+      %span
+        2Checkout.com Inc. (Ohio, USA) is a payment facilitator for goods and services provided by KENNEL CLUB PERUANO.

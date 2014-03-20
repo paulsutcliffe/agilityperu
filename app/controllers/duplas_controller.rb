@@ -15,9 +15,9 @@ class DuplasController < InheritedResources::Base
       @duplas = Dupla.where("usuario_id = ?", @usuario.id)
     else
       if params[:tag]
-        @duplas = Dupla.tagged_with(params[:tag]).page(params[:page])
+        @duplas = Dupla.tagged_with(params[:tag])
       else
-        @duplas = Dupla.page(params[:page])
+        @duplas = Dupla.all
       end
     end
     respond_to do |format|
@@ -27,6 +27,10 @@ class DuplasController < InheritedResources::Base
       format.xls
       format.json { render json: @duplas }
     end
+  end
+
+  def new
+    redirect_to inicio_index_path, notice: "Ya se Cerro la Inscripción"
   end
 
   def setup_usuario
