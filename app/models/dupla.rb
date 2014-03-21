@@ -20,7 +20,7 @@ class Dupla < ActiveRecord::Base
 
   acts_as_taggable
 
-  paginates_per 5
+  #paginates_per 5
 
   before_save :override_tag
 
