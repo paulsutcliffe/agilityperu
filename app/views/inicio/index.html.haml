@@ -1,23 +1,6 @@
 - content_for :javascript do
   = stylesheet_link_tag 'jquery.countdown/jquery.countdown.css'
-  = javascript_include_tag 'jquery.countdown/jquery.plugin.min.js', 'jquery.countdown/jquery.countdown.min.js', 'jquery.countdown/jquery.countdown-es.js'
-  :javascript
-    $(document).ready(function() {
-      $('#carousel-generic').carousel({
-        interval: 3000,
-        wrap: true
-        });
-      $('#carousel-auspiciadores').carousel({
-       interval: 2000,
-        wrap: true
-        });
-    $(function () {
-      	var austDay = new Date();
-      	austDay = new Date(2014, 4-1, 03);
-      	$('#contador').countdown({until: austDay, format: 'dHM'});
-      });
-
-    });
+  = javascript_include_tag 'jquery.countdown/jquery.plugin.min.js', 'jquery.countdown/jquery.countdown.min.js', 'jquery.countdown/jquery.countdown-es.js', 'fecha.js'
 
 - page_title!('Inicio')
 
@@ -121,6 +104,12 @@
           .clear
           %p.info-descrip
             Al finalizar cada día podrá ver las pistas en las que se compitieron
+
+
+
+
+
+
 #region-auspicio
   .container-auspicio
     .container
