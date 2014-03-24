@@ -1,6 +1,5 @@
 - content_for :javascript do
-  = stylesheet_link_tag 'jquery.countdown/jquery.countdown.css'
-  = javascript_include_tag 'jquery.countdown/jquery.plugin.min.js', 'jquery.countdown/jquery.countdown.min.js', 'jquery.countdown/jquery.countdown-es.js', 'fecha.js'
+  = javascript_include_tag 'fecha.js'
 
 - page_title!('Inicio')
 
@@ -23,7 +22,23 @@
     .region-horas
       %h2
         FALTAN:
-      #contador
+      #countdown
+        %p.days
+          00
+        %p.timeRefDays 
+          days
+        %span.hours
+          00
+        %p.timeRefHours
+          hours
+        %span.minutes
+          00
+        %p.timeRefMinutes
+          minutes
+        %span.seconds
+          00
+        %p.timeRefSeconds
+          seconds
 
   .region.line.inscripcion
     .region-inscripcion
