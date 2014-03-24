@@ -94,30 +94,33 @@
           .clear
           %p.info-descrip
             = raw @noticia.first.contenido.truncate(150)
-    .region-info
-      .info
-        %h4.titulo
-          %span SE&Ntilde;AL EN VIVO
-          = image_tag (image_path('icon-transmision.png')), class: 'icon'
-        .clear
-        %p.info-descrip
-          Podrá ver en vivo la inaguracion, compenetancias y premiaciones del Campeonato Mundial de Agility de la FCI 2014
-    .region-info
-      .info
-        %h4.titulo
-          %span RESULTADOS
-          = image_tag (image_path('icon-resultados.png')), class: 'icon'
-        .clear
-        %p.info-descrip
-          Podrá ver los resultados a tiempo real de las competencias y premiaciones del Campeonato Mundial de Agility de la FCI 2014
-    .region-info
-      .info
-        %h4.titulo
-          %span PISTAS
-          = image_tag (image_path('icon-pistas.png')), class: 'icon'
-        .clear
-        %p.info-descrip
-          Al finalizar cada día podrá ver las pistas en las que se compitieron
+    =link_to('#') do
+      .region-info
+        .info
+          %h4.titulo
+            %span SE&Ntilde;AL EN VIVO
+            = image_tag (image_path('icon-transmision.png')), class: 'icon'
+          .clear
+          %p.info-descrip
+            Podrá ver en vivo la inaguracion, compenetancias y premiaciones del Campeonato Mundial de Agility de la FCI 2014
+    =link_to('#') do
+      .region-info
+        .info
+          %h4.titulo
+            %span RESULTADOS
+            = image_tag (image_path('icon-resultados.png')), class: 'icon'
+          .clear
+          %p.info-descrip
+            Podrá ver los resultados a tiempo real de las competencias y premiaciones del Campeonato Mundial de Agility de la FCI 2014
+    =link_to ('#') do
+      .region-info
+        .info
+          %h4.titulo
+            %span PISTAS
+            = image_tag (image_path('icon-pistas.png')), class: 'icon'
+          .clear
+          %p.info-descrip
+            Al finalizar cada día podrá ver las pistas en las que se compitieron
 #region-auspicio
   .container-auspicio
     .container
