@@ -25,7 +25,7 @@
       #countdown
         %p.days
           00
-        %p.timeRefDays 
+        %p.timeRefDays
           days
         %span.hours
           00
@@ -95,7 +95,7 @@
           .clear
           %p.info-descrip
             = raw @noticia.first.contenido.truncate(150)
-    =link_to('#') do
+    =link_to(streamings_path) do
       .region-info
         .info
           %h4.titulo

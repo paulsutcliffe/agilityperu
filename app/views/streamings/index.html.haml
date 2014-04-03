@@ -4,14 +4,16 @@
     .region-title
       %h1= page_title!('Señal en Vivo')
 
-    .region
+    -# .region
       - if current_admin
         .admin-control
           = link_to 'Crear Señal en Vivo', new_streaming_path, class: 'btn btn-primary'
 
     %h3.titulos
-      Podrás disfrutar del campeonato online.
-    - @streamings.each do |streaming|
+      Disfruta del campeonato online.
+
+    = render 'player'
+    -# @streamings.each do |streaming|
       = link_to streaming.codigo_embed
       %br
         - if current_admin
