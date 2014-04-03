@@ -87,7 +87,7 @@
         - if @noticia.first.foto_url
           = image_tag @noticia.first.foto_url(:thumb), :class => 'img-responsive'
         - else
-          .espacio
+          = image_tag(image_path('default-img.jpg'), class: 'image-responsive') 
         .info
           %h4.titulo
             %span NOTICIAS
@@ -97,6 +97,7 @@
             = raw @noticia.first.contenido.truncate(150)
     =link_to(streamings_path) do
       .region-info
+        = image_tag(image_path('default-img.jpg'), class: 'image-responsive') 
         .info
           %h4.titulo
             %span SE&Ntilde;AL EN VIVO
