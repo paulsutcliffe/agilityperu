@@ -21,24 +21,8 @@
 
     .region-horas
       %h2
-        FALTAN:
-      #countdown
-        %p.days
-          00
-        %p.timeRefDays
-          days
-        %span.hours
-          00
-        %p.timeRefHours
-          hours
-        %span.minutes
-          00
-        %p.timeRefMinutes
-          minutes
-        %span.seconds
-          00
-        %p.timeRefSeconds
-          seconds
+      .streaming
+        = render 'streamings/player'
 
   .region.line.inscripcion
     .region-inscripcion
@@ -87,7 +71,7 @@
         - if @noticia.first.foto_url
           = image_tag @noticia.first.foto_url(:thumb), :class => 'img-responsive'
         - else
-          = image_tag(image_path('default-img.jpg'), class: 'image-responsive') 
+          = image_tag(image_path('default-img.jpg'), class: 'image-responsive')
         .info
           %h4.titulo
             %span NOTICIAS
@@ -97,7 +81,6 @@
             = raw @noticia.first.contenido.truncate(150)
     =link_to(streamings_path) do
       .region-info
-        = image_tag(image_path('default-img.jpg'), class: 'image-responsive') 
         .info
           %h4.titulo
             %span SE&Ntilde;AL EN VIVO
